@@ -1,2 +1,2 @@
-# BD
+# Base de Datos
 La idea es desarrollar una 🛠️ base de datos para una plataforma de educación en línea, cubriendo aspectos como cursos 📚, estudiantes 🎓, profesores 👩‍🏫 y calificaciones 📊. Se han introducido tablas para administrar foros 💬, tareas 📝, certificados 🏅 y una biblioteca de recursos educativos 📚. La base de datos facilitará la matrícula de estudiantes, el seguimiento del progreso académico y la participación en discusiones 💬 y tareas 📝 en línea.
