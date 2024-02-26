@@ -1,0 +1,3 @@
+-- Insertar datos
+
+USE Diplomados
