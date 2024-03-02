@@ -57,7 +57,7 @@ INSERT INTO InformeInvestigacion(Tipo, Titulo, Autor, NoEjemplares, FechaPublica
 
 SELECT * FROM InformeInvestigacion
 
-INSERT INTO Sede(Localidad) values ('Envigado')
+INSERT INTO Sede(Localidad,Nombre_Sede) values ('Envigado','Uni1')
 
 SELECT * FROM Sede
 
@@ -85,19 +85,19 @@ INSERT INTO Anuncios(ID_Curso, Fecha, Mensaje) values ('001', '2024-02-28', 'Hol
 
 SELECT * FROM Anuncios
 
-INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ('EF5B69E2-C67D-41C5-911F-488D4E32A9C8','001')
-INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ('EF5B69E2-C67D-41C5-911F-488D4E32A9C8','002')
-INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ('EF5B69E2-C67D-41C5-911F-488D4E32A9C8','003')
-INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ('EF5B69E2-C67D-41C5-911F-488D4E32A9C8','004')
-INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ('EF5B69E2-C67D-41C5-911F-488D4E32A9C8','005')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni1'),'001')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni1'),'002')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni1'),'003')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni1'),'004')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni1'),'005')
 
 SELECT * FROM Sede_Curso
 
-INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ('EF5B69E2-C67D-41C5-911F-488D4E32A9C8','CC','0000000000')
-INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ('EF5B69E2-C67D-41C5-911F-488D4E32A9C8','CC','0000000001')
-INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ('EF5B69E2-C67D-41C5-911F-488D4E32A9C8','CC','0000000002')
-INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ('EF5B69E2-C67D-41C5-911F-488D4E32A9C8','CC','0000000003')
-INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ('EF5B69E2-C67D-41C5-911F-488D4E32A9C8','CC','0000000004')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni1'),'CC','0000000000')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni1'),'CC','0000000001')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni1'),'CC','0000000002')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni1'),'CC','0000000003')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni1'),'CC','0000000004')
 
 SELECT * FROM Sede_Profesor
 
@@ -117,27 +117,27 @@ INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values 
 
 SELECT * FROM Curso_Estudiante
 
-INSERT INTO Biblioteca_Libro(ID_Biblioteca, ID_Libro) values ('CC4418CC-B858-495C-8EEB-4A937FA5FD34','E8F0DEF7-405A-40A2-9BB5-10965F612F4F')
-INSERT INTO Biblioteca_Libro(ID_Biblioteca, ID_Libro) values ('CC4418CC-B858-495C-8EEB-4A937FA5FD34','C76A663A-2591-49EE-8037-5E7F3092E70F')
-INSERT INTO Biblioteca_Libro(ID_Biblioteca, ID_Libro) values ('CC4418CC-B858-495C-8EEB-4A937FA5FD34','195AC9AA-2836-49E6-BA9E-6FA9C111932C')
-INSERT INTO Biblioteca_Libro(ID_Biblioteca, ID_Libro) values ('CC4418CC-B858-495C-8EEB-4A937FA5FD34','F91A1620-B1C5-4B00-8AFF-EF56E5D0886F')
-INSERT INTO Biblioteca_Libro(ID_Biblioteca, ID_Libro) values ('CC4418CC-B858-495C-8EEB-4A937FA5FD34','8A1B93E7-69A6-440D-8316-F655583F1C9D')
+INSERT INTO Biblioteca_Libro(ID_Biblioteca, ID_Libro) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Libro FROM Libro where Titulo ='Dune'))
+INSERT INTO Biblioteca_Libro(ID_Biblioteca, ID_Libro) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Libro FROM Libro where Titulo ='Las aventuras de Tom Sawyer'))
+INSERT INTO Biblioteca_Libro(ID_Biblioteca, ID_Libro) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Libro FROM Libro where Titulo ='El código Da Vinci'))
+INSERT INTO Biblioteca_Libro(ID_Biblioteca, ID_Libro) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Libro FROM Libro where Titulo ='Los miserables'))
+INSERT INTO Biblioteca_Libro(ID_Biblioteca, ID_Libro) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Libro FROM Libro where Titulo ='El señor de los anillos'))
 
 SELECT * FROM Biblioteca_Libro
 
-INSERT INTO Biblioteca_Revista(ID_Biblioteca, ID_Revista) values ('CC4418CC-B858-495C-8EEB-4A937FA5FD34','8D1D94F9-9185-4548-BF29-837E45145D51')
-INSERT INTO Biblioteca_Revista(ID_Biblioteca, ID_Revista) values ('CC4418CC-B858-495C-8EEB-4A937FA5FD34','B5DAD608-C471-4C3C-92A8-A391443FCEE5')
-INSERT INTO Biblioteca_Revista(ID_Biblioteca, ID_Revista) values ('CC4418CC-B858-495C-8EEB-4A937FA5FD34','C51BCFFD-AAEC-49A6-BE26-C52243358F6B')
-INSERT INTO Biblioteca_Revista(ID_Biblioteca, ID_Revista) values ('CC4418CC-B858-495C-8EEB-4A937FA5FD34','B53B6050-1BB2-4872-A8F6-E169F9ABDC90')
-INSERT INTO Biblioteca_Revista(ID_Biblioteca, ID_Revista) values ('CC4418CC-B858-495C-8EEB-4A937FA5FD34','83D5546A-C3CC-4583-BA09-F9767EB3D619')
+INSERT INTO Biblioteca_Revista(ID_Biblioteca, ID_Revista) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Revista FROM RevistaCientifica where Titulo ='Psicología Clínica Avanzada'))
+INSERT INTO Biblioteca_Revista(ID_Biblioteca, ID_Revista) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Revista FROM RevistaCientifica where Titulo ='Investigaciones Biológicas'))
+INSERT INTO Biblioteca_Revista(ID_Biblioteca, ID_Revista) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Revista FROM RevistaCientifica where Titulo ='Ciencia para Todos'))
+INSERT INTO Biblioteca_Revista(ID_Biblioteca, ID_Revista) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Revista FROM RevistaCientifica where Titulo ='Avances en Física Cuántica'))
+INSERT INTO Biblioteca_Revista(ID_Biblioteca, ID_Revista) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Revista FROM RevistaCientifica where Titulo ='Innovaciones en Ingeniería Civil'))
 
 SELECT * FROM Biblioteca_Revista
 
-INSERT INTO Biblioteca_Informe(ID_Biblioteca, ID_Informe) values ('CC4418CC-B858-495C-8EEB-4A937FA5FD34','61C109D7-6BBC-4C80-8B04-05669154C7FA')
-INSERT INTO Biblioteca_Informe(ID_Biblioteca, ID_Informe) values ('CC4418CC-B858-495C-8EEB-4A937FA5FD34','EB679F05-2763-47CD-B706-5F040BB33B55')
-INSERT INTO Biblioteca_Informe(ID_Biblioteca, ID_Informe) values ('CC4418CC-B858-495C-8EEB-4A937FA5FD34','A1C0BEBE-A4EB-4DBF-B46F-734A49CBC8DC')
-INSERT INTO Biblioteca_Informe(ID_Biblioteca, ID_Informe) values ('CC4418CC-B858-495C-8EEB-4A937FA5FD34','4573A2AF-A5CA-48C2-8527-A9DF4EE2DBBF')
-INSERT INTO Biblioteca_Informe(ID_Biblioteca, ID_Informe) values ('CC4418CC-B858-495C-8EEB-4A937FA5FD34','C694D46C-07F2-4A4A-993D-C5A87EB6CB9C')
+INSERT INTO Biblioteca_Informe(ID_Biblioteca, ID_Informe) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Informe FROM InformeInvestigacion where Titulo ='Impacto Ambiental en Zonas Urbanas'))
+INSERT INTO Biblioteca_Informe(ID_Biblioteca, ID_Informe) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Informe FROM InformeInvestigacion where Titulo ='Tendencias Económicas Globales'))
+INSERT INTO Biblioteca_Informe(ID_Biblioteca, ID_Informe) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Informe FROM InformeInvestigacion where Titulo ='Avances en Inteligencia Artificial'))
+INSERT INTO Biblioteca_Informe(ID_Biblioteca, ID_Informe) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Informe FROM InformeInvestigacion where Titulo ='Desarrollo de Nuevos Materiales'))
+INSERT INTO Biblioteca_Informe(ID_Biblioteca, ID_Informe) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Informe FROM InformeInvestigacion where Titulo ='Impacto Social de las Redes Sociales'))
 
 SELECT * FROM Biblioteca_Informe
 
@@ -149,6 +149,14 @@ INSERT INTO CursoProfesorEstudiante(ID_Curso, TypeID_Profesor, ID_Profesor, Type
 
 SELECT * FROM CursoProfesorEstudiante
 
-INSERT INTO SedeBiblioteca(ID_Sede, ID_Biblioteca) VALUES ('EF5B69E2-C67D-41C5-911F-488D4E32A9C8', 'CC4418CC-B858-495C-8EEB-4A937FA5FD34');
+INSERT INTO SedeBiblioteca(ID_Sede, ID_Biblioteca) VALUES ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni1'), (SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'));
 
 SELECT * FROM SedeBiblioteca
+
+
+--Cositas bonitas
+DELETE FROM Profesor WHERE ID_Profesor='0000000003'
+INSERT INTO Profesor(TypeID_Profesor, ID_Profesor, Nombre, Apellido, Email) values ('CC', '0000000003', 'Abigail', 'Mendoza', 'abigailprofe@gmail.com')
+UPDATE Profesor SET Email='toronolesabes@gmail.com' WHERE ID_Profesor='0000000004' 
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Nota, Trabajo) values ('CC', '0000000012', '002',15, 3.5, 'EvaluacionIsis')
+UPDATE Calificacion SET Fecha='3 am' WHERE Trabajo = 'EvaluacionIsis'
