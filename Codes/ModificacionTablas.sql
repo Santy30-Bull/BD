@@ -9,9 +9,11 @@ CREATE TABLE CursoProfesorEstudiante(
 	TypeID_EStudiante Varchar(10),
     ID_Estudiante Varchar(15),
 	CONSTRAINT FK__CursoProfesorEstudiante__Curso FOREIGN KEY (ID_Curso) REFERENCES Curso (ID_Curso),
-	CONSTRAINT FK__CursoProfesorEstudiante__Profesor FOREIGN KEY (TypeID_Profesor, ID_Profesor) REFERENCES Profesor (TypeID_Profesor, ID_Profesor),
+	CONSTRAINT FK__CursoProfesorEstudiante__Profesor FOREIGN KEY (TypeID_Profesor, ID_Profesor) REFERENCES Profesor (TypeID_Profesor, ID_Profesor) ON DELETE CASCADE,
 	CONSTRAINT FK__CursoProfesorEstudiante__Estudiante FOREIGN KEY (TypeID_Estudiante, ID_Estudiante) REFERENCES Estudiante (TypeID_Estudiante, ID_Estudiante),
 )	
+
+drop table CursoProfesorEstudiante
 --Tabla redundante, no necesaria, ya que calificacion tiene a estudiante y a curso
 /*CREATE TABLE EstudianteCalificacion(
 	ID_Calificacion  INT IDENTITY(1, 1),
@@ -48,3 +50,7 @@ ALTER COLUMN Autor VARCHAR(40) NOT NULL;
 
 ALTER TABLE InformeInvestigacion
 ALTER COLUMN Tematica VARCHAR(40);
+
+--Condicion Extra para los NEWIDS();
+ALTER TABLE Sede
+ADD Nombre_Sede VARCHAR(12);
