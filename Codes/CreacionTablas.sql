@@ -82,6 +82,7 @@ CREATE TABLE Sede(
 	FOREIGN KEY (ID_Biblioteca) REFERENCES Biblioteca (ID_Biblioteca) ON DELETE CASCADE
 )
 
+
 CREATE TABLE Calificacion(
 	ID_Calificacion  INT IDENTITY(1, 1),
 	TypeID_Estudiante VARCHAR(10),
