@@ -13,7 +13,6 @@ CREATE TABLE CursoProfesorEstudiante(
 	CONSTRAINT FK__CursoProfesorEstudiante__Estudiante FOREIGN KEY (TypeID_Estudiante, ID_Estudiante) REFERENCES Estudiante (TypeID_Estudiante, ID_Estudiante),
 )	
 
-drop table CursoProfesorEstudiante
 --Tabla redundante, no necesaria, ya que calificacion tiene a estudiante y a curso
 /*CREATE TABLE EstudianteCalificacion(
 	ID_Calificacion  INT IDENTITY(1, 1),
@@ -25,13 +24,6 @@ drop table CursoProfesorEstudiante
         FOREIGN KEY (ID_Calificacion, TypeID_Estudiante, ID_Estudiante,	ID_Curso) 
         REFERENCES Calificacion (ID_Calificacion, TypeID_Estudiante, ID_Estudiante, ID_Curso)
 );*/
-
-CREATE TABLE SedeBiblioteca(
-	ID_Sede UNIQUEIDENTIFIER DEFAULT NEWID() PRIMARY KEY,
-	ID_Biblioteca UNIQUEIDENTIFIER DEFAULT NEWID(),
-	CONSTRAINT FK_SedeCursoBiblioteca_Sede FOREIGN KEY (ID_Sede) REFERENCES Sede (ID_Sede),
-	CONSTRAINT FK_SedeCursoBiblioteca_Biblioteca FOREIGN KEY (ID_Biblioteca) REFERENCES Biblioteca (ID_Biblioteca)
-);
 
 ALTER TABLE Libro
 ALTER COLUMN Tipo VARCHAR(15) NOT NULL;

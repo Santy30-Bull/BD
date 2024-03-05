@@ -57,7 +57,7 @@ INSERT INTO InformeInvestigacion(Tipo, Titulo, Autor, NoEjemplares, FechaPublica
 
 SELECT * FROM InformeInvestigacion
 
-INSERT INTO Sede(Localidad,Nombre_Sede) values ('Envigado','Uni1')
+INSERT INTO Sede(Localidad,Nombre_Sede,ID_Biblioteca) values ('Envigado','Uni1',(SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'))
 
 SELECT * FROM Sede
 
