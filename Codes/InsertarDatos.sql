@@ -181,7 +181,7 @@ INSERT INTO Libro(Tipo, Titulo, Autor, NoEjemplares, FechaPublicación, Genero, 
 ('Infantil', 'Alicia en el país de las maravillas', 'Lewis Carroll', 115, '1865-11-26', 'Fantasía', 272),
 ('Psicología', 'Mentes peligrosas', 'Ana Beatriz Barbosa Silva', 65, '2008-01-01', 'Psicología', 264),
 ('Filosofía', 'El mundo de Sofía', 'Jostein Gaarder', 75, '1991-01-01', 'Filosofía', 508),
-('Autobiografía', 'Long Walk to Freedom', 'Nelson Mandela', 60, '1994-10-01', 'Autobiografía', 630);
+('Autobiografía', 'Long Walk to Freedom', 'Nelson Mandela', 60, '1994-10-01', 'Autobiografía', 630),
 ('Ficcion', '1984', 'George Orwell', 85, '1949-06-08', 'Distopía', 328),
 ('Drama', 'Hamlet', 'William Shakespeare', 75, '1603-01-01', 'Tragedia', 342),
 ('Aventura', 'La isla del tesoro', 'Robert Louis Stevenson', 95, '1883-11-14', 'Aventura', 311),
@@ -194,7 +194,6 @@ INSERT INTO Libro(Tipo, Titulo, Autor, NoEjemplares, FechaPublicación, Genero, 
 ('Filosófico', 'Así habló Zaratustra', 'Friedrich Nietzsche', 65, '1883-09-01', 'Filosofía', 352);
 
 SELECT * FROM Libro
-
 
 INSERT INTO RevistaCientifica(Tipo, Titulo, Autor, NoEjemplares, FechaPublicación, Tematica, Periocidad) values 
 ('Académica', 'Avances en Química Orgánica', 'Dr. Carlos López', 55, '2024-06-18', 'Química Orgánica', 'Trimestral'),
@@ -245,16 +244,16 @@ INSERT INTO Sede(Localidad,Nombre_Sede,ID_Biblioteca) values ('Sabaneta','Uni7',
 
 SELECT * FROM Sede
 
-INSERT INTO Calificacion(TypeID_Estudiante,ID_Estudiante,ID_Curso,Porcentaje,Fecha,Nota,Trabajo) VALUES ('CC','0000000010','001',50,'2024-03-28',4.5,'Proyecto')
-INSERT INTO Calificacion(TypeID_Estudiante,ID_Estudiante,ID_Curso,Porcentaje,Fecha,Nota,Trabajo) VALUES ('CC','0000000010','002',10,'2024-03-15',3.0,'Quiz')
-INSERT INTO Calificacion(TypeID_Estudiante,ID_Estudiante,ID_Curso,Porcentaje,Fecha,Nota,Trabajo) VALUES ('CC','0000000010','003',10,'2024-04-02',4.0,'Quiz')
-INSERT INTO Calificacion(TypeID_Estudiante,ID_Estudiante,ID_Curso,Porcentaje,Fecha,Nota,Trabajo) VALUES ('CC','0000000010','004',75,'2024-04-10',3.7,'Proyecto')
-INSERT INTO Calificacion(TypeID_Estudiante,ID_Estudiante,ID_Curso,Porcentaje,Fecha,Nota,Trabajo) VALUES ('CC','0000000010','005',15,'2024-04-01',4.5,'Quiz')
+INSERT INTO Calificacion(TypeID_Estudiante,ID_Estudiante,ID_Curso,Porcentaje,Fecha,Nota,Trabajo) VALUES ('CC','0001','001',50,'2024-03-28',4.5,'Proyecto')
+INSERT INTO Calificacion(TypeID_Estudiante,ID_Estudiante,ID_Curso,Porcentaje,Fecha,Nota,Trabajo) VALUES ('CC','0001','002',10,'2024-03-15',3.0,'Quiz')
+INSERT INTO Calificacion(TypeID_Estudiante,ID_Estudiante,ID_Curso,Porcentaje,Fecha,Nota,Trabajo) VALUES ('CC','0001','003',10,'2024-04-02',4.0,'Quiz')
+INSERT INTO Calificacion(TypeID_Estudiante,ID_Estudiante,ID_Curso,Porcentaje,Fecha,Nota,Trabajo) VALUES ('CC','0001','004',75,'2024-04-10',3.7,'Proyecto')
+INSERT INTO Calificacion(TypeID_Estudiante,ID_Estudiante,ID_Curso,Porcentaje,Fecha,Nota,Trabajo) VALUES ('CC','0001','005',15,'2024-04-01',4.5,'Quiz')
 
 
 SELECT * FROM Calificacion
 
-INSERT INTO Certificado(TypeID_Estudiante, ID_Estudiante, ID_Curso, Fecha) values ('CC', '0000000012', '001', '2024-03-01')
+INSERT INTO Certificado(TypeID_Estudiante, ID_Estudiante, ID_Curso, Fecha) values ('CC', '0002', '001', '2024-03-01')
 
 SELECT * FROM Certificado
 
@@ -294,27 +293,27 @@ INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('CC',
 
 SELECT * FROM Profesor_Curso
 
-INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0000000010', '001')
-INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0000000011', '002')
-INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0000000012', '003')
-INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0000000013', '004')
-INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0000000014', '005')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0010', '001')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0011', '002')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0012', '003')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0013', '004')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0014', '005')
 
 SELECT * FROM Curso_Estudiante
 
-INSERT INTO Biblioteca_Libro(ID_Biblioteca, ID_Libro) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Libro FROM Libro where Titulo ='Dune'))
-INSERT INTO Biblioteca_Libro(ID_Biblioteca, ID_Libro) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Libro FROM Libro where Titulo ='Las aventuras de Tom Sawyer'))
-INSERT INTO Biblioteca_Libro(ID_Biblioteca, ID_Libro) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Libro FROM Libro where Titulo ='El código Da Vinci'))
-INSERT INTO Biblioteca_Libro(ID_Biblioteca, ID_Libro) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Libro FROM Libro where Titulo ='Los miserables'))
-INSERT INTO Biblioteca_Libro(ID_Biblioteca, ID_Libro) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Libro FROM Libro where Titulo ='El señor de los anillos'))
+INSERT INTO Biblioteca_Libro(ID_Biblioteca, ID_Libro) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Libro FROM Libro where Titulo ='Cien años de soledad'))
+INSERT INTO Biblioteca_Libro(ID_Biblioteca, ID_Libro) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Libro FROM Libro where Titulo ='El retrato de Dorian Gray'))
+INSERT INTO Biblioteca_Libro(ID_Biblioteca, ID_Libro) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Libro FROM Libro where Titulo ='Breve historia del tiempo'))
+INSERT INTO Biblioteca_Libro(ID_Biblioteca, ID_Libro) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Libro FROM Libro where Titulo ='Steve Jobs'))
+INSERT INTO Biblioteca_Libro(ID_Biblioteca, ID_Libro) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Libro FROM Libro where Titulo ='Los pilares de la tierra'))
 
 SELECT * FROM Biblioteca_Libro
 
-INSERT INTO Biblioteca_Revista(ID_Biblioteca, ID_Revista) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Revista FROM RevistaCientifica where Titulo ='Psicología Clínica Avanzada'))
-INSERT INTO Biblioteca_Revista(ID_Biblioteca, ID_Revista) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Revista FROM RevistaCientifica where Titulo ='Investigaciones Biológicas'))
-INSERT INTO Biblioteca_Revista(ID_Biblioteca, ID_Revista) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Revista FROM RevistaCientifica where Titulo ='Ciencia para Todos'))
-INSERT INTO Biblioteca_Revista(ID_Biblioteca, ID_Revista) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Revista FROM RevistaCientifica where Titulo ='Avances en Física Cuántica'))
-INSERT INTO Biblioteca_Revista(ID_Biblioteca, ID_Revista) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Revista FROM RevistaCientifica where Titulo ='Innovaciones en Ingeniería Civil'))
+INSERT INTO Biblioteca_Revista(ID_Biblioteca, ID_Revista) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Revista FROM RevistaCientifica where Titulo ='Avances en Química Orgánica'))
+INSERT INTO Biblioteca_Revista(ID_Biblioteca, ID_Revista) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Revista FROM RevistaCientifica where Titulo ='Mundo Espacial'))
+INSERT INTO Biblioteca_Revista(ID_Biblioteca, ID_Revista) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Revista FROM RevistaCientifica where Titulo ='Medicina Avanzada'))
+INSERT INTO Biblioteca_Revista(ID_Biblioteca, ID_Revista) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Revista FROM RevistaCientifica where Titulo ='Avances en Neurociencia'))
+INSERT INTO Biblioteca_Revista(ID_Biblioteca, ID_Revista) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Revista FROM RevistaCientifica where Titulo ='Maravillas Naturales'))
 
 SELECT * FROM Biblioteca_Revista
 
@@ -325,23 +324,3 @@ INSERT INTO Biblioteca_Informe(ID_Biblioteca, ID_Informe) values ((SELECT ID_Bib
 INSERT INTO Biblioteca_Informe(ID_Biblioteca, ID_Informe) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Informe FROM InformeInvestigacion where Titulo ='Impacto Social de las Redes Sociales'))
 
 SELECT * FROM Biblioteca_Informe
-
-INSERT INTO CursoProfesorEstudiante(ID_Curso, TypeID_Profesor, ID_Profesor, TypeID_EStudiante, ID_Estudiante) values ('001', 'CC', '0000000000', 'CC', '0000000010')
-INSERT INTO CursoProfesorEstudiante(ID_Curso, TypeID_Profesor, ID_Profesor, TypeID_EStudiante, ID_Estudiante) values ('002', 'CC', '0000000001', 'CC', '0000000011')
-INSERT INTO CursoProfesorEstudiante(ID_Curso, TypeID_Profesor, ID_Profesor, TypeID_EStudiante, ID_Estudiante) values ('003', 'CC', '0000000002', 'CC', '0000000012')
-INSERT INTO CursoProfesorEstudiante(ID_Curso, TypeID_Profesor, ID_Profesor, TypeID_EStudiante, ID_Estudiante) values ('004', 'CC', '0000000004', 'CC', '0000000013')
-INSERT INTO CursoProfesorEstudiante(ID_Curso, TypeID_Profesor, ID_Profesor, TypeID_EStudiante, ID_Estudiante) values ('005', 'CC', '0000000003', 'CC', '0000000014')
-
-SELECT * FROM CursoProfesorEstudiante
-
-INSERT INTO SedeBiblioteca(ID_Sede, ID_Biblioteca) VALUES ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni1'), (SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'));
-
-SELECT * FROM SedeBiblioteca
-
-
---Cositas bonitas
-DELETE FROM Profesor WHERE ID_Profesor='0000000003'
-INSERT INTO Profesor(TypeID_Profesor, ID_Profesor, Nombre, Apellido, Email) values ('CC', '0000000003', 'Abigail', 'Mendoza', 'abigailprofe@gmail.com')
-UPDATE Profesor SET Email='toronolesabes@gmail.com' WHERE ID_Profesor='0000000004' 
-INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Nota, Trabajo) values ('CC', '0000000012', '002',15, 3.5, 'EvaluacionIsis')
-UPDATE Calificacion SET Fecha='3 am' WHERE Trabajo = 'EvaluacionIsis'
