@@ -159,7 +159,7 @@ INSERT INTO Biblioteca(Nombre) values ('El Tigre')
 
 --SELECT * FROM Biblioteca
 
-INSERT INTO Libro(Tipo, Titulo, Autor, NoEjemplares, FechaPublicación, Genero, NoPaginas) values 
+INSERT INTO Libro(Tipo, Titulo, Autor, NoEjemplares, FechaPublicacion, Genero, NoPaginas) values 
 ('Ficcion', 'Cien años de soledad', 'Gabriel García Márquez', 95, '1967-05-30', 'Realismo Mágico', 417),
 ('Drama', 'Romeo y Julieta', 'William Shakespeare', 85, '1597-01-01', 'Tragedia', 336),
 ('Ciencia', 'Breve historia del tiempo', 'Stephen Hawking', 75, '1988-04-01', 'Divulgación científica', 256),
@@ -204,7 +204,7 @@ INSERT INTO Libro(Tipo, Titulo, Autor, NoEjemplares, FechaPublicación, Genero, 
 
 --SELECT * FROM Libro
 
-INSERT INTO RevistaCientifica(Tipo, Titulo, Autor, NoEjemplares, FechaPublicación, Tematica, Periocidad) values 
+INSERT INTO RevistaCientifica(Tipo, Titulo, Autor, NoEjemplares, FechaPublicacion, Tematica, Periocidad) values 
 ('Académica', 'Avances en Química Orgánica', 'Dr. Carlos López', 55, '2024-06-18', 'Química Orgánica', 'Trimestral'),
 ('Divulga', 'Mundo Espacial', 'Dr. Luisa García', 65, '2024-07-22', 'Astronomía', 'Mensual'),
 ('Especia', 'Medicina Avanzada', 'Dra. Laura Fernández', 45, '2024-08-30', 'Medicina', 'Anual'),
@@ -245,7 +245,7 @@ INSERT INTO RevistaCientifica(Tipo, Titulo, Autor, NoEjemplares, FechaPublicaci�
 
 --SELECT * FROM RevistaCientifica
 
-INSERT INTO InformeInvestigacion(Tipo, Titulo, Autor, NoEjemplares, FechaPublicación, Tematica) values 
+INSERT INTO InformeInvestigacion(Tipo, Titulo, Autor, NoEjemplares, FechaPublicacion, Tematica) values 
 ('Análisis', 'Evolución del Comercio Electrónico', 'Economista Javier Ramírez', 22, '2024-06-18', 'Comercio'),
 ('Informe', 'Impacto de la Inteligencia Artificial en la Industria', 'Dr. Ana López', 28, '2024-07-22', 'Industria'),
 ('Estudio', 'Tendencias en Energías Renovables', 'Dr. Andrés Martínez', 35, '2024-08-30', 'Energías Renovables'),
