@@ -13,7 +13,7 @@ SET @courseList = STUFF((
         FROM Curso
         FOR XML PATH('')), 1, 1, '');
 		
--- Crear consulta dinámica para el pivote
+-- Crear consulta dinï¿½mica para el pivote
 SET @dynamicSql = N'
 SELECT *
 FROM (
@@ -31,7 +31,7 @@ PIVOT (
     FOR courseName IN ( ' + @courseList + ')
 ) AS PivotTable';
 
--- Construir la parte de manejo de nulos después del pivote
+-- Construir la parte de manejo de nulos despuï¿½s del pivote
 DECLARE courseListCursor CURSOR FOR
     SELECT REPLACE(REPLACE(value, '[', ''), ']', '') FROM STRING_SPLIT(@courseList, ',');
 
@@ -55,10 +55,10 @@ FROM (
     ' + @dynamicSql + '
 ) AS PivotData';
 
--- Ejecutar consulta dinámica
+-- Ejecutar consulta dinï¿½mica
 EXEC sp_executesql @dynamicSql;
 
---Cantidad de Libros de cada género
+--Cantidad de Libros de cada gï¿½nero
 SELECT *
 FROM (
     SELECT COALESCE(COUNT(li.Genero), 0) AS Cant,

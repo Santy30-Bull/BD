@@ -160,9 +160,7 @@ INSERT INTO Biblioteca(Nombre) values ('El Buho')
 INSERT INTO Biblioteca(Nombre) values ('El Lobo')
 INSERT INTO Biblioteca(Nombre) values ('El Zorro')
 INSERT INTO Biblioteca(Nombre) values ('El Tigre')
-INSERT INTO Biblioteca(Nombre) values ('El León')
-INSERT INTO Biblioteca(Nombre) values ('El Elefante')
-INSERT INTO Biblioteca(Nombre) values ('El Oso')
+
 
 SELECT * FROM Biblioteca
 
@@ -191,7 +189,23 @@ INSERT INTO Libro(Tipo, Titulo, Autor, NoEjemplares, FechaPublicación, Genero, 
 ('Historia', 'Sapiens: De animales a dioses', 'Yuval Noah Harari', 70, '2011-04-01', 'Historia', 443),
 ('Romántico', 'Romeo y Julieta', 'William Shakespeare', 100, '1597-01-01', 'Tragedia', 336),
 ('Terror', 'Drácula', 'Bram Stoker', 80, '1897-05-26', 'Horror', 418),
-('Filosófico', 'Así habló Zaratustra', 'Friedrich Nietzsche', 65, '1883-09-01', 'Filosofía', 352);
+('Filosófico', 'Así habló Zaratustra', 'Friedrich Nietzsche', 65, '1883-09-01', 'Filosofía', 352),
+('Suspense', 'La chica del tren', 'Paula Hawkins', 95, '2015-01-13', 'Suspense', 473),
+('Biografía', 'Leonardo da Vinci', 'Walter Isaacson', 75, '2017-10-17', 'Biografía', 624),
+('Romance', 'Diario de una pasión', 'Nicholas Sparks', 110, '1996-10-01', 'Romance', 213),
+('Histórico', 'El código Da Vinci', 'Dan Brown', 120, '2003-03-18', 'Misterio', 593),
+('Fantástico', 'El hobbit', 'J.R.R. Tolkien', 100, '1937-09-21', 'Fantasía', 310),
+('Policiaco', 'El cuervo', 'Edgar Allan Poe', 90, '1845-01-29', 'Misterio', 90),
+('Humor', 'El amor en los tiempos del cólera', 'Gabriel García Márquez', 80, '1985-11-13', 'Romance', 368),
+('Terror', 'El resplandor', 'Stephen King', 95, '1977-01-28', 'Horror', 447),
+('Infantil', 'Matilda', 'Roald Dahl', 115, '1988-10-01', 'Infantil', 240),
+('Psicología', 'El cerebro del niño', 'Daniel J. Siegel', 65, '2011-10-04', 'Psicología', 241),
+/*('Filosofía', 'La República', 'Platón', 75, '380 AC', 'Filosofía', 457), -- XD, la fecha que ??*/
+('Filosofía', 'La República', 'Platón', 75, '0380-01-01', 'Filosofía', 457),
+('Autobiografía', 'Una tierra prometida', 'Barack Obama', 60, '2020-11-17', 'Autobiografía', 768),
+('Ficción', 'El principito', 'Antoine de Saint-Exupéry', 85, '1943-04-06', 'Ficción', 96),
+('Drama', 'Matar un ruiseñor', 'Harper Lee', 75, '1960-07-11', 'Drama', 336),
+('Aventura', 'La vuelta al mundo en ochenta días', 'Julio Verne', 95, '1873-01-30', 'Aventura', 288);
 
 SELECT * FROM Libro
 
@@ -219,16 +233,64 @@ INSERT INTO RevistaCientifica(Tipo, Titulo, Autor, NoEjemplares, FechaPublicaci�
 ('Especia', 'Avances en Psiquiatría Infantil', 'Dr. Carlos Sánchez', 45, '2026-02-28', 'Psiquiatría Infantil', 'Anual'),
 ('Científ', 'Avances en Bioquímica', 'Dr. Eva Pérez', 75, '2026-03-08', 'Bioquímica', 'Mensual'),
 ('Académica', 'Estudios en Literatura Comparada', 'Dr. Javier García', 65, '2026-04-14', 'Literatura Comparada', 'Semestral'),
-('Técnica', 'Innovaciones en Energía Nuclear', 'Ing. Laura Martín', 90, '2026-05-20', 'Energía Nuclear', 'Bimensual');
+('Técnica', 'Innovaciones en Energía Nuclear', 'Ing. Laura Martín', 90, '2026-05-20', 'Energía Nuclear', 'Bimensual'),
+('Especia', 'Avances en Cardiología', 'Dr. Patricia López', 65, '2026-07-22', 'Cardiología', 'Anual'),
+('Técnica', 'Innovaciones en Ingeniería Biomédica', 'Ing. Ana Rodríguez', 75, '2026-08-30', 'Ingeniería Biomédica', 'Bimensual'),
+('Científ', 'Avances en Física Teórica', 'Dr. José Ramírez', 60, '2026-09-05', 'Física Teórica', 'Mensual'),
+('Académica', 'Investigaciones en Psicología Educativa', 'Dr. María García', 70, '2026-10-14', 'Psicología Educativa', 'Semestral'),
+('Divulga', 'Explorando el Universo', 'Dr. Juan Pérez', 80, '2026-11-20', 'Astronomía', 'Trimestral'),
+('Especia', 'Avances en Medicina Intensiva', 'Dr. Laura Sánchez', 40, '2027-01-08', 'Medicina Intensiva', 'Anual'),
+('Técnica', 'Innovaciones en Inteligencia Artificial', 'Ing. Carlos Gómez', 85, '2027-02-16', 'Inteligencia Artificial', 'Bimensual'),
+('Científ', 'Avances en Biología Celular', 'Dr. Ana Martínez', 65, '2027-03-22', 'Biología Celular', 'Mensual'),
+('Académica', 'Estudios en Historia del Arte', 'Dr. Javier López', 55, '2027-04-25', 'Historia del Arte', 'Semestral'),
+('Divulga', 'Naturaleza Salvaje', 'Dr. Carlos Fernández', 90, '2027-05-30', 'Ecología', 'Trimestral'),
+('Especia', 'Avances en Endodoncia', 'Dr. Laura Gómez', 50, '2027-07-08', 'Endodoncia', 'Anual'),
+('Técnica', 'Innovaciones en Telecomunicaciones', 'Ing. Andrés Martínez', 80, '2027-08-22', 'Telecomunicaciones', 'Bimensual'),
+('Científ', 'Avances en Química Orgánica', 'Dr. María Rodríguez', 70, '2027-09-28', 'Química Orgánica', 'Mensual'),
+('Académica', 'Investigaciones en Filosofía de la Ciencia', 'Dr. Laura Martín', 60, '2027-10-04', 'Filosofía de la Ciencia', 'Semestral');
 
 SELECT * FROM RevistaCientifica
 
 INSERT INTO InformeInvestigacion(Tipo, Titulo, Autor, NoEjemplares, FechaPublicación, Tematica) values 
-('Estudio', 'Impacto Ambiental en Zonas Urbanas', 'Dr. Carlos García', 25, '2024-01-05', 'Medio Ambiente'),
-('Análisis', 'Tendencias Económicas Globales', 'Economista Laura Mendoza', 20, '2024-02-12', 'Economía'),
-('Investigación', 'Avances en Inteligencia Artificial', 'Dr. Martín López', 30, '2024-03-20', 'Inteligencia Artificial'),
-('Informe Técnico', 'Desarrollo de Nuevos Materiales', 'Ing. Patricia Torres', 15, '2024-04-08', 'Ciencia de Materiales'),
-('Estudio de Caso', 'Impacto Social de las Redes Sociales', 'Lic. María González', 18, '2024-05-15', 'Sociología');
+('Análisis', 'Evolución del Comercio Electrónico', 'Economista Javier Ramírez', 22, '2024-06-18', 'Comercio'),
+('Informe', 'Impacto de la Inteligencia Artificial en la Industria', 'Dr. Ana López', 28, '2024-07-22', 'Industria'),
+('Estudio', 'Tendencias en Energías Renovables', 'Dr. Andrés Martínez', 35, '2024-08-30', 'Energías Renovables'),
+('Informe Técnico', 'Aplicaciones de la Realidad Virtual en la Educación', 'Ing. María Rodríguez', 19, '2024-09-05', 'Educación'),
+('Análisis', 'Efectos del Cambio Climático en la Agricultura', 'Dr. Luisa Sánchez', 24, '2024-10-14', 'Agricultura'),
+('Investigación', 'Avances en Medicina Personalizada', 'Dr. José Gómez', 32, '2024-11-20', 'Medicina'),
+('Estudio de Caso', 'Impacto Económico del Turismo Sostenible', 'Lic. Carlos Martín', 17, '2024-12-05', 'Turismo'),
+('Informe', 'Tecnologías Emergentes en la Industria Automotriz', 'Ing. Laura Pérez', 23, '2025-01-08', 'Automotriz'),
+('Estudio', 'Innovaciones en la Agricultura de Precisión', 'Dr. Marcos Soto', 29, '2025-02-16', 'Agricultura'),
+('Informe Técnico', 'Desarrollo de Baterías de Alta Capacidad', 'Ing. David Sánchez', 14, '2025-03-22', 'Energía'),
+('Análisis', 'Impacto Socioeconómico de la Inteligencia Artificial', 'Economista Ana García', 26, '2025-04-25', 'Socioeconomía'),
+('Investigación', 'Avances en Terapia Génica', 'Dr. Juan Rodríguez', 33, '2025-05-30', 'Genética'),
+('Estudio de Caso', 'Gestión del Cambio Organizacional en Empresas', 'Lic. Laura Martínez', 21, '2025-06-10', 'Gestión'),
+('Informe', 'Tecnologías Disruptivas en el Sector Financiero', 'Ing. Javier Fernández', 27, '2025-07-18', 'Finanzas'),
+('Estudio', 'Estrategias de Marketing Digital', 'Dr. María Sánchez', 36, '2025-08-22', 'Marketing'),
+('Informe Técnico', 'Aplicaciones de la Blockchain en la Industria', 'Ing. Carlos Gómez', 16, '2025-09-28', 'Tecnología'),
+('Análisis', 'Impacto Ambiental de la Industria Textil', 'Dr. Marta López', 25, '2025-10-04', 'Textil'),
+('Investigación', 'Avances en la Lucha contra el Cáncer', 'Dr. Pablo Martínez', 31, '2025-11-15', 'Oncología'),
+('Estudio de Caso', 'Gestión de Crisis en Empresas Multinacionales', 'Lic. Andrés Gutiérrez', 18, '2025-12-20', 'Gestión'),
+('Informe', 'Tecnologías Innovadoras en la Industria Alimentaria', 'Ing. Laura Rodríguez', 24, '2026-01-25', 'Alimentación'),
+('Estudio', 'Nuevas Tendencias en Educación Virtual', 'Dr. Javier Sánchez', 30, '2026-02-28', 'Educación'),
+('Informe Técnico', 'Desarrollo de Vehículos Eléctricos Autónomos', 'Ing. Ana Martín', 20, '2026-03-08', 'Transporte'),
+('Análisis', 'Impacto Económico de la Pandemia COVID-19', 'Economista Carlos Pérez', 28, '2026-04-14', 'Economía'),
+('Investigación', 'Avances en Biología Sintética', 'Dr. Laura Gómez', 34, '2026-05-20', 'Biología'),
+('Estudio de Caso', 'Gestión del Talento en Empresas Innovadoras', 'Lic. María López', 23, '2026-06-25', 'Recursos Humanos'),
+('Informe', 'Tecnologías Emergentes en el Sector Energético', 'Ing. Javier Martínez', 29, '2026-07-30', 'Energía'),
+('Estudio', 'Innovaciones en la Industria del Entretenimiento', 'Dr. Martín Gutiérrez', 37, '2026-08-08', 'Entretenimiento'),
+('Informe Técnico', 'Aplicaciones de la Inteligencia Artificial en la Salud', 'Ing. Laura Sánchez', 15, '2026-09-14', 'Salud'),
+('Análisis', 'Impacto Social de la Automatización en el Empleo', 'Dr. Pablo Sánchez', 27, '2026-10-20', 'Empleo'),
+('Investigación', 'Avances en la Medicina Regenerativa', 'Dr. María Rodríguez', 32, '2026-11-25', 'Medicina'),
+('Estudio de Caso', 'Gestión de la Innovación en Empresas Tecnológicas', 'Lic. Carlos Martínez', 19, '2026-12-30', 'Innovación'),
+('Informe', 'Tecnologías Emergentes en el Sector Turístico', 'Ing. Ana García', 25, '2027-01-05', 'Turismo'),
+('Estudio', 'Estrategias de Inversión en Criptomonedas', 'Dr. Luis Sánchez', 31, '2027-02-12', 'Finanzas'),
+('Informe Técnico', 'Desarrollo de Impresoras 3D de Alta Precisión', 'Ing. Javier Gómez', 17, '2027-03-20', 'Tecnología'),
+('Análisis', 'Impacto Ambiental de la Industria Minera', 'Dr. Laura Martínez', 26, '2027-04-08', 'Minería'),
+('Investigación', 'Avances en la Ingeniería Biomédica', 'Dr. Andrés López', 33, '2027-05-15', 'Ingeniería Biomédica'),
+('Estudio de Caso', 'Gestión de la Diversidad Cultural en Empresas Globales', 'Lic. Ana Rodríguez', 20, '2027-06-18', 'Diversidad'),
+('Informe', 'Tecnologías Innovadoras en la Agricultura Sostenible', 'Ing. Carlos López', 28, '2027-07-22', 'Agricultura'),
+('Estudio', 'Nuevas Tendencias en la Industria del Fitness', 'Dr. María Gómez', 35, '2027-08-30', 'Fitness');
 
 SELECT * FROM InformeInvestigacion
 
@@ -236,11 +298,6 @@ INSERT INTO Sede(Localidad,Nombre_Sede,ID_Biblioteca) values ('Envigado','Uni1',
 INSERT INTO Sede(Localidad,Nombre_Sede,ID_Biblioteca) values ('Itagüí','Uni2',(SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Lobo'))
 INSERT INTO Sede(Localidad,Nombre_Sede,ID_Biblioteca) values ('Bello','Uni3',(SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Zorro'))
 INSERT INTO Sede(Localidad,Nombre_Sede,ID_Biblioteca) values ('Medellín','Uni4',(SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Tigre'))
-INSERT INTO Sede(Localidad,Nombre_Sede,ID_Biblioteca) values ('Rionegro','Uni5',(SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El León'))
-INSERT INTO Sede(Localidad,Nombre_Sede,ID_Biblioteca) values ('La Estrella','Uni6',(SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Elefante'))
-INSERT INTO Sede(Localidad,Nombre_Sede,ID_Biblioteca) values ('Sabaneta','Uni7',(SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Oso'))
-
-
 
 SELECT * FROM Sede
 
@@ -274,6 +331,49 @@ INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede wher
 INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni1'),'003')
 INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni1'),'004')
 INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni1'),'005')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni1'),'006')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni1'),'007')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni1'),'008')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni1'),'009')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni1'),'010')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni1'),'011')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni1'),'012')
+
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni2'),'013')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni2'),'014')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni2'),'015')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni2'),'016')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni2'),'017')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni2'),'018')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni2'),'019')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni2'),'020')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni2'),'021')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni2'),'022')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni2'),'023')
+
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni3'),'024')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni3'),'025')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni3'),'026')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni3'),'027')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni3'),'028')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni3'),'029')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni3'),'030')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni3'),'031')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni3'),'032')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni3'),'033')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni3'),'034')
+
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni4'),'035')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni4'),'036')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni4'),'037')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni4'),'038')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni4'),'039')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni4'),'040')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni4'),'041')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni4'),'042')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni4'),'043')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni4'),'044')
+INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni4'),'045')
 
 SELECT * FROM Sede_Curso
 
@@ -282,6 +382,51 @@ INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT
 INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni1'),'CC','0000000002')
 INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni1'),'CC','0000000003')
 INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni1'),'CC','0000000004')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni1'),'CC','0000000005')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni1'),'CC','0000000006')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni1'),'CC','0000000007')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni1'),'CC','0000000008')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni1'),'CC','0000000009')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni1'),'CC','0000000010')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni1'),'CC','0000000011')
+
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni2'),'CC','0000000012')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni2'),'CC','0000000013')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni2'),'CC','0000000014')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni2'),'CC','0000000015')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni2'),'CC','0000000016')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni2'),'CC','0000000017')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni2'),'CC','0000000018')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni2'),'CC','0000000019')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni2'),'CC','0000000020')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni2'),'CC','0000000021')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni2'),'CC','0000000022')
+
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni3'),'CC','0000000023')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni3'),'CC','0000000024')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni3'),'CC','0000000025')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni3'),'AD','0000000026')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni3'),'AD','0000000027')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni3'),'AD','0000000028')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni3'),'AD','0000000029')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni3'),'AD','0000000030')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni3'),'AD','0000000031')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni3'),'AD','0000000032')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni3'),'AD','0000000033')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni3'),'AD','0000000034')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni3'),'AD','0000000035')
+
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni4'),'ED','0000000036')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni4'),'ED','0000000037')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni4'),'ED','0000000038')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni4'),'ED','0000000039')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni4'),'ED','0000000040')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni4'),'IN','0000000041')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni4'),'IN','0000000042')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni4'),'IN','0000000043')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni4'),'IN','0000000044')
+INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni4'),'IN','0000000045')
+
 
 SELECT * FROM Sede_Profesor
 
