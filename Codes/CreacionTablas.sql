@@ -1,7 +1,9 @@
 -- Creaci�n DataBase
 CREATE DATABASE Diplomados;
+go
 
 USE Diplomados;
+go
 
 -- Creaci�n de tablas sin FK
 CREATE TABLE Profesor(
@@ -45,7 +47,7 @@ CREATE TABLE Libro(
 	Titulo VARCHAR(40) NOT NULL,
 	Autor VARCHAR(20) NOT NULL,
 	NoEjemplares INT,
-	FechaPublicaci�n DATE,
+	FechaPublicacion DATE,
 	Genero VARCHAR(20) NOT NULL,
 	NoPaginas INT
 )
@@ -57,7 +59,7 @@ CREATE TABLE RevistaCientifica(
 	Titulo VARCHAR(40) NOT NULL,
 	Autor VARCHAR(20) NOT NULL,
 	NoEjemplares INT,
-	FechaPublicaci�n DATE,
+	FechaPublicacion DATE,
 	Tematica VARCHAR(20) NOT NULL,
 	Periocidad INT
 )
@@ -69,7 +71,7 @@ CREATE TABLE InformeInvestigacion(
 	Titulo VARCHAR(40) NOT NULL,
 	Autor VARCHAR(20) NOT NULL,
 	NoEjemplares INT,
-	FechaPublicaci�n DATE,
+	FechaPublicacion DATE,
 	Tematica VARCHAR(20) NOT NULL,
 )
 
