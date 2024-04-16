@@ -49,10 +49,8 @@ INSERT INTO Profesor(TypeID_Profesor, ID_Profesor, Nombre, Apellido, Email) VALU
 INSERT INTO Profesor(TypeID_Profesor, ID_Profesor, Nombre, Apellido, Email) VALUES ('IN', '0000000044', 'Lucas', 'Vazquez', 'lucasvazquezprofe@gmail.com');
 INSERT INTO Profesor(TypeID_Profesor, ID_Profesor, Nombre, Apellido, Email) VALUES ('IN', '0000000045', 'Valeria', 'Santos', 'valeriasantosprofe@gmail.com');
 
---delete from Profesor
+--SELECT * FROM Profesor
 
-SELECT * FROM Profesor
-Order by ID_Profesor
 
 
 INSERT INTO Curso(ID_Curso, Nombre, FechaInicio, FechaFinal, Estado) values ('001', 'Estructuras de Datos', '2024-03-01', '2024-05-1', 'Activo')
@@ -101,9 +99,7 @@ INSERT INTO Curso(ID_Curso, Nombre, FechaInicio, FechaFinal, Estado) VALUES ('04
 INSERT INTO Curso(ID_Curso, Nombre, FechaInicio, FechaFinal, Estado) VALUES ('044', 'Primeros auxilios', '2024-03-01', '2024-05-1', 'Activo');
 INSERT INTO Curso(ID_Curso, Nombre, FechaInicio, FechaFinal, Estado) VALUES ('045', 'Técnicas de estudio', '2024-03-01', '2024-05-1', 'Activo');
 
-delete from Curso
-
-SELECT * FROM Curso
+--SELECT * FROM Curso
 
 
 INSERT INTO Estudiante(TypeID_Estudiante, ID_Estudiante, Nombre, Apellido, Email) VALUES ('CC', '0001', 'Luis', 'González', 'luisestudiante@gmail.com');
@@ -153,7 +149,7 @@ INSERT INTO Estudiante(TypeID_Estudiante, ID_Estudiante, Nombre, Apellido, Email
 INSERT INTO Estudiante(TypeID_Estudiante, ID_Estudiante, Nombre, Apellido, Email) VALUES ('TI', '0045', 'Luciana', 'Reyes', 'luciana.estudiante@gmail.com');
 INSERT INTO Estudiante(TypeID_Estudiante, ID_Estudiante, Nombre, Apellido, Email) VALUES ('TI', '0046', 'Joaquín', 'Sosa', 'joaquin.estudiante@gmail.com');
 
-SELECT * FROM Estudiante
+--SELECT * FROM Estudiante
 
 
 INSERT INTO Biblioteca(Nombre) values ('El Buho')
@@ -161,8 +157,7 @@ INSERT INTO Biblioteca(Nombre) values ('El Lobo')
 INSERT INTO Biblioteca(Nombre) values ('El Zorro')
 INSERT INTO Biblioteca(Nombre) values ('El Tigre')
 
-
-SELECT * FROM Biblioteca
+--SELECT * FROM Biblioteca
 
 INSERT INTO Libro(Tipo, Titulo, Autor, NoEjemplares, FechaPublicación, Genero, NoPaginas) values 
 ('Ficcion', 'Cien años de soledad', 'Gabriel García Márquez', 95, '1967-05-30', 'Realismo Mágico', 417),
@@ -207,7 +202,7 @@ INSERT INTO Libro(Tipo, Titulo, Autor, NoEjemplares, FechaPublicación, Genero, 
 ('Drama', 'Matar un ruiseñor', 'Harper Lee', 75, '1960-07-11', 'Drama', 336),
 ('Aventura', 'La vuelta al mundo en ochenta días', 'Julio Verne', 95, '1873-01-30', 'Aventura', 288);
 
-SELECT * FROM Libro
+--SELECT * FROM Libro
 
 INSERT INTO RevistaCientifica(Tipo, Titulo, Autor, NoEjemplares, FechaPublicación, Tematica, Periocidad) values 
 ('Académica', 'Avances en Química Orgánica', 'Dr. Carlos López', 55, '2024-06-18', 'Química Orgánica', 'Trimestral'),
@@ -246,10 +241,9 @@ INSERT INTO RevistaCientifica(Tipo, Titulo, Autor, NoEjemplares, FechaPublicaci�
 ('Divulga', 'Naturaleza Salvaje', 'Dr. Carlos Fernández', 90, '2027-05-30', 'Ecología', 'Trimestral'),
 ('Especia', 'Avances en Endodoncia', 'Dr. Laura Gómez', 50, '2027-07-08', 'Endodoncia', 'Anual'),
 ('Técnica', 'Innovaciones en Telecomunicaciones', 'Ing. Andrés Martínez', 80, '2027-08-22', 'Telecomunicaciones', 'Bimensual'),
-('Científ', 'Avances en Química Orgánica', 'Dr. María Rodríguez', 70, '2027-09-28', 'Química Orgánica', 'Mensual'),
 ('Académica', 'Investigaciones en Filosofía de la Ciencia', 'Dr. Laura Martín', 60, '2027-10-04', 'Filosofía de la Ciencia', 'Semestral');
 
-SELECT * FROM RevistaCientifica
+--SELECT * FROM RevistaCientifica
 
 INSERT INTO InformeInvestigacion(Tipo, Titulo, Autor, NoEjemplares, FechaPublicación, Tematica) values 
 ('Análisis', 'Evolución del Comercio Electrónico', 'Economista Javier Ramírez', 22, '2024-06-18', 'Comercio'),
@@ -290,16 +284,21 @@ INSERT INTO InformeInvestigacion(Tipo, Titulo, Autor, NoEjemplares, FechaPublica
 ('Investigación', 'Avances en la Ingeniería Biomédica', 'Dr. Andrés López', 33, '2027-05-15', 'Ingeniería Biomédica'),
 ('Estudio de Caso', 'Gestión de la Diversidad Cultural en Empresas Globales', 'Lic. Ana Rodríguez', 20, '2027-06-18', 'Diversidad'),
 ('Informe', 'Tecnologías Innovadoras en la Agricultura Sostenible', 'Ing. Carlos López', 28, '2027-07-22', 'Agricultura'),
-('Estudio', 'Nuevas Tendencias en la Industria del Fitness', 'Dr. María Gómez', 35, '2027-08-30', 'Fitness');
+('Estudio', 'Nuevas Tendencias en la Industria del Fitness', 'Dr. María Gómez', 35, '2027-08-30', 'Fitness'),
+('Estudio', 'Impacto Ambiental en Zonas Urbanas', 'Dr. Carlos García', 25, '2024-01-05', 'Medio Ambiente'),
+('Análisis', 'Tendencias Económicas Globales', 'Economista Laura Mendoza', 20, '2024-02-12', 'Economía'),
+('Investigación', 'Avances en Inteligencia Artificial', 'Dr. Martín López', 30, '2024-03-20', 'Inteligencia Artificial'),
+('Informe Técnico', 'Desarrollo de Nuevos Materiales', 'Ing. Patricia Torres', 15, '2024-04-08', 'Ciencia de Materiales'),
+('Estudio de Caso', 'Impacto Social de las Redes Sociales', 'Lic. María González', 18, '2024-05-15', 'Sociología');
 
-SELECT * FROM InformeInvestigacion
+--SELECT * FROM InformeInvestigacion
 
 INSERT INTO Sede(Localidad,Nombre_Sede,ID_Biblioteca) values ('Envigado','Uni1',(SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'))
 INSERT INTO Sede(Localidad,Nombre_Sede,ID_Biblioteca) values ('Itagüí','Uni2',(SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Lobo'))
 INSERT INTO Sede(Localidad,Nombre_Sede,ID_Biblioteca) values ('Bello','Uni3',(SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Zorro'))
 INSERT INTO Sede(Localidad,Nombre_Sede,ID_Biblioteca) values ('Medellín','Uni4',(SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Tigre'))
 
-SELECT * FROM Sede
+--SELECT * FROM Sede
 
 INSERT INTO Calificacion(TypeID_Estudiante,ID_Estudiante,ID_Curso,Porcentaje,Fecha,Nota,Trabajo) VALUES ('CC','0001','001',50,'2024-03-28',4.5,'Proyecto')
 INSERT INTO Calificacion(TypeID_Estudiante,ID_Estudiante,ID_Curso,Porcentaje,Fecha,Nota,Trabajo) VALUES ('CC','0001','002',10,'2024-03-15',3.0,'Quiz')
@@ -307,24 +306,27 @@ INSERT INTO Calificacion(TypeID_Estudiante,ID_Estudiante,ID_Curso,Porcentaje,Fec
 INSERT INTO Calificacion(TypeID_Estudiante,ID_Estudiante,ID_Curso,Porcentaje,Fecha,Nota,Trabajo) VALUES ('CC','0001','004',75,'2024-04-10',3.7,'Proyecto')
 INSERT INTO Calificacion(TypeID_Estudiante,ID_Estudiante,ID_Curso,Porcentaje,Fecha,Nota,Trabajo) VALUES ('CC','0001','005',15,'2024-04-01',4.5,'Quiz')
 
+INSERT INTO Calificacion(TypeID_Estudiante,ID_Estudiante,ID_Curso,Porcentaje,Fecha,Nota,Trabajo) VALUES ('CC','0002','001',75,'2024-04-10',3.7,'Proyecto')
+INSERT INTO Calificacion(TypeID_Estudiante,ID_Estudiante,ID_Curso,Porcentaje,Fecha,Nota,Trabajo) VALUES ('CC','0002','002',15,'2024-04-01',4.5,'Quiz')
 
-SELECT * FROM Calificacion
+
+--SELECT * FROM Calificacion
 
 INSERT INTO Certificado(TypeID_Estudiante, ID_Estudiante, ID_Curso, Fecha) values ('CC', '0002', '001', '2024-03-01')
 
-SELECT * FROM Certificado
+--SELECT * FROM Certificado
 
 INSERT INTO Horarios(ID_Curso, Dia, Hora) values ('001', 'Jueves', '8:00')
 INSERT INTO Horarios(ID_Curso, Dia, Hora) values ('002', 'Jueves', '10:00')
 INSERT INTO Horarios(ID_Curso, Dia, Hora) values ('003', 'Jueves', '14:00')
 INSERT INTO Horarios(ID_Curso, Dia, Hora) values ('004', 'Viernes', '15:00')
 
-SELECT * FROM Horarios
+--SELECT * FROM Horarios
 
 INSERT INTO Anuncios(ID_Curso, Fecha, Mensaje) values ('001', '2024-02-28', 'Hola muchachos, mañana empezamos :)')
 INSERT INTO Anuncios(ID_Curso, Fecha, Mensaje) values ('001', '2024-02-28', 'Hola muchachos, me caen mal')
 
-SELECT * FROM Anuncios
+--SELECT * FROM Anuncios
 
 INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni1'),'001')
 INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni1'),'002')
@@ -375,7 +377,7 @@ INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede wher
 INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni4'),'044')
 INSERT INTO Sede_Curso(ID_Sede, ID_Curso) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni4'),'045')
 
-SELECT * FROM Sede_Curso
+--SELECT * FROM Sede_Curso
 
 INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni1'),'CC','0000000000')
 INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni1'),'CC','0000000001')
@@ -428,7 +430,7 @@ INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT
 INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT ID_Sede FROM Sede where Nombre_Sede ='Uni4'),'IN','0000000045')
 
 
-SELECT * FROM Sede_Profesor
+--SELECT * FROM Sede_Profesor
 
 INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('CC','0000000000','001')
 INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('CC','0000000001','002')
@@ -436,7 +438,7 @@ INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('CC',
 INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('CC','0000000003','005')
 INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('CC','0000000004','004')
 
-SELECT * FROM Profesor_Curso
+--SELECT * FROM Profesor_Curso
 
 INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0010', '001')
 INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0011', '002')
@@ -444,7 +446,7 @@ INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values 
 INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0013', '004')
 INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0014', '005')
 
-SELECT * FROM Curso_Estudiante
+--SELECT * FROM Curso_Estudiante
 
 INSERT INTO Biblioteca_Libro(ID_Biblioteca, ID_Libro) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Libro FROM Libro where Titulo ='Cien años de soledad'))
 INSERT INTO Biblioteca_Libro(ID_Biblioteca, ID_Libro) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Libro FROM Libro where Titulo ='El retrato de Dorian Gray'))
@@ -452,7 +454,7 @@ INSERT INTO Biblioteca_Libro(ID_Biblioteca, ID_Libro) values ((SELECT ID_Bibliot
 INSERT INTO Biblioteca_Libro(ID_Biblioteca, ID_Libro) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Libro FROM Libro where Titulo ='Steve Jobs'))
 INSERT INTO Biblioteca_Libro(ID_Biblioteca, ID_Libro) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Libro FROM Libro where Titulo ='Los pilares de la tierra'))
 
-SELECT * FROM Biblioteca_Libro
+--SELECT * FROM Biblioteca_Libro
 
 INSERT INTO Biblioteca_Revista(ID_Biblioteca, ID_Revista) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Revista FROM RevistaCientifica where Titulo ='Avances en Química Orgánica'))
 INSERT INTO Biblioteca_Revista(ID_Biblioteca, ID_Revista) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Revista FROM RevistaCientifica where Titulo ='Mundo Espacial'))
@@ -460,7 +462,7 @@ INSERT INTO Biblioteca_Revista(ID_Biblioteca, ID_Revista) values ((SELECT ID_Bib
 INSERT INTO Biblioteca_Revista(ID_Biblioteca, ID_Revista) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Revista FROM RevistaCientifica where Titulo ='Avances en Neurociencia'))
 INSERT INTO Biblioteca_Revista(ID_Biblioteca, ID_Revista) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Revista FROM RevistaCientifica where Titulo ='Maravillas Naturales'))
 
-SELECT * FROM Biblioteca_Revista
+--SELECT * FROM Biblioteca_Revista
 
 INSERT INTO Biblioteca_Informe(ID_Biblioteca, ID_Informe) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Informe FROM InformeInvestigacion where Titulo ='Impacto Ambiental en Zonas Urbanas'))
 INSERT INTO Biblioteca_Informe(ID_Biblioteca, ID_Informe) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Informe FROM InformeInvestigacion where Titulo ='Tendencias Económicas Globales'))
@@ -468,4 +470,6 @@ INSERT INTO Biblioteca_Informe(ID_Biblioteca, ID_Informe) values ((SELECT ID_Bib
 INSERT INTO Biblioteca_Informe(ID_Biblioteca, ID_Informe) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Informe FROM InformeInvestigacion where Titulo ='Desarrollo de Nuevos Materiales'))
 INSERT INTO Biblioteca_Informe(ID_Biblioteca, ID_Informe) values ((SELECT ID_Biblioteca FROM Biblioteca where Nombre ='El Buho'),(SELECT ID_Informe FROM InformeInvestigacion where Titulo ='Impacto Social de las Redes Sociales'))
 
-SELECT * FROM Biblioteca_Informe
+--SELECT * FROM Biblioteca_Inform
+
+go

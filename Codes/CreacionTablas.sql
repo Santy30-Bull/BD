@@ -1,9 +1,9 @@
--- Creación DataBase
+-- Creaciï¿½n DataBase
 CREATE DATABASE Diplomados;
 
 USE Diplomados;
 
--- Creación de tablas sin FK
+-- Creaciï¿½n de tablas sin FK
 CREATE TABLE Profesor(
 	TypeID_Profesor VARCHAR(10),
 	ID_Profesor VARCHAR(15),
@@ -45,7 +45,7 @@ CREATE TABLE Libro(
 	Titulo VARCHAR(40) NOT NULL,
 	Autor VARCHAR(20) NOT NULL,
 	NoEjemplares INT,
-	FechaPublicación DATE,
+	FechaPublicaciï¿½n DATE,
 	Genero VARCHAR(20) NOT NULL,
 	NoPaginas INT
 )
@@ -57,7 +57,7 @@ CREATE TABLE RevistaCientifica(
 	Titulo VARCHAR(40) NOT NULL,
 	Autor VARCHAR(20) NOT NULL,
 	NoEjemplares INT,
-	FechaPublicación DATE,
+	FechaPublicaciï¿½n DATE,
 	Tematica VARCHAR(20) NOT NULL,
 	Periocidad INT
 )
@@ -69,12 +69,12 @@ CREATE TABLE InformeInvestigacion(
 	Titulo VARCHAR(40) NOT NULL,
 	Autor VARCHAR(20) NOT NULL,
 	NoEjemplares INT,
-	FechaPublicación DATE,
+	FechaPublicaciï¿½n DATE,
 	Tematica VARCHAR(20) NOT NULL,
 )
 
 
--- Creación tablas con FK
+-- Creaciï¿½n tablas con FK
 CREATE TABLE Sede(
 	ID_Sede UNIQUEIDENTIFIER DEFAULT NEWID() PRIMARY KEY,
 	Localidad VARCHAR(50) NOT NULL,
@@ -194,3 +194,5 @@ CREATE TABLE Biblioteca_Informe(
 	FOREIGN KEY (ID_Biblioteca) REFERENCES Biblioteca (ID_Biblioteca) ON DELETE CASCADE,
 	FOREIGN KEY (ID_Informe) REFERENCES InformeInvestigacion(ID_Informe) ON DELETE CASCADE
 )
+
+go
