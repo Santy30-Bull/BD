@@ -324,8 +324,97 @@ INSERT INTO Horarios(ID_Curso, Dia, Hora) values ('004', 'Viernes', '15:00')
 
 --SELECT * FROM Horarios
 
-INSERT INTO Anuncios(ID_Curso, Fecha, Mensaje) values ('001', '2024-02-28', 'Hola muchachos, mañana empezamos :)')
-INSERT INTO Anuncios(ID_Curso, Fecha, Mensaje) values ('001', '2024-02-28', 'Hola muchachos, me caen mal')
+INSERT INTO Anuncios(ID_Curso, Fecha, Mensaje) values 
+('001', '2024-02-28', 'Hola muchachos, mañana empezamos :)'),
+('002', '2024-03-01', '¡Hola a todos! Espero que estén listos para sumergirse en el mundo del curso.'),
+('003', '2024-03-02', 'Buenos días, estudiantes. ¡Hoy vamos a explorar nuevos conceptos fascinantes!'),
+('004', '2024-03-03', '¡Hola, clase! Estoy emocionado de compartir nuevas ideas y desafíos con ustedes.'),
+('005', '2024-03-04', '¡Buenos días a todos! Preparen sus mentes para un día lleno de aprendizaje y descubrimiento.'),
+('006', '2024-03-05', '¡Hola, estudiantes! Hoy nos espera una jornada llena de nuevas oportunidades de crecimiento.'),
+('007', '2024-03-06', 'Buenos días, clase. ¡Espero que estén listos para embarcarse en este emocionante viaje de aprendizaje!'),
+('008', '2024-03-07', '¡Hola a todos! Estoy emocionado de comenzar esta nueva aventura educativa con ustedes.'),
+('009', '2024-03-08', '¡Buenos días, estudiantes! Hoy vamos a sumergirnos en un mundo de conocimiento y descubrimiento.'),
+('010', '2024-03-09', '¡Hola, clase! Prepárense para explorar nuevas ideas y desafiar sus límites.'),
+('011', '2024-03-10', 'Buenos días a todos. ¡Hoy vamos a trabajar juntos para alcanzar nuevas metas y logros!'),
+('012', '2024-03-11', '¡Hola, estudiantes! Estoy emocionado de comenzar este viaje educativo con ustedes.'),
+('013', '2024-03-12', '¡Buenos días, clase! Hoy vamos a sumergirnos en un océano de conocimiento y aprendizaje.'),
+('014', '2024-03-13', '¡Hola a todos! Estoy ansioso por explorar nuevos horizontes educativos con ustedes.'),
+('015', '2024-03-14', '¡Buenos días, estudiantes! Prepárense para un día lleno de desafíos y descubrimientos.'),
+('016', '2024-03-15', '¡Hola, clase! Estoy emocionado de comenzar este viaje educativo con una clase tan entusiasta.'),
+('017', '2024-03-16', '¡Buenos días a todos! Hoy vamos a desafiar nuestras mentes y expandir nuestros conocimientos.'),
+('018', '2024-03-17', '¡Hola, estudiantes! Estoy emocionado de compartir este viaje educativo con cada uno de ustedes.'),
+('019', '2024-03-18', '¡Buenos días, clase! Prepárense para explorar nuevos conceptos y expandir sus horizontes.'),
+('020', '2024-03-19', '¡Hola a todos! Estoy emocionado de comenzar este viaje educativo con tanta energía y entusiasmo.'),
+('021', '2024-03-20', '¡Buenos días, estudiantes! Hoy vamos a desafiarnos a nosotros mismos y alcanzar nuevas alturas.'),
+('022', '2024-03-21', '¡Hola, clase! Estoy emocionado de compartir este viaje educativo con una clase tan motivada.'),
+('023', '2024-03-22', '¡Buenos días a todos! Prepárense para un día lleno de aprendizaje y descubrimiento.'),
+('024', '2024-03-23', '¡Hola, estudiantes! Hoy vamos a explorar nuevas ideas y perspectivas juntos.'),
+('025', '2024-03-24', '¡Buenos días, clase! Estoy emocionado de comenzar este viaje educativo con ustedes.'),
+('026', '2024-03-25', '¡Hola a todos! Hoy vamos a sumergirnos en un mar de conocimiento y aprendizaje.'),
+('027', '2024-03-26', '¡Buenos días, estudiantes! Prepárense para un día lleno de desafíos y oportunidades.'),
+('028', '2024-03-27', '¡Hola, clase! Estoy emocionado de compartir este viaje educativo con una clase tan dedicada.'),
+('029', '2024-03-28', '¡Buenos días a todos! Hoy vamos a explorar nuevas fronteras de conocimiento.'),
+('030', '2024-03-29', '¡Hola, estudiantes! Estoy emocionado de comenzar este viaje educativo con ustedes.'),
+('031', '2024-03-30', '¡Buenos días, clase! Prepárense para un día lleno de aprendizaje y descubrimiento.'),
+('032', '2024-03-31', '¡Hola a todos! Estoy emocionado de comenzar este nuevo mes con tanto entusiasmo y energía.'),
+('033', '2024-04-01', '¡Buenos días, estudiantes! Hoy vamos a iniciar este mes con nuevos desafíos y oportunidades.'),
+('034', '2024-04-02', '¡Hola, clase! Estoy emocionado de continuar nuestro viaje educativo con tanto entusiasmo.'),
+('035', '2024-04-03', '¡Buenos días a todos! Hoy vamos a seguir explorando nuevas ideas y perspectivas.'),
+('036', '2024-04-04', '¡Hola, estudiantes! Estoy emocionado de seguir aprendiendo y creciendo con ustedes.'),
+('037', '2024-04-05', '¡Buenos días, clase! Prepárense para un día lleno de desafíos y oportunidades.'),
+('038', '2024-04-06', '¡Hola a todos! Estoy emocionado de continuar este viaje educativo con tanto entusiasmo.'),
+('039', '2024-04-07', '¡Buenos días, estudiantes! Hoy vamos a seguir explorando nuevas áreas de conocimiento.'),
+('040', '2024-04-08', '¡Hola, clase! Estoy emocionado de compartir más descubrimientos educativos con ustedes.'),
+('041', '2024-04-09', '¡Buenos días a todos! Hoy vamos a continuar nuestro viaje de aprendizaje con determinación.'),
+('042', '2024-04-10', '¡Hola, estudiantes! Estoy emocionado de seguir creciendo y aprendiendo con ustedes.'),
+('043', '2024-04-11', '¡Buenos días, clase! Prepárense para otro día lleno de aprendizaje y descubrimiento.'),
+('044', '2024-04-12', '¡Hola a todos! Estoy emocionado de continuar este viaje educativo con tanto entusiasmo.'),
+('045', '2024-04-13', '¡Buenos días, estudiantes! Hoy vamos a seguir desafiándonos y creciendo juntos.'),
+('001', '2024-04-14', '¡Buen día a todos! Espero que estén listos para comenzar este emocionante viaje educativo.'),
+('002', '2024-04-15', '¡Hola, estudiantes! Hoy vamos a explorar nuevos conceptos y desafíos juntos.'),
+('003', '2024-04-16', '¡Buenos días, clase! Estoy emocionado de compartir conocimientos y experiencias con ustedes.'),
+('004', '2024-04-17', '¡Hola a todos! Prepárense para sumergirse en un mundo de aprendizaje y descubrimiento.'),
+('005', '2024-04-18', '¡Buen día, estudiantes! Hoy vamos a desafiar nuestras mentes y alcanzar nuevas metas.'),
+('006', '2024-04-19', '¡Hola, clase! Estoy emocionado de comenzar este viaje educativo con ustedes.'),
+('007', '2024-04-20', '¡Buenos días a todos! Prepárense para un día lleno de exploración y crecimiento.'),
+('008', '2024-04-21', '¡Hola, estudiantes! Hoy vamos a expandir nuestros horizontes y buscar nuevas perspectivas.'),
+('009', '2024-04-22', '¡Buen día, clase! Estoy emocionado de compartir este viaje educativo con cada uno de ustedes.'),
+('010', '2024-04-23', '¡Hola a todos! Prepárense para desafiarse a sí mismos y alcanzar nuevas alturas.'),
+('011', '2024-04-24', '¡Buenos días, estudiantes! Hoy vamos a explorar nuevas áreas de conocimiento y crecimiento personal.'),
+('012', '2024-04-25', '¡Hola, clase! Estoy emocionado de continuar este viaje educativo con ustedes.'),
+('013', '2024-04-26', '¡Buen día a todos! Hoy vamos a sumergirnos en un océano de aprendizaje y descubrimiento.'),
+('014', '2024-04-27', '¡Hola, estudiantes! Prepárense para un día lleno de desafíos y oportunidades de crecimiento.'),
+('015', '2024-04-28', '¡Buenos días, clase! Estoy emocionado de compartir más conocimientos y experiencias con ustedes.'),
+('016', '2024-04-29', '¡Hola a todos! Hoy vamos a explorar nuevas ideas y perspectivas juntos.'),
+('017', '2024-04-30', '¡Buen día, estudiantes! Prepárense para desafiarse a sí mismos y crecer como individuos.'),
+('018', '2024-05-01', '¡Hola, clase! Estoy emocionado de comenzar este nuevo mes con tanto entusiasmo y energía.'),
+('019', '2024-05-02', '¡Buenos días a todos! Hoy vamos a iniciar este mes con una mentalidad abierta y receptiva al aprendizaje.'),
+('020', '2024-05-03', '¡Hola, estudiantes! Estoy emocionado de seguir creciendo y aprendiendo con ustedes.'),
+('021', '2024-05-04', '¡Buen día, clase! Hoy vamos a seguir explorando nuevos horizontes y desafiando nuestros límites.'),
+('022', '2024-05-05', '¡Hola a todos! Prepárense para un día lleno de descubrimientos y experiencias enriquecedoras.'),
+('023', '2024-05-06', '¡Buenos días, estudiantes! Estoy emocionado de compartir más conocimientos y experiencias con ustedes.'),
+('024', '2024-05-07', '¡Hola, clase! Hoy vamos a seguir explorando y aprendiendo juntos.'),
+('025', '2024-05-08', '¡Buen día a todos! Estoy emocionado de continuar este viaje educativo con tanto entusiasmo y compromiso.'),
+('026', '2024-05-09', '¡Hola, estudiantes! Prepárense para un día lleno de desafíos y oportunidades de crecimiento personal.'),
+('027', '2024-05-10', '¡Buenos días, clase! Estoy emocionado de compartir más conocimientos y experiencias con ustedes.'),
+('028', '2024-05-11', '¡Hola a todos! Hoy vamos a seguir explorando nuevas ideas y perspectivas juntos.'),
+('029', '2024-05-12', '¡Buen día, estudiantes! Prepárense para desafiarse a sí mismos y alcanzar nuevas metas.'),
+('030', '2024-05-13', '¡Hola, clase! Estoy emocionado de continuar este viaje educativo con ustedes.'),
+('031', '2024-05-14', '¡Buenos días a todos! Hoy vamos a seguir explorando y aprendiendo juntos.'),
+('032', '2024-05-15', '¡Hola, estudiantes! Prepárense para un día lleno de desafíos y oportunidades de crecimiento personal.'),
+('033', '2024-05-16', '¡Buen día, clase! Estoy emocionado de compartir más conocimientos y experiencias con ustedes.'),
+('034', '2024-05-17', '¡Hola a todos! Hoy vamos a seguir explorando nuevas ideas y perspectivas juntos.'),
+('035', '2024-05-18', '¡Buenos días, estudiantes! Prepárense para desafiarse a sí mismos y alcanzar nuevas metas.'),
+('036', '2024-05-19', '¡Hola, clase! Estoy emocionado de continuar este viaje educativo con ustedes.'),
+('037', '2024-05-20', '¡Buen día a todos! Hoy vamos a seguir explorando y aprendiendo juntos.'),
+('038', '2024-05-21', '¡Hola, estudiantes! Prepárense para un día lleno de desafíos y oportunidades de crecimiento personal.'),
+('039', '2024-05-22', '¡Buen día, clase! Estoy emocionado de compartir más conocimientos y experiencias con ustedes.'),
+('040', '2024-05-23', '¡Hola a todos! Hoy vamos a seguir explorando nuevas ideas y perspectivas juntos.'),
+('041', '2024-05-24', '¡Buenos días, estudiantes! Prepárense para desafiarse a sí mismos y alcanzar nuevas metas.'),
+('042', '2024-05-25', '¡Hola, clase! Estoy emocionado de continuar este viaje educativo con ustedes.'),
+('043', '2024-05-26', '¡Buen día a todos! Hoy vamos a seguir explorando y aprendiendo juntos.'),
+('044', '2024-05-27', '¡Hola, estudiantes! Prepárense para un día lleno de desafíos y oportunidades de crecimiento personal.'),
+('045', '2024-05-28', '¡Buen día, clase! Estoy emocionado de compartir más conocimientos y experiencias con ustedes.');
 
 --SELECT * FROM Anuncios
 
@@ -438,6 +527,47 @@ INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('CC',
 INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('CC','0000000002','003')
 INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('CC','0000000003','005')
 INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('CC','0000000004','004')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('CC','0000000005','006')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('CC','0000000006','007')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('CC','0000000007','008')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('CC','0000000008','009')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('CC','0000000009','010')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('CC','0000000010','011')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('CC','0000000011','012')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('CC','0000000012','013')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('CC','0000000013','014')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('CC','0000000014','015')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('CC','0000000015','016')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('CC','0000000016','017')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('CC','0000000017','018')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('CC','0000000018','019')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('CC','0000000019','020')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('CC','0000000020','021')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('CC','0000000021','022')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('CC','0000000022','023')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('CC','0000000023','024')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('CC','0000000024','025')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('CC','0000000025','026')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('AD','0000000026','027')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('AD','0000000027','028')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('AD','0000000028','029')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('AD','0000000029','030')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('AD','0000000030','031')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('AD','0000000031','032')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('AD','0000000032','033')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('AD','0000000033','034')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('AD','0000000034','035')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('AD','0000000035','036')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('ED','0000000036','037')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('ED','0000000037','038')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('ED','0000000038','039')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('ED','0000000039','040')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('ED','0000000040','041')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('IN','0000000041','042')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('IN','0000000042','043')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('IN','0000000043','044')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('IN','0000000044','045')
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('IN','0000000045','001')
 
 --SELECT * FROM Profesor_Curso
 
