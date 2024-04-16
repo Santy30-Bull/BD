@@ -310,6 +310,7 @@ INSERT INTO Calificacion(TypeID_Estudiante,ID_Estudiante,ID_Curso,Porcentaje,Fec
 INSERT INTO Calificacion(TypeID_Estudiante,ID_Estudiante,ID_Curso,Porcentaje,Fecha,Nota,Trabajo) VALUES ('CC','0002','002',15,'2024-04-01',4.5,'Quiz')
 
 
+
 --SELECT * FROM Calificacion
 
 INSERT INTO Certificado(TypeID_Estudiante, ID_Estudiante, ID_Curso, Fecha) values ('CC', '0002', '001', '2024-03-01')

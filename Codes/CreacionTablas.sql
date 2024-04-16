@@ -90,7 +90,7 @@ CREATE TABLE Calificacion(
 	TypeID_Estudiante VARCHAR(10),
 	ID_Estudiante VARCHAR(15), 
 	ID_Curso VARCHAR(10), 
-	Porcentaje INT NOT NULL,
+	Porcentaje INT NOT NULL CHECK(Porcentaje > 0 AND Porcentaje <= 100),
 	Fecha DATE,
 	Nota FLOAT NOT NULL,
 	Trabajo VARCHAR(15) NOT NULL,
