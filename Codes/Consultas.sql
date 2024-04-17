@@ -75,3 +75,48 @@ FROM (
     FROM RevistaCientifica re
     GROUP BY re.Tematica
 ) AS SourceTable
+
+SELECT * FROM Estudiante
+
+--Revista científica, que hayan mas de 70 ejemplares y sean de tipo Tecnica, ademas se acomodan los nombres de los autores y esta organizada por titulo descendente
+SELECT 
+    Titulo, 
+    Tipo, 
+    CONCAT(
+        SUBSTRING(Autor, CHARINDEX(' ', Autor) + 1, LEN(Autor) - CHARINDEX(' ', Autor)), ', ',
+        SUBSTRING(Autor, 1, CHARINDEX(' ', Autor) - 1)
+    ) AS Autor, 
+    NoEjemplares, 
+    Tematica AS Temática
+FROM RevistaCientifica
+WHERE Tipo = 'Técnica' AND NoEjemplares > 70
+ORDER BY Titulo DESC
+
+--Informe de Investigacion, que hayan mas de 15 ejemplares y sean de tipo Estudio de Caso o Investigacion, ademas se acomodan los nombres de los autores
+SELECT 
+    Titulo, 
+    Tipo, 
+    CONCAT(
+        SUBSTRING(Autor, CHARINDEX(' ', Autor) + 1, LEN(Autor) - CHARINDEX(' ', Autor)), ', ',
+        SUBSTRING(Autor, 1, CHARINDEX(' ', Autor) - 1)
+    ) AS Autor, 
+    NoEjemplares, 
+    Tematica AS Temática 
+FROM InformeInvestigacion
+WHERE NoEjemplares > 15 AND Tipo = 'Estudio de Caso' OR Tipo = 'Investigación'
+
+--Libro, que sea de tipo ficcion y tengan mas de 600 paginas, ademas se acomodan los nombres de los autores y esta organizado por tipo ascendente
+
+SELECT 
+    Titulo, 
+    Tipo, 
+    CONCAT(
+        SUBSTRING(Autor, CHARINDEX(' ', Autor) + 1, LEN(Autor) - CHARINDEX(' ', Autor)), ', ',
+        SUBSTRING(Autor, 1, CHARINDEX(' ', Autor) - 1)
+    ) AS Autor, 
+    NoEjemplares, 
+    Genero, 
+    NoPaginas
+FROM Libro
+WHERE Tipo = 'Ficcion' OR NoPaginas > 600
+ORDER BY Tipo ASC;

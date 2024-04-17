@@ -300,18 +300,2109 @@ INSERT INTO Sede(Localidad,Nombre_Sede,ID_Biblioteca) values ('Medellín','Uni4'
 
 --SELECT * FROM Sede
 
-INSERT INTO Calificacion(TypeID_Estudiante,ID_Estudiante,ID_Curso,Porcentaje,Fecha,Nota,Trabajo) VALUES ('CC','0001','001',50,'2024-03-28',4.5,'Proyecto')
-INSERT INTO Calificacion(TypeID_Estudiante,ID_Estudiante,ID_Curso,Porcentaje,Fecha,Nota,Trabajo) VALUES ('CC','0001','002',10,'2024-03-15',3.0,'Quiz')
-INSERT INTO Calificacion(TypeID_Estudiante,ID_Estudiante,ID_Curso,Porcentaje,Fecha,Nota,Trabajo) VALUES ('CC','0001','003',10,'2024-04-02',4.0,'Quiz')
-INSERT INTO Calificacion(TypeID_Estudiante,ID_Estudiante,ID_Curso,Porcentaje,Fecha,Nota,Trabajo) VALUES ('CC','0001','004',75,'2024-04-10',3.7,'Proyecto')
-INSERT INTO Calificacion(TypeID_Estudiante,ID_Estudiante,ID_Curso,Porcentaje,Fecha,Nota,Trabajo) VALUES ('CC','0001','005',15,'2024-04-01',4.5,'Quiz')
+--Estudiante 0023
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0023', '021', 30, '2024-03-28', 3.9, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0023', '021', 20, '2024-03-15', 4.1, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0023', '021', 10, '2024-03-28', 4.0, 'Tarea');
 
-INSERT INTO Calificacion(TypeID_Estudiante,ID_Estudiante,ID_Curso,Porcentaje,Fecha,Nota,Trabajo) VALUES ('CC','0002','001',75,'2024-04-10',3.7,'Proyecto')
-INSERT INTO Calificacion(TypeID_Estudiante,ID_Estudiante,ID_Curso,Porcentaje,Fecha,Nota,Trabajo) VALUES ('CC','0002','002',15,'2024-04-01',4.5,'Quiz')
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0023', '022', 25, '2024-04-02', 4.2, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0023', '022', 15, '2024-04-10', 4.0, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0023', '022', 10, '2024-04-15', 4.1, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0023', '023', 20, '2024-04-18', 4.3, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0023', '023', 10, '2024-04-25', 4.1, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0023', '023', 5, '2024-05-02', 4.2, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0023', '024', 15, '2024-05-10', 4.4, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0023', '024', 10, '2024-05-18', 3.8, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0023', '024', 5, '2024-05-25', 4.0, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0023', '025', 10, '2024-06-02', 3.9, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0023', '025', 5, '2024-06-10', 4.2, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0023', '025', 5, '2024-06-15', 3.7, 'Tarea');
 
 
+--Estudiante 0022
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0022', '007', 60, '2024-03-28', 4.3, 'Proyecto');
 
---SELECT * FROM Calificacion
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0022', '007', 20, '2024-04-05', 3.9, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0022', '007', 20, '2024-04-12', 4.1, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0022', '042', 50, '2024-04-20', 4.5, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0022', '042', 30, '2024-04-25', 3.7, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0022', '042', 20, '2024-05-02', 4.0, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0022', '018', 40, '2024-05-10', 3.8, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0022', '018', 30, '2024-05-18', 4.0, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0022', '018', 30, '2024-05-25', 3.5, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0022', '027', 45, '2024-06-02', 3.9, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0022', '027', 35, '2024-06-10', 4.1, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0022', '027', 20, '2024-06-15', 4.3, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0022', '036', 55, '2024-06-22', 4.4, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0022', '036', 25, '2024-06-30', 4.2, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0022', '036', 20, '2024-07-05', 4.5, 'Tarea');
+
+
+--Estudiante 0021
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0021', '015', 50, '2024-03-28', 4.0, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0021', '015', 25, '2024-04-02', 3.8, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0021', '015', 25, '2024-04-10', 4.2, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0021', '021', 60, '2024-04-18', 4.5, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0021', '021', 20, '2024-04-25', 3.9, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0021', '021', 20, '2024-05-02', 4.1, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0021', '032', 40, '2024-05-10', 4.2, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0021', '032', 30, '2024-05-18', 3.7, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0021', '032', 30, '2024-05-25', 4.0, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0021', '025', 45, '2024-06-02', 3.9, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0021', '025', 35, '2024-06-10', 4.1, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0021', '025', 20, '2024-06-15', 4.3, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0021', '041', 55, '2024-06-22', 4.4, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0021', '041', 25, '2024-06-30', 4.2, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0021', '041', 20, '2024-07-05', 4.5, 'Tarea');
+
+
+--Estudiante 0020
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0020', '040', 40, '2024-03-28', 4.1, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0020', '040', 30, '2024-04-02', 4.2, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0020', '040', 30, '2024-04-10', 4.0, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0020', '027', 50, '2024-04-18', 3.8, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0020', '027', 20, '2024-04-25', 4.5, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0020', '027', 30, '2024-05-02', 3.9, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0020', '033', 60, '2024-05-10', 4.4, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0020', '033', 15, '2024-05-18', 3.7, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0020', '033', 25, '2024-05-25', 4.1, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0020', '010', 45, '2024-06-02', 3.9, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0020', '010', 35, '2024-06-10', 4.2, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0020', '010', 20, '2024-06-15', 4.0, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0020', '043', 55, '2024-06-22', 4.3, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0020', '043', 25, '2024-06-30', 4.1, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0020', '043', 20, '2024-07-05', 4.4, 'Tarea');
+
+
+--Estudiante 0019
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0019', '021', 40, '2024-03-28', 4.0, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0019', '021', 30, '2024-04-02', 3.5, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0019', '021', 30, '2024-04-10', 4.2, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0019', '015', 50, '2024-04-18', 4.5, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0019', '015', 20, '2024-04-25', 3.7, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0019', '015', 30, '2024-05-02', 4.1, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0019', '011', 60, '2024-05-10', 4.3, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0019', '011', 15, '2024-05-18', 3.8, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0019', '011', 25, '2024-05-25', 4.1, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0019', '025', 45, '2024-06-02', 4.2, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0019', '025', 35, '2024-06-10', 4.0, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0019', '025', 20, '2024-06-15', 4.3, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0019', '030', 55, '2024-06-22', 3.9, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0019', '030', 25, '2024-06-30', 3.6, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0019', '030', 20, '2024-07-05', 4.1, 'Tarea');
+
+
+--Estudiante 0018
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0018', '027', 40, '2024-03-28', 4.0, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0018', '027', 30, '2024-04-02', 3.5, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0018', '027', 30, '2024-04-10', 4.2, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0018', '039', 50, '2024-04-18', 4.5, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0018', '039', 20, '2024-04-25', 3.7, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0018', '039', 30, '2024-05-02', 4.1, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0018', '010', 60, '2024-05-10', 4.3, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0018', '010', 15, '2024-05-18', 3.8, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0018', '010', 25, '2024-05-25', 4.1, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0018', '020', 45, '2024-06-02', 4.2, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0018', '020', 35, '2024-06-10', 4.0, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0018', '020', 20, '2024-06-15', 4.3, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0018', '035', 55, '2024-06-22', 3.9, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0018', '035', 25, '2024-06-30', 3.6, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0018', '035', 20, '2024-07-05', 4.1, 'Tarea');
+
+
+--Estudiante 0017
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0017', '012', 40, '2024-03-28', 3.8, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0017', '012', 30, '2024-04-02', 3.5, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0017', '012', 30, '2024-04-10', 4.0, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0017', '038', 50, '2024-04-18', 4.5, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0017', '038', 20, '2024-04-25', 3.7, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0017', '038', 30, '2024-05-02', 4.0, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0017', '015', 60, '2024-05-10', 4.3, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0017', '015', 15, '2024-05-18', 3.8, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0017', '015', 25, '2024-05-25', 4.1, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0017', '041', 45, '2024-06-02', 4.2, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0017', '041', 35, '2024-06-10', 4.0, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0017', '041', 20, '2024-06-15', 4.3, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0017', '037', 55, '2024-06-22', 3.9, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0017', '037', 25, '2024-06-30', 3.6, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0017', '037', 20, '2024-07-05', 4.1, 'Tarea');
+
+--Estudiante 0016
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0016', '018', 40, '2024-03-28', 3.8, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0016', '018', 30, '2024-04-02', 3.5, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0016', '018', 30, '2024-04-10', 4.0, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0016', '033', 50, '2024-04-18', 4.5, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0016', '033', 20, '2024-04-25', 3.7, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0016', '033', 30, '2024-05-02', 4.0, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0016', '025', 60, '2024-05-10', 4.3, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0016', '025', 15, '2024-05-18', 3.8, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0016', '025', 25, '2024-05-25', 4.1, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0016', '022', 45, '2024-06-02', 4.2, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0016', '022', 35, '2024-06-10', 4.0, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0016', '022', 20, '2024-06-15', 4.3, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0016', '029', 55, '2024-06-22', 3.9, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0016', '029', 25, '2024-06-30', 3.6, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0016', '029', 20, '2024-07-05', 4.1, 'Tarea');
+
+
+--Estudiante 0015
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0015', '022', 40, '2024-03-28', 3.8, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0015', '022', 30, '2024-04-02', 3.5, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0015', '022', 30, '2024-04-10', 4.0, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0015', '040', 50, '2024-04-18', 4.5, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0015', '040', 20, '2024-04-25', 3.7, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0015', '040', 30, '2024-05-02', 4.0, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0015', '025', 60, '2024-05-10', 4.3, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0015', '025', 15, '2024-05-18', 3.8, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0015', '025', 25, '2024-05-25', 4.1, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0015', '018', 45, '2024-06-02', 4.2, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0015', '018', 35, '2024-06-10', 4.0, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0015', '018', 20, '2024-06-15', 4.3, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0015', '032', 55, '2024-06-22', 3.9, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0015', '032', 25, '2024-06-30', 3.6, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0015', '032', 20, '2024-07-05', 4.1, 'Tarea');
+
+-- Estudiante '0013'
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0013', '014', 40, '2024-03-28', 3.8, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0013', '014', 30, '2024-04-02', 3.5, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0013', '014', 30, '2024-04-10', 4.0, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0013', '010', 50, '2024-04-18', 4.5, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0013', '010', 20, '2024-04-25', 3.7, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0013', '010', 30, '2024-05-02', 4.0, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0013', '002', 60, '2024-05-10', 4.3, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0013', '002', 15, '2024-05-18', 3.8, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0013', '002', 25, '2024-05-25', 4.1, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0013', '035', 45, '2024-06-02', 4.2, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0013', '035', 35, '2024-06-10', 4.0, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0013', '035', 20, '2024-06-15', 4.3, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0013', '038', 55, '2024-06-22', 3.9, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0013', '038', 25, '2024-06-30', 3.6, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0013', '038', 20, '2024-07-05', 4.1, 'Tarea');
+
+-- Estudiante '0014'
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0014', '005', 40, '2024-03-28', 3.8, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0014', '005', 30, '2024-04-02', 3.5, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0014', '005', 30, '2024-04-10', 4.0, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0014', '008', 50, '2024-04-18', 4.5, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0014', '008', 20, '2024-04-25', 3.7, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0014', '008', 30, '2024-05-02', 4.0, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0014', '031', 60, '2024-05-10', 4.3, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0014', '031', 15, '2024-05-18', 3.8, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0014', '031', 25, '2024-05-25', 4.1, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0014', '020', 45, '2024-06-02', 4.2, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0014', '020', 35, '2024-06-10', 4.0, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0014', '020', 20, '2024-06-15', 4.3, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0014', '027', 55, '2024-06-22', 3.9, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0014', '027', 25, '2024-06-30', 3.6, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0014', '027', 20, '2024-07-05', 4.1, 'Tarea');
+
+-- Estudiante '0012'
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0012', '028', 40, '2024-03-28', 3.8, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0012', '028', 30, '2024-04-02', 3.5, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0012', '028', 30, '2024-04-10', 4.0, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0012', '016', 50, '2024-04-18', 4.5, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0012', '016', 20, '2024-04-25', 3.7, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0012', '016', 30, '2024-05-02', 4.0, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0012', '007', 60, '2024-05-10', 4.3, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0012', '007', 15, '2024-05-18', 3.8, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0012', '007', 25, '2024-05-25', 4.1, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0012', '025', 45, '2024-06-02', 4.2, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0012', '025', 35, '2024-06-10', 4.0, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0012', '025', 20, '2024-06-15', 4.3, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0012', '030', 55, '2024-06-22', 3.9, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0012', '030', 25, '2024-06-30', 3.6, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0012', '030', 20, '2024-07-05', 4.1, 'Tarea');
+
+-- Estudiante '0011'
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0011', '018', 40, '2024-03-28', 3.5, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0011', '018', 30, '2024-04-02', 3.8, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0011', '018', 30, '2024-04-10', 4.0, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0011', '041', 50, '2024-04-18', 4.7, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0011', '041', 20, '2024-04-25', 4.0, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0011', '041', 30, '2024-05-02', 4.3, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0011', '014', 60, '2024-05-10', 4.0, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0011', '014', 15, '2024-05-18', 3.6, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0011', '014', 25, '2024-05-25', 3.8, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0011', '024', 45, '2024-06-02', 4.5, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0011', '024', 35, '2024-06-10', 4.1, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0011', '024', 20, '2024-06-15', 4.3, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0011', '005', 55, '2024-06-22', 3.8, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0011', '005', 25, '2024-06-30', 3.5, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0011', '005', 20, '2024-07-05', 4.0, 'Tarea');
+
+-- Estudiante '0010'
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0010', '040', 40, '2024-03-28', 3.7, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0010', '040', 30, '2024-04-02', 4.0, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0010', '040', 30, '2024-04-10', 3.9, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0010', '020', 50, '2024-04-18', 4.2, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0010', '020', 20, '2024-04-25', 3.8, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0010', '020', 30, '2024-05-02', 4.1, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0010', '033', 60, '2024-05-10', 4.5, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0010', '033', 15, '2024-05-18', 3.9, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0010', '033', 25, '2024-05-25', 4.3, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0010', '045', 45, '2024-06-02', 4.1, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0010', '045', 35, '2024-06-10', 3.8, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0010', '045', 20, '2024-06-15', 4.0, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0010', '025', 55, '2024-06-22', 4.2, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0010', '025', 25, '2024-06-30', 4.5, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0010', '025', 20, '2024-07-05', 4.3, 'Tarea');
+
+-- Estudiante '0009'
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0009', '026', 40, '2024-03-28', 3.8, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0009', '026', 30, '2024-04-02', 4.2, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0009', '026', 30, '2024-04-10', 3.9, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0009', '021', 50, '2024-04-18', 4.5, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0009', '021', 20, '2024-04-25', 3.7, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0009', '021', 30, '2024-05-02', 4.1, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0009', '036', 60, '2024-05-10', 4.7, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0009', '036', 15, '2024-05-18', 4.0, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0009', '036', 25, '2024-05-25', 4.5, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0009', '016', 45, '2024-06-02', 4.0, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0009', '016', 35, '2024-06-10', 4.3, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0009', '016', 20, '2024-06-15', 4.1, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0009', '035', 55, '2024-06-22', 3.9, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0009', '035', 25, '2024-06-30', 3.6, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0009', '035', 20, '2024-07-05', 4.0, 'Tarea');
+
+-- Estudiante '0008'
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0008', '014', 40, '2024-03-28', 3.5, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0008', '014', 30, '2024-04-02', 4.0, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0008', '014', 30, '2024-04-10', 3.8, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0008', '027', 50, '2024-04-18', 4.2, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0008', '027', 20, '2024-04-25', 3.7, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0008', '027', 30, '2024-05-02', 4.1, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0008', '041', 60, '2024-05-10', 4.6, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0008', '041', 15, '2024-05-18', 3.8, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0008', '041', 25, '2024-05-25', 4.3, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0008', '012', 45, '2024-06-02', 3.9, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0008', '012', 35, '2024-06-10', 4.5, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0008', '012', 20, '2024-06-15', 4.2, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0008', '031', 55, '2024-06-22', 4.1, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0008', '031', 25, '2024-06-30', 3.6, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0008', '031', 20, '2024-07-05', 4.0, 'Tarea');
+
+-- Calificaciones para los estudiantes del '0007' al '0046'
+
+-- Estudiante '0007'
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0007', '030', 40, '2024-03-28', 3.8, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0007', '030', 30, '2024-04-02', 3.5, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0007', '030', 30, '2024-04-10', 4.2, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0007', '018', 50, '2024-04-18', 4.6, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0007', '018', 20, '2024-04-25', 3.9, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0007', '018', 30, '2024-05-02', 4.1, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0007', '037', 60, '2024-05-10', 4.8, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0007', '037', 15, '2024-05-18', 3.5, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0007', '037', 25, '2024-05-25', 4.2, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0007', '021', 45, '2024-06-02', 4.0, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0007', '021', 35, '2024-06-10', 3.7, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0007', '021', 20, '2024-06-15', 3.9, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0007', '035', 55, '2024-06-22', 3.3, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0007', '035', 25, '2024-06-30', 3.8, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0007', '035', 20, '2024-07-05', 4.1, 'Tarea');
+
+-- Estudiante '0006'
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0006', '011', 40, '2024-03-28', 3.8, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0006', '011', 30, '2024-04-02', 3.5, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0006', '011', 30, '2024-04-10', 4.2, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0006', '022', 50, '2024-04-18', 4.6, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0006', '022', 20, '2024-04-25', 3.9, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0006', '022', 30, '2024-05-02', 4.1, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0006', '032', 60, '2024-05-10', 4.8, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0006', '032', 15, '2024-05-18', 3.5, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0006', '032', 25, '2024-05-25', 4.2, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0006', '042', 45, '2024-06-02', 4.0, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0006', '042', 35, '2024-06-10', 3.7, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0006', '042', 20, '2024-06-15', 3.9, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0006', '025', 55, '2024-06-22', 3.3, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0006', '025', 25, '2024-06-30', 3.8, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0006', '025', 20, '2024-07-05', 4.1, 'Tarea');
+
+
+-- Estudiante '0005'
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0005', '015', 40, '2024-03-28', 3.8, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0005', '015', 30, '2024-04-02', 3.5, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0005', '015', 30, '2024-04-10', 4.2, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0005', '030', 50, '2024-04-18', 4.6, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0005', '030', 20, '2024-04-25', 3.9, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0005', '030', 30, '2024-05-02', 4.1, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0005', '041', 60, '2024-05-10', 4.8, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0005', '041', 15, '2024-05-18', 3.5, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0005', '041', 25, '2024-05-25', 4.2, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0005', '036', 45, '2024-06-02', 4.0, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0005', '036', 35, '2024-06-10', 3.7, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0005', '036', 20, '2024-06-15', 3.9, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0005', '024', 55, '2024-06-22', 3.3, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0005', '024', 25, '2024-06-30', 3.8, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0005', '024', 20, '2024-07-05', 4.1, 'Tarea');
+
+-- Calificaciones para el estudiante '0004' en cinco cursos diferentes
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0004', '021', 40, '2024-03-28', 3.8, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0004', '021', 20, '2024-03-15', 4.5, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0004', '021', 30, '2024-03-28', 4.0, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0004', '015', 40, '2024-04-02', 4.2, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0004', '015', 30, '2024-04-10', 3.8, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0004', '015', 30, '2024-04-15', 4.5, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0004', '032', 50, '2024-04-18', 3.6, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0004', '032', 20, '2024-04-25', 4.1, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0004', '032', 30, '2024-05-02', 3.9, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0004', '038', 60, '2024-05-10', 4.8, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0004', '038', 15, '2024-05-18', 4.0, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0004', '038', 25, '2024-05-25', 4.5, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0004', '009', 45, '2024-06-02', 3.2, 'Proyecto');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0004', '009', 35, '2024-06-10', 3.9, 'Quiz');
+
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0004', '009', 20, '2024-06-15', 3.5, 'Tarea');
+
+
+--Estudiante 0003
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0003', '031', 30, '2024-03-28', 4.0, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0003', '031', 20, '2024-03-15', 4.2, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0003', '031', 10, '2024-03-28', 4.1, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0003', '032', 25, '2024-04-02', 4.3, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0003', '032', 15, '2024-04-10', 4.1, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0003', '032', 10, '2024-04-15', 4.2, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0003', '033', 20, '2024-04-18', 4.4, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0003', '033', 10, '2024-04-25', 4.2, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0003', '033', 5, '2024-05-02', 4.3, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0003', '034', 15, '2024-05-10', 4.5, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0003', '034', 10, '2024-05-18', 4.3, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0003', '034', 5, '2024-05-25', 4.4, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0003', '035', 10, '2024-06-02', 4.6, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0003', '035', 5, '2024-06-10', 4.4, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0003', '035', 5, '2024-06-15', 4.5, 'Tarea');
+
+
+--Estudiante 0002
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0002', '036', 30, '2024-03-28', 4.2, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0002', '036', 20, '2024-03-15', 4.4, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0002', '036', 10, '2024-03-28', 4.3, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0002', '037', 25, '2024-04-02', 4.5, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0002', '037', 15, '2024-04-10', 4.3, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0002', '037', 10, '2024-04-15', 4.4, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0002', '038', 20, '2024-04-18', 4.6, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0002', '038', 10, '2024-04-25', 4.4, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0002', '038', 5, '2024-05-02', 4.5, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0002', '039', 15, '2024-05-10', 4.7, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0002', '039', 10, '2024-05-18', 4.5, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0002', '039', 5, '2024-05-25', 4.6, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0002', '040', 10, '2024-06-02', 4.8, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0002', '040', 5, '2024-06-10', 4.6, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0002', '040', 5, '2024-06-15', 4.7, 'Tarea');
+
+
+--Estudiante 0001
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0001', '041', 30, '2024-03-28', 4.4, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0001', '041', 20, '2024-03-15', 4.6, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0001', '041', 10, '2024-03-28', 4.5, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0001', '042', 25, '2024-04-02', 4.7, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0001', '042', 15, '2024-04-10', 4.5, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0001', '042', 10, '2024-04-15', 4.6, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0001', '043', 20, '2024-04-18', 4.8, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0001', '043', 10, '2024-04-25', 4.6, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0001', '043', 5, '2024-05-02', 4.7, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0001', '044', 15, '2024-05-10', 4.9, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0001', '044', 10, '2024-05-18', 4.7, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0001', '044', 5, '2024-05-25', 4.8, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0001', '045', 10, '2024-06-02', 5.0, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0001', '045', 5, '2024-06-10', 4.8, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0001', '045', 5, '2024-06-15', 4.9, 'Tarea');
+
+--Estudiante 0024
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0024', '021', 40, '2024-03-28', 3.8, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0024', '021', 20, '2024-03-15', 4.5, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0024', '021', 30, '2024-03-28', 4.0, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0024', '015', 40, '2024-04-02', 4.2, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0024', '015', 30, '2024-04-10', 3.8, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0024', '015', 30, '2024-04-15', 4.5, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0024', '032', 50, '2024-04-18', 3.6, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0024', '032', 20, '2024-04-25', 4.1, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0024', '032', 30, '2024-05-02', 3.9, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0024', '038', 60, '2024-05-10', 4.8, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0024', '038', 15, '2024-05-18', 4.0, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0024', '038', 25, '2024-05-25', 4.5, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0024', '009', 45, '2024-06-02', 3.2, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0024', '009', 35, '2024-06-10', 3.9, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo) 
+VALUES ('CC', '0024', '009', 20, '2024-06-15', 3.5, 'Tarea');
+
+
+--Estudiante 0025
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0025', '021', 45, '2024-03-28', 3.9, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0025', '021', 25, '2024-03-15', 4.2, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0025', '021', 30, '2024-03-28', 3.8, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0025', '015', 50, '2024-04-02', 4.5, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0025', '015', 20, '2024-04-10', 3.7, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0025', '015', 30, '2024-04-15', 4.1, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0025', '032', 40, '2024-04-18', 3.4, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0025', '032', 30, '2024-04-25', 3.9, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0025', '032', 30, '2024-05-02', 3.6, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0025', '038', 60, '2024-05-10', 4.7, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0025', '038', 15, '2024-05-18', 3.8, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0025', '038', 25, '2024-05-25', 4.4, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0025', '009', 45, '2024-06-02', 3.3, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0025', '009', 35, '2024-06-10', 3.6, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0025', '009', 20, '2024-06-15', 3.9, 'Tarea');
+
+
+--Estudiante 0026
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0026', '022', 35, '2024-03-28', 4.0, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0026', '022', 30, '2024-03-15', 4.3, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0026', '022', 35, '2024-03-28', 3.9, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0026', '016', 50, '2024-04-02', 4.6, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0026', '016', 20, '2024-04-10', 3.5, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0026', '016', 30, '2024-04-15', 4.0, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0026', '033', 40, '2024-04-18', 4.1, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0026', '033', 30, '2024-04-25', 3.8, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0026', '033', 30, '2024-05-02', 4.2, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0026', '039', 60, '2024-05-10', 4.5, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0026', '039', 15, '2024-05-18', 3.9, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0026', '039', 25, '2024-05-25', 4.3, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0026', '010', 45, '2024-06-02', 3.7, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0026', '010', 35, '2024-06-10', 4.1, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('CC', '0026', '010', 20, '2024-06-15', 3.6, 'Tarea');
+
+
+--Estudiante 0027
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0027', '023', 40, '2024-03-28', 4.2, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0027', '023', 30, '2024-03-15', 3.9, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0027', '023', 30, '2024-03-28', 4.1, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0027', '017', 50, '2024-04-02', 4.5, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0027', '017', 20, '2024-04-10', 3.6, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0027', '017', 30, '2024-04-15', 4.0, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0027', '034', 45, '2024-04-18', 4.1, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0027', '034', 25, '2024-04-25', 3.8, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0027', '034', 30, '2024-05-02', 4.2, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0027', '040', 60, '2024-05-10', 4.6, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0027', '040', 15, '2024-05-18', 3.7, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0027', '040', 25, '2024-05-25', 4.4, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0027', '011', 45, '2024-06-02', 3.8, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0027', '011', 35, '2024-06-10', 4.1, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0027', '011', 20, '2024-06-15', 3.6, 'Tarea');
+
+
+--Estudiante 0028
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0028', '024', 35, '2024-03-28', 4.1, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0028', '024', 30, '2024-03-15', 3.8, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0028', '024', 35, '2024-03-28', 4.2, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0028', '018', 50, '2024-04-02', 4.4, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0028', '018', 20, '2024-04-10', 3.9, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0028', '018', 30, '2024-04-15', 4.1, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0028', '035', 45, '2024-04-18', 4.2, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0028', '035', 25, '2024-04-25', 4.0, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0028', '035', 30, '2024-05-02', 4.3, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0028', '041', 60, '2024-05-10', 4.7, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0028', '041', 15, '2024-05-18', 3.6, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0028', '041', 25, '2024-05-25', 4.5, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0028', '012', 45, '2024-06-02', 3.9, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0028', '012', 35, '2024-06-10', 4.2, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0028', '012', 20, '2024-06-15', 3.7, 'Tarea');
+
+
+--Estudiante 0029
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0029', '025', 40, '2024-03-28', 4.3, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0029', '025', 30, '2024-03-15', 4.0, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0029', '025', 30, '2024-03-28', 4.2, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0029', '019', 50, '2024-04-02', 4.6, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0029', '019', 20, '2024-04-10', 3.7, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0029', '019', 30, '2024-04-15', 4.1, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0029', '036', 45, '2024-04-18', 4.2, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0029', '036', 25, '2024-04-25', 4.0, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0029', '036', 30, '2024-05-02', 4.3, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0029', '042', 60, '2024-05-10', 4.7, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0029', '042', 15, '2024-05-18', 3.6, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0029', '042', 25, '2024-05-25', 4.5, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0029', '013', 45, '2024-06-02', 3.9, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0029', '013', 35, '2024-06-10', 4.2, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0029', '013', 20, '2024-06-15', 3.7, 'Tarea');
+
+
+--Estudiante 0030
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0030', '026', 30, '2024-03-28', 4.0, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0030', '026', 20, '2024-03-15', 3.7, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0030', '026', 25, '2024-03-28', 4.1, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0030', '020', 35, '2024-04-02', 4.3, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0030', '020', 15, '2024-04-10', 3.9, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0030', '020', 20, '2024-04-15', 4.2, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0030', '037', 25, '2024-04-18', 3.8, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0030', '037', 10, '2024-04-25', 4.0, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0030', '037', 5, '2024-05-02', 3.5, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0030', '043', 45, '2024-05-10', 4.5, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0030', '043', 15, '2024-05-18', 3.6, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0030', '043', 20, '2024-05-25', 4.3, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0030', '014', 35, '2024-06-02', 3.9, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0030', '014', 5, '2024-06-10', 4.2, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0030', '014', 10, '2024-06-15', 3.7, 'Tarea');
+
+
+--Estudiante 0031
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0031', '027', 30, '2024-03-28', 4.1, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0031', '027', 25, '2024-03-15', 3.8, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0031', '027', 15, '2024-03-28', 4.2, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0031', '021', 35, '2024-04-02', 4.5, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0031', '021', 20, '2024-04-10', 3.9, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0031', '021', 10, '2024-04-15', 4.1, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0031', '038', 30, '2024-04-18', 4.2, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0031', '038', 15, '2024-04-25', 4.0, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0031', '038', 10, '2024-05-02', 4.3, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0031', '044', 45, '2024-05-10', 4.6, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0031', '044', 10, '2024-05-18', 3.7, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0031', '044', 5, '2024-05-25', 4.5, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0031', '015', 20, '2024-06-02', 3.7, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0031', '015', 10, '2024-06-10', 4.0, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0031', '015', 5, '2024-06-15', 3.5, 'Tarea');
+
+
+--Estudiante 0032
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0032', '028', 25, '2024-03-28', 3.9, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0032', '028', 15, '2024-03-15', 3.5, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0032', '028', 20, '2024-03-28', 4.2, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0032', '022', 30, '2024-04-02', 4.1, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0032', '022', 20, '2024-04-10', 3.7, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0032', '022', 25, '2024-04-15', 4.0, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0032', '039', 35, '2024-04-18', 4.3, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0032', '039', 10, '2024-04-25', 3.8, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0032', '039', 5, '2024-05-02', 3.9, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0032', '045', 40, '2024-05-10', 4.5, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0032', '045', 20, '2024-05-18', 3.6, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0032', '045', 15, '2024-05-25', 4.2, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0032', '016', 20, '2024-06-02', 3.8, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0032', '016', 10, '2024-06-10', 4.1, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0032', '016', 5, '2024-06-15', 3.6, 'Tarea');
+
+
+--Estudiante 0033
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0033', '029', 35, '2024-03-28', 4.2, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0033', '029', 15, '2024-03-15', 3.9, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0033', '029', 20, '2024-03-28', 4.1, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0033', '023', 25, '2024-04-02', 4.0, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0033', '023', 20, '2024-04-10', 3.7, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0033', '023', 15, '2024-04-15', 3.8, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0033', '040', 40, '2024-04-18', 4.3, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0033', '040', 10, '2024-04-25', 4.0, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0033', '040', 5, '2024-05-02', 4.1, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0033', '002', 30, '2024-05-10', 4.4, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0033', '002', 10, '2024-05-18', 3.6, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0033', '002', 5, '2024-05-25', 4.2, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0033', '017', 30, '2024-06-02', 3.9, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0033', '017', 10, '2024-06-10', 4.1, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0033', '017', 5, '2024-06-15', 3.7, 'Tarea');
+
+
+--Estudiante 0034
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0034', '001', 40, '2024-03-28', 4.3, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0034', '001', 20, '2024-03-15', 4.0, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0034', '001', 15, '2024-03-28', 4.1, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0034', '002', 30, '2024-04-02', 4.2, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0034', '002', 15, '2024-04-10', 3.8, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0034', '002', 10, '2024-04-15', 4.0, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0034', '003', 25, '2024-04-18', 4.4, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0034', '003', 20, '2024-04-25', 4.1, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0034', '003', 15, '2024-05-02', 4.3, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0034', '004', 10, '2024-05-10', 4.5, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0034', '004', 5, '2024-05-18', 3.7, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0034', '004', 5, '2024-05-25', 4.0, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0034', '005', 20, '2024-06-02', 3.8, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0034', '005', 10, '2024-06-10', 4.1, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0034', '005', 5, '2024-06-15', 3.6, 'Tarea');
+
+
+--Estudiante 0035
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0035', '006', 40, '2024-03-28', 4.3, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0035', '006', 20, '2024-03-15', 4.0, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0035', '006', 15, '2024-03-28', 4.1, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0035', '007', 30, '2024-04-02', 4.2, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0035', '007', 15, '2024-04-10', 3.8, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0035', '007', 10, '2024-04-15', 4.0, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0035', '008', 25, '2024-04-18', 4.4, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0035', '008', 20, '2024-04-25', 4.1, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0035', '008', 15, '2024-05-02', 4.3, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0035', '009', 10, '2024-05-10', 4.5, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0035', '009', 5, '2024-05-18', 3.7, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0035', '009', 5, '2024-05-25', 4.0, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0035', '010', 20, '2024-06-02', 3.8, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0035', '010', 10, '2024-06-10', 4.1, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0035', '010', 5, '2024-06-15', 3.6, 'Tarea');
+
+
+--Estudiante 0036
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0036', '011', 40, '2024-03-28', 4.3, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0036', '011', 20, '2024-03-15', 4.0, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0036', '011', 15, '2024-03-28', 4.1, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0036', '012', 30, '2024-04-02', 4.2, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0036', '012', 15, '2024-04-10', 3.8, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0036', '012', 10, '2024-04-15', 4.0, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0036', '013', 25, '2024-04-18', 4.4, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0036', '013', 20, '2024-04-25', 4.1, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0036', '013', 15, '2024-05-02', 4.3, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0036', '014', 10, '2024-05-10', 4.5, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0036', '014', 5, '2024-05-18', 3.7, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0036', '014', 5, '2024-05-25', 4.0, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0036', '015', 20, '2024-06-02', 3.8, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0036', '015', 10, '2024-06-10', 4.1, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0036', '015', 5, '2024-06-15', 3.6, 'Tarea');
+
+
+--Estudiante 0037
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0037', '016', 40, '2024-03-28', 4.3, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0037', '016', 20, '2024-03-15', 4.0, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0037', '016', 15, '2024-03-28', 4.1, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0037', '017', 30, '2024-04-02', 4.2, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0037', '017', 15, '2024-04-10', 3.8, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0037', '017', 10, '2024-04-15', 4.0, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0037', '018', 25, '2024-04-18', 4.4, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0037', '018', 20, '2024-04-25', 4.1, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0037', '018', 15, '2024-05-02', 4.3, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0037', '019', 10, '2024-05-10', 4.5, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0037', '019', 5, '2024-05-18', 3.7, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0037', '019', 5, '2024-05-25', 4.0, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0037', '020', 20, '2024-06-02', 3.8, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0037', '020', 10, '2024-06-10', 4.1, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0037', '020', 5, '2024-06-15', 3.6, 'Tarea');
+
+--Estudiante 0038
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0038', '021', 40, '2024-03-28', 4.3, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0038', '021', 20, '2024-03-15', 4.0, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0038', '021', 15, '2024-03-28', 4.1, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0038', '022', 30, '2024-04-02', 4.2, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0038', '022', 15, '2024-04-10', 3.8, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0038', '022', 10, '2024-04-15', 4.0, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0038', '023', 25, '2024-04-18', 4.4, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0038', '023', 20, '2024-04-25', 4.1, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0038', '023', 15, '2024-05-02', 4.3, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0038', '024', 10, '2024-05-10', 4.5, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0038', '024', 5, '2024-05-18', 3.7, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0038', '024', 5, '2024-05-25', 4.0, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0038', '025', 20, '2024-06-02', 3.8, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0038', '025', 10, '2024-06-10', 4.1, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0038', '025', 5, '2024-06-15', 3.6, 'Tarea');
+
+
+--Estudiante 0039
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0039', '026', 35, '2024-03-28', 4.2, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0039', '026', 25, '2024-03-15', 3.9, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0039', '026', 20, '2024-03-28', 4.0, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0039', '027', 25, '2024-04-02', 4.1, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0039', '027', 20, '2024-04-10', 3.8, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0039', '027', 15, '2024-04-15', 4.0, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0039', '028', 30, '2024-04-18', 4.3, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0039', '028', 15, '2024-04-25', 4.1, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0039', '028', 10, '2024-05-02', 4.2, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0039', '029', 10, '2024-05-10', 4.4, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0039', '029', 5, '2024-05-18', 3.7, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0039', '029', 5, '2024-05-25', 4.0, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0039', '030', 15, '2024-06-02', 4.0, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0039', '030', 10, '2024-06-10', 4.1, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0039', '030', 5, '2024-06-15', 3.8, 'Tarea');
+
+
+--Estudiante 0040
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0040', '031', 30, '2024-03-28', 4.2, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0040', '031', 20, '2024-03-15', 4.1, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0040', '031', 10, '2024-03-28', 4.0, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0040', '032', 25, '2024-04-02', 4.3, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0040', '032', 15, '2024-04-10', 3.9, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0040', '032', 10, '2024-04-15', 4.1, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0040', '033', 20, '2024-04-18', 4.4, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0040', '033', 10, '2024-04-25', 4.0, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0040', '033', 5, '2024-05-02', 4.2, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0040', '034', 15, '2024-05-10', 4.5, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0040', '034', 5, '2024-05-18', 3.8, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0040', '034', 5, '2024-05-25', 4.0, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0040', '035', 30, '2024-06-02', 3.9, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0040', '035', 20, '2024-06-10', 4.2, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0040', '035', 10, '2024-06-15', 3.7, 'Tarea');
+
+
+--Estudiante 0041
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0041', '036', 20, '2024-03-28', 4.0, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0041', '036', 10, '2024-03-15', 4.1, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0041', '036', 5, '2024-03-28', 4.3, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0041', '037', 25, '2024-04-02', 4.2, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0041', '037', 15, '2024-04-10', 4.0, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0041', '037', 10, '2024-04-15', 4.1, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0041', '038', 30, '2024-04-18', 4.3, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0041', '038', 20, '2024-04-25', 4.1, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0041', '038', 15, '2024-05-02', 4.2, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0041', '039', 15, '2024-05-10', 4.4, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0041', '039', 10, '2024-05-18', 3.8, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0041', '039', 5, '2024-05-25', 4.0, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0041', '040', 10, '2024-06-02', 3.9, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0041', '040', 5, '2024-06-10', 4.2, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0041', '040', 5, '2024-06-15', 3.7, 'Tarea');
+
+
+--Estudiante 0042
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0042', '041', 25, '2024-03-28', 4.1, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0042', '041', 15, '2024-03-15', 3.9, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0042', '041', 10, '2024-03-28', 4.0, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0042', '042', 30, '2024-04-02', 4.2, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0042', '042', 20, '2024-04-10', 4.0, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0042', '042', 15, '2024-04-15', 4.1, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0042', '043', 20, '2024-04-18', 4.3, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0042', '043', 10, '2024-04-25', 4.1, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0042', '043', 5, '2024-05-02', 4.2, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0042', '044', 15, '2024-05-10', 4.4, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0042', '044', 10, '2024-05-18', 3.8, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0042', '044', 5, '2024-05-25', 4.0, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0042', '045', 10, '2024-06-02', 3.9, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0042', '045', 5, '2024-06-10', 4.2, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0042', '045', 5, '2024-06-15', 3.7, 'Tarea');
+
+
+--Estudiante 0043
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0043', '001', 20, '2024-03-28', 4.0, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0043', '001', 10, '2024-03-15', 4.1, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0043', '001', 5, '2024-03-28', 4.3, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0043', '002', 30, '2024-04-02', 4.2, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0043', '002', 20, '2024-04-10', 4.0, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0043', '002', 15, '2024-04-15', 4.1, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0043', '003', 20, '2024-04-18', 4.3, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0043', '003', 10, '2024-04-25', 4.1, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0043', '003', 5, '2024-05-02', 4.2, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0043', '004', 15, '2024-05-10', 4.4, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0043', '004', 10, '2024-05-18', 3.8, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0043', '004', 5, '2024-05-25', 4.0, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0043', '005', 10, '2024-06-02', 3.9, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0043', '005', 5, '2024-06-10', 4.2, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0043', '005', 5, '2024-06-15', 3.7, 'Tarea');
+
+
+--Estudiante 0044
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0044', '006', 20, '2024-03-28', 4.0, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0044', '006', 10, '2024-03-15', 4.1, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0044', '006', 5, '2024-03-28', 4.3, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0044', '007', 30, '2024-04-02', 4.2, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0044', '007', 20, '2024-04-10', 4.0, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0044', '007', 15, '2024-04-15', 4.1, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0044', '008', 20, '2024-04-18', 4.3, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0044', '008', 10, '2024-04-25', 4.1, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0044', '008', 5, '2024-05-02', 4.2, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0044', '009', 15, '2024-05-10', 4.4, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0044', '009', 10, '2024-05-18', 3.8, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0044', '009', 5, '2024-05-25', 4.0, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0044', '010', 10, '2024-06-02', 3.9, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0044', '010', 5, '2024-06-10', 4.2, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0044', '010', 5, '2024-06-15', 3.7, 'Tarea');
+
+
+--Estudiante 0045
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0045', '011', 25, '2024-03-28', 4.1, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0045', '011', 15, '2024-03-15', 3.9, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0045', '011', 10, '2024-03-28', 4.0, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0045', '012', 30, '2024-04-02', 4.2, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0045', '012', 20, '2024-04-10', 4.0, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0045', '012', 15, '2024-04-15', 4.1, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0045', '013', 20, '2024-04-18', 4.3, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0045', '013', 10, '2024-04-25', 4.1, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0045', '013', 5, '2024-05-02', 4.2, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0045', '014', 15, '2024-05-10', 4.4, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0045', '014', 10, '2024-05-18', 3.8, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0045', '014', 5, '2024-05-25', 4.0, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0045', '015', 10, '2024-06-02', 3.9, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0045', '015', 5, '2024-06-10', 4.2, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0045', '015', 5, '2024-06-15', 3.7, 'Tarea');
+
+
+--Estudiante 0046
+-- Curso 1
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0046', '016', 25, '2024-03-28', 4.1, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0046', '016', 15, '2024-03-15', 3.9, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0046', '016', 10, '2024-03-28', 4.0, 'Tarea');
+
+-- Curso 2
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0046', '017', 30, '2024-04-02', 4.2, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0046', '017', 20, '2024-04-10', 4.0, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0046', '017', 15, '2024-04-15', 4.1, 'Tarea');
+
+-- Curso 3
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0046', '018', 20, '2024-04-18', 4.3, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0046', '018', 10, '2024-04-25', 4.1, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0046', '018', 5, '2024-05-02', 4.2, 'Tarea');
+
+-- Curso 4
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0046', '019', 15, '2024-05-10', 4.4, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0046', '019', 10, '2024-05-18', 3.8, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0046', '019', 5, '2024-05-25', 4.0, 'Tarea');
+
+-- Curso 5
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0046', '020', 10, '2024-06-02', 3.9, 'Proyecto');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0046', '020', 5, '2024-06-10', 4.2, 'Quiz');
+INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
+VALUES ('TI', '0046', '020', 5, '2024-06-15', 3.7, 'Tarea');
+
+SELECT * FROM Calificacion
 
 INSERT INTO Certificado(TypeID_Estudiante, ID_Estudiante, ID_Curso, Fecha) values ('CC', '0002', '001', '2024-03-01')
 
@@ -441,11 +2532,281 @@ INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('CC',
 
 --SELECT * FROM Profesor_Curso
 
-INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0010', '001')
-INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0011', '002')
-INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0012', '003')
-INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0013', '004')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0001', '041')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0001', '042')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0001', '043')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0001', '044')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0001', '045')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0002', '036')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0002', '037')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0002', '038')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0002', '039')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0002', '040')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0003', '031')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0003', '032')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0003', '033')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0003', '034')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0003', '035')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0004', '021')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0004', '015')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0004', '032')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0004', '038')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0004', '009')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0005', '015')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0005', '030')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0005', '041')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0005', '036')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0005', '024')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0006', '011')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0006', '022')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0006', '032')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0006', '042')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0006', '045')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0007', '030')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0007', '018')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0007', '037')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0007', '021')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0007', '035')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0008', '014')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0008', '027')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0008', '041')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0008', '012')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0008', '031')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0009', '026')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0009', '021')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0009', '036')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0009', '016')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0009', '035')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0010', '040')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0010', '020')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0010', '033')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0010', '045')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0010', '025')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0011', '018')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0011', '041')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0011', '014')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0011', '024')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0011', '005')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0012', '028')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0012', '016')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0012', '007')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0012', '025')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0012', '030')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0013', '014')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0013', '010')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0013', '002')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0013', '035')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0013', '038')
+
 INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0014', '005')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0014', '008')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0014', '031')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0014', '020')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0014', '027')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0015', '022')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0015', '040')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0015', '025')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0015', '018')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0015', '032')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0016', '018')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0016', '033')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0016', '025')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0016', '022')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0016', '029')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0017', '012')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0017', '038')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0017', '015')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0017', '041')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0017', '037')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0018', '027')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0018', '039')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0018', '010')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0018', '020')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0018', '035')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0019', '021')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0019', '015')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0019', '011')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0019', '025')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0019', '030')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0020', '040')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0020', '027')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0020', '033')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0020', '010')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0020', '043')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0021', '015')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0021', '021')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0021', '032')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0021', '025')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0021', '041')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0022', '007')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0022', '042')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0022', '018')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0022', '027')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0022', '036')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0023', '021')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0023', '022')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0023', '023')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0023', '024')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0023', '025')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0024', '021')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0024', '015')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0024', '032')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0024', '038')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0024', '009')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0025', '021')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0025', '015')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0025', '032')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0025', '038')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0025', '009')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0026', '022')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0026', '016')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0026', '033')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0026', '039')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('CC', '0026', '010')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0027', '023')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0027', '017')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0027', '034')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0027', '040')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0027', '011')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0028', '024')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0028', '018')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0028', '035')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0028', '041')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0028', '012')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0029', '025')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0029', '019')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0029', '036')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0029', '042')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0029', '013')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0030', '026')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0030', '020')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0030', '037')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0030', '043')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0030', '014')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0031', '027')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0031', '021')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0031', '038')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0031', '044')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0031', '015')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0032', '028')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0032', '022')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0032', '019')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0032', '045')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0032', '016')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0033', '029')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0033', '023')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0033', '040')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0033', '002')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0033', '017')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0034', '001')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0034', '002')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0034', '003')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0034', '004')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0034', '005')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0035', '006')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0035', '007')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0035', '008')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0035', '009')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0035', '010')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0036', '011')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0036', '012')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0036', '013')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0036', '014')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0036', '015')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0037', '016')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0037', '017')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0037', '018')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0037', '019')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0037', '020')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0038', '021')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0038', '022')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0038', '023')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0038', '024')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0038', '025')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0039', '026')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0039', '027')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0039', '028')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0039', '029')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0039', '030')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0040', '031')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0040', '032')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0040', '033')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0040', '034')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0040', '035')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0041', '036')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0041', '037')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0041', '038')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0041', '039')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0041', '040')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0042', '041')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0042', '042')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0042', '043')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0042', '044')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0042', '045')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0043', '001')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0043', '002')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0043', '003')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0043', '004')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0043', '005')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0044', '006')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0044', '007')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0044', '008')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0044', '009')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0044', '010')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0045', '011')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0045', '012')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0045', '013')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0045', '014')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0045', '015')
+
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0046', '016')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0046', '017')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0046', '018')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0046', '019')
+INSERT INTO Curso_Estudiante(TypeID_Estudiante, ID_Estudiante, ID_Curso) values ('TI', '0046', '020')
 
 --SELECT * FROM Curso_Estudiante
 
