@@ -120,3 +120,66 @@ SELECT
 FROM Libro
 WHERE Tipo = 'Ficcion' OR NoPaginas > 600
 ORDER BY Tipo ASC;
+
+
+-- Obtener la nota real (la nota mínima que puede sacar si en el porcentaje faltante saca 0)
+-- Opción 1
+CREATE OR ALTER FUNCTION dbo.CalcularPromedioPorcentaje (
+    @courseID INT,
+    @studentTypeID VARCHAR(10),
+    @studentID VARCHAR(15)
+)
+RETURNS TABLE
+AS
+RETURN
+(
+    SELECT 
+        c.ID_Curso,
+        c.TypeID_Estudiante,
+        c.ID_Estudiante,
+        SUM(c.Nota * c.Porcentaje) / 100 AS NotaFinal,
+        SUM(c.Porcentaje) AS PorcentajeCalificado
+    FROM 
+        (SELECT DISTINCT ID_Curso, TypeID_Estudiante, ID_Estudiante, Nota, Porcentaje FROM Calificacion) c
+    WHERE 
+        c.ID_Curso = @courseID
+        AND c.TypeID_Estudiante = @studentTypeID
+        AND c.ID_Estudiante = @studentID
+    GROUP BY
+        c.ID_Curso, c.TypeID_Estudiante, c.ID_Estudiante
+);
+
+GO
+
+SELECT 
+    CONCAT(e.Nombre, ' ', e.Apellido) AS 'Nombre Estudiante',
+    c.ID_Curso AS 'ID Curso',
+	c.Nombre AS 'Curso',
+    pp.NotaFinal AS 'Nota final',
+    pp.PorcentajeCalificado AS 'Porcentaje calificado'
+FROM 
+    Estudiante e
+INNER JOIN 
+    Calificacion cal ON e.TypeID_Estudiante = cal.TypeID_Estudiante AND e.ID_Estudiante = cal.ID_Estudiante
+INNER JOIN 
+    Curso c ON cal.ID_Curso = c.ID_Curso
+OUTER APPLY 
+    dbo.CalcularPromedioPorcentaje(c.ID_Curso, e.TypeID_Estudiante, e.ID_Estudiante) pp
+GROUP BY CONCAT(e.Nombre, ' ', e.Apellido), c.ID_Curso, c.Nombre, pp.NotaFinal, pp.PorcentajeCalificado;
+
+
+-- Opción 2
+SELECT 
+    CONCAT(e.Nombre, ' ', e.Apellido) AS 'Nombre Estudiante',
+    c.ID_Curso AS 'ID Curso',
+	c.Nombre AS 'Curso',
+    SUM(cal.Nota * cal.Porcentaje)/100  AS 'Nota final',
+    SUM(cal.Porcentaje) AS 'Porcentaje calificado'
+FROM 
+    Estudiante e
+INNER JOIN 
+    Calificacion cal ON e.TypeID_Estudiante = cal.TypeID_Estudiante AND e.ID_Estudiante = cal.ID_Estudiante
+INNER JOIN 
+    Curso c ON cal.ID_Curso = c.ID_Curso
+GROUP BY 
+    CONCAT(e.Nombre, ' ', e.Apellido), c.ID_Curso, c.Nombre;
