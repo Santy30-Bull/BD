@@ -1,5 +1,7 @@
 USE Diplomados;
 
+
+-- 1)
 --Promedio del curso para cada estudiante, si aplica para dicho curso y tiene notas en dicho curso de lo contrario rellenar con 0.
 
 DECLARE @courseList NVARCHAR(MAX);
@@ -58,6 +60,8 @@ FROM (
 -- Ejecutar consulta din�mica
 EXEC sp_executesql @dynamicSql;
 
+
+-- 2)
 --Cantidad de Libros de cada g�nero
 SELECT *
 FROM (
@@ -67,6 +71,8 @@ FROM (
     GROUP BY li.Genero
 ) AS SourceTable
 
+
+-- 3)
 --Cantidad de Revistas cientificas por tematica
 SELECT *
 FROM (
@@ -78,6 +84,8 @@ FROM (
 
 SELECT * FROM Estudiante
 
+
+-- 4)
 --Revista científica, que hayan mas de 70 ejemplares y sean de tipo Tecnica, ademas se acomodan los nombres de los autores y esta organizada por titulo descendente
 SELECT 
     Titulo, 
@@ -92,6 +100,8 @@ FROM RevistaCientifica
 WHERE Tipo = 'Técnica' AND NoEjemplares > 70
 ORDER BY Titulo DESC
 
+
+-- 5)
 --Informe de Investigacion, que hayan mas de 15 ejemplares y sean de tipo Estudio de Caso o Investigacion, ademas se acomodan los nombres de los autores
 SELECT 
     Titulo, 
@@ -105,6 +115,8 @@ SELECT
 FROM InformeInvestigacion
 WHERE NoEjemplares > 15 AND Tipo = 'Estudio de Caso' OR Tipo = 'Investigación'
 
+
+-- 6)
 --Libro, que sea de tipo ficcion y tengan mas de 600 paginas, ademas se acomodan los nombres de los autores y esta organizado por tipo ascendente
 SELECT 
     Titulo, 
@@ -121,6 +133,7 @@ WHERE Tipo = 'Ficcion' OR NoPaginas > 600
 ORDER BY Tipo ASC;
 
 
+-- 7)
 --Anuncios, que se encuentren entre las fechas 28 de febrero de 2024 y 29 de mayo de 2024, ademas se acomodan los nombres de los cursos y profesores
 SELECT A.Fecha, C.Nombre AS Nombre_Curso, CONCAT(P.Nombre, ' ', P.Apellido) AS Nombre_Profesor
 FROM Anuncios A
@@ -130,6 +143,8 @@ JOIN Profesor P ON PC.TypeID_Profesor = P.TypeID_Profesor AND PC.ID_Profesor = P
 WHERE A.Fecha BETWEEN '2024-02-28' AND '2024-05-29'
 ORDER BY A.ID_Curso, A.Fecha;
 
+
+-- 8)
 /*Promedio de calificaciones (de estudiantes que tengan TI), que se encuentren entre las fechas 28 de febrero de 2024 y 31 de marzo de 2024. 
  Usando una funcion de tabla para calcular el promedio de calificaciones*/ --Se puede hacer para muchas combianciones de fechas;TypeID;o el nombre del curso, nombre del estudiante, etc.
 
@@ -168,6 +183,7 @@ WHERE C.Fecha BETWEEN '2024-02-28' AND '2024-03-31'
 ORDER BY C.ID_Curso, C.Fecha;
 
 
+-- 9)
 --Cantidad de cursos que tiene cada profesor. Usando una funcion escalar para contar la cantidad de cursos por profesor
 CREATE or ALTER FUNCTION dbo.ContarCursosPorProfesor (
     @TypeID_Profesor VARCHAR(MAX),
@@ -190,29 +206,20 @@ SELECT
 FROM Profesor P;
 
 
+-- 10)
 -- Obtener la nota real (la nota mínima que puede sacar si en el porcentaje faltante saca 0)
 -- Opción 1
-CREATE OR ALTER FUNCTION dbo.CalcularPromedioPorcentaje (
-    @courseID INT,
-    @studentTypeID VARCHAR(10),
-    @studentID VARCHAR(15)
-)
+CREATE OR ALTER FUNCTION dbo.CalcularPromedioPorcentaje (@courseID INT, @studentTypeID VARCHAR(10), @studentID VARCHAR(15))
 RETURNS TABLE
 AS
 RETURN
 (
-    SELECT 
-        c.ID_Curso,
-        c.TypeID_Estudiante,
-        c.ID_Estudiante,
-        SUM(c.Nota * c.Porcentaje) / 100 AS NotaFinal,
-        SUM(c.Porcentaje) AS PorcentajeCalificado
+    SELECT c.ID_Curso, c.TypeID_Estudiante, c.ID_Estudiante, SUM(c.Nota * c.Porcentaje) / 100 AS NotaFinal, 
+	SUM(c.Porcentaje) AS PorcentajeCalificado
     FROM 
         (SELECT DISTINCT ID_Curso, TypeID_Estudiante, ID_Estudiante, Nota, Porcentaje FROM Calificacion) c
     WHERE 
-        c.ID_Curso = @courseID
-        AND c.TypeID_Estudiante = @studentTypeID
-        AND c.ID_Estudiante = @studentID
+        c.ID_Curso = @courseID AND c.TypeID_Estudiante = @studentTypeID AND c.ID_Estudiante = @studentID
     GROUP BY
         c.ID_Curso, c.TypeID_Estudiante, c.ID_Estudiante
 );
@@ -220,34 +227,49 @@ RETURN
 GO
 
 SELECT 
-    CONCAT(e.Nombre, ' ', e.Apellido) AS 'Nombre Estudiante',
-    c.ID_Curso AS 'ID Curso',
-	c.Nombre AS 'Curso',
-    pp.NotaFinal AS 'Nota final',
+    CONCAT(e.Nombre, ' ', e.Apellido) AS 'Nombre Estudiante', c.ID_Curso AS 'ID Curso', c.Nombre AS 'Curso', pp.NotaFinal AS 'Nota final',
     pp.PorcentajeCalificado AS 'Porcentaje calificado'
 FROM 
-    Estudiante e
-INNER JOIN 
-    Calificacion cal ON e.TypeID_Estudiante = cal.TypeID_Estudiante AND e.ID_Estudiante = cal.ID_Estudiante
-INNER JOIN 
-    Curso c ON cal.ID_Curso = c.ID_Curso
-OUTER APPLY 
-    dbo.CalcularPromedioPorcentaje(c.ID_Curso, e.TypeID_Estudiante, e.ID_Estudiante) pp
+    Estudiante e INNER JOIN Calificacion cal ON e.TypeID_Estudiante = cal.TypeID_Estudiante AND e.ID_Estudiante = cal.ID_Estudiante
+	INNER JOIN Curso c ON cal.ID_Curso = c.ID_Curso 
+	OUTER APPLY dbo.CalcularPromedioPorcentaje(c.ID_Curso, e.TypeID_Estudiante, e.ID_Estudiante) pp
 GROUP BY CONCAT(e.Nombre, ' ', e.Apellido), c.ID_Curso, c.Nombre, pp.NotaFinal, pp.PorcentajeCalificado;
 
 
 -- Opción 2
 SELECT 
-    CONCAT(e.Nombre, ' ', e.Apellido) AS 'Nombre Estudiante',
-    c.ID_Curso AS 'ID Curso',
-	c.Nombre AS 'Curso',
-    SUM(cal.Nota * cal.Porcentaje)/100  AS 'Nota final',
+    CONCAT(e.Nombre, ' ', e.Apellido) AS 'Nombre Estudiante', c.ID_Curso AS 'ID Curso', c.Nombre AS 'Curso', SUM(cal.Nota * cal.Porcentaje)/100  AS 'Nota final',
     SUM(cal.Porcentaje) AS 'Porcentaje calificado'
 FROM 
-    Estudiante e
-INNER JOIN 
-    Calificacion cal ON e.TypeID_Estudiante = cal.TypeID_Estudiante AND e.ID_Estudiante = cal.ID_Estudiante
-INNER JOIN 
-    Curso c ON cal.ID_Curso = c.ID_Curso
+    Estudiante e INNER JOIN Calificacion cal ON e.TypeID_Estudiante = cal.TypeID_Estudiante AND e.ID_Estudiante = cal.ID_Estudiante
+	INNER JOIN Curso c ON cal.ID_Curso = c.ID_Curso
 GROUP BY 
     CONCAT(e.Nombre, ' ', e.Apellido), c.ID_Curso, c.Nombre;
+
+
+-- 11)
+-- Obtener la cantidad de estudiantes por cada curso 
+-- Por función escalar
+CREATE or ALTER FUNCTION dbo.ObtenerCantidadEstudiantesPorCurso(@id_curso INT)
+RETURNS INT
+AS
+BEGIN
+    DECLARE @cantidad_estudiantes INT;
+    SELECT @cantidad_estudiantes = COUNT(*)
+    FROM Curso_Estudiante ce
+    WHERE ce.ID_Curso = @id_curso;
+    RETURN @cantidad_estudiantes;
+END;
+
+SELECT 
+    c.Nombre, c.Estado, dbo.ObtenerCantidadEstudiantesPorCurso(c.ID_Curso) AS 'Cantidad estudiantes' 
+FROM Curso c;
+
+-- Por subconsulta
+SELECT 
+    c.Nombre,
+    (SELECT COUNT(*)
+     FROM Curso_Estudiante ce
+     WHERE ce.ID_Curso = c.ID_Curso) AS 'Cantidad estudiantes'
+FROM Curso c;
+
