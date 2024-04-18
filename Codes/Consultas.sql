@@ -106,7 +106,6 @@ FROM InformeInvestigacion
 WHERE NoEjemplares > 15 AND Tipo = 'Estudio de Caso' OR Tipo = 'Investigación'
 
 --Libro, que sea de tipo ficcion y tengan mas de 600 paginas, ademas se acomodan los nombres de los autores y esta organizado por tipo ascendente
-
 SELECT 
     Titulo, 
     Tipo, 
@@ -120,3 +119,74 @@ SELECT
 FROM Libro
 WHERE Tipo = 'Ficcion' OR NoPaginas > 600
 ORDER BY Tipo ASC;
+
+
+--Anuncios, que se encuentren entre las fechas 28 de febrero de 2024 y 29 de mayo de 2024, ademas se acomodan los nombres de los cursos y profesores
+SELECT A.Fecha, C.Nombre AS Nombre_Curso, CONCAT(P.Nombre, ' ', P.Apellido) AS Nombre_Profesor
+FROM Anuncios A
+JOIN Curso C ON A.ID_Curso = C.ID_Curso
+JOIN Profesor_Curso PC ON C.ID_Curso = PC.ID_Curso
+JOIN Profesor P ON PC.TypeID_Profesor = P.TypeID_Profesor AND PC.ID_Profesor = P.ID_Profesor
+WHERE A.Fecha BETWEEN '2024-02-28' AND '2024-05-29'
+ORDER BY A.ID_Curso, A.Fecha;
+
+/*Promedio de calificaciones (de estudiantes que tengan TI), que se encuentren entre las fechas 28 de febrero de 2024 y 31 de marzo de 2024. 
+ Usando una funcion de tabla para calcular el promedio de calificaciones*/ --Se puede hacer para muchas combianciones de fechas;TypeID;o el nombre del curso, nombre del estudiante, etc.
+
+CREATE or ALTER FUNCTION dbo.CalcularPromedioCalificacionesTI (
+    @FechaInicio DATE,
+    @FechaFin DATE
+)
+RETURNS TABLE
+AS
+RETURN
+(
+    SELECT 
+        C.ID_Curso,
+        E.TypeID_Estudiante,
+        E.ID_Estudiante,
+        AVG(C.Nota) AS PromedioCalificaciones
+    FROM Calificacion C
+    JOIN Estudiante E ON C.TypeID_Estudiante = E.TypeID_Estudiante AND C.ID_Estudiante = E.ID_Estudiante
+    WHERE C.Fecha BETWEEN @FechaInicio AND @FechaFin
+    AND E.TypeID_Estudiante = 'TI'-- Filtrar solo estudiantes con Type_ID 'TI'
+    GROUP BY C.ID_Curso, E.TypeID_Estudiante, E.ID_Estudiante
+);
+
+SELECT 
+    C.Fecha, 
+    C.Porcentaje, 
+    E.Nombre AS Nombre_Estudiante, 
+    E.Apellido AS Apellido_Estudiante, 
+    CO.Nombre AS Nombre_Curso,
+    Promedio.PromedioCalificaciones
+FROM Calificacion C
+JOIN Estudiante E ON C.TypeID_Estudiante = E.TypeID_Estudiante AND C.ID_Estudiante = E.ID_Estudiante
+JOIN Curso CO ON C.ID_Curso = CO.ID_Curso
+JOIN dbo.CalcularPromedioCalificacionesTI('2024-02-28', '2024-03-31') Promedio ON C.ID_Curso = Promedio.ID_Curso AND E.TypeID_Estudiante = Promedio.TypeID_Estudiante AND E.ID_Estudiante = Promedio.ID_Estudiante
+WHERE C.Fecha BETWEEN '2024-02-28' AND '2024-03-31'
+ORDER BY C.ID_Curso, C.Fecha;
+
+
+--Cantidad de cursos que tiene cada profesor. Usando una funcion escalar para contar la cantidad de cursos por profesor
+CREATE or ALTER FUNCTION dbo.ContarCursosPorProfesor (
+    @TypeID_Profesor VARCHAR(MAX),
+    @ID_Profesor VARCHAR(MAX)
+)
+RETURNS INT
+AS
+BEGIN
+    DECLARE @Contador INT;
+    SELECT @Contador = COUNT(*) 
+    FROM Profesor_Curso 
+    WHERE TypeID_Profesor = @TypeID_Profesor AND ID_Profesor = @ID_Profesor;
+    RETURN @Contador;
+END;
+
+SELECT 
+    CONCAT(P.Nombre, ' ', P.Apellido) AS Nombre_Completo,
+    P.Email,
+    dbo.ContarCursosPorProfesor(P.TypeID_Profesor, P.ID_Profesor) AS Cantidad_Cursos
+FROM Profesor P;
+
+
