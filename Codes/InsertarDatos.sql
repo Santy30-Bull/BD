@@ -2614,6 +2614,9 @@ INSERT INTO Sede_Profesor(ID_Sede, TypeID_Profesor, ID_Profesor) values ((SELECT
 --SELECT * FROM Sede_Profesor
 
 INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('CC','0000000000','001')
+
+INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('CC','0000000000','002')
+
 INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('CC','0000000001','002')
 INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('CC','0000000002','003')
 INSERT INTO Profesor_Curso(TypeID_Profesor, ID_Profesor, ID_Curso) values ('CC','0000000003','005')

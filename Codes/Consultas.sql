@@ -88,8 +88,8 @@ SELECT
     Titulo, 
     Tipo, 
     CONCAT(
-        SUBSTRING(Autor, CHARINDEX(' ', Autor) + 1, LEN(Autor) - CHARINDEX(' ', Autor)), ', ',
-        SUBSTRING(Autor, 1, CHARINDEX(' ', Autor) - 1)
+        SUBSTRING(Autor, CHARINDEX(' ', Autor) + 1, LEN(Autor) - CHARINDEX(' ', Autor)), ', ',--El nombre
+        SUBSTRING(Autor, 1, CHARINDEX(' ', Autor) - 1) --El titulo (ps Ingeniero, Doctor, etc)
     ) AS Autor, 
     NoEjemplares, 
     Tematica AS Temática
@@ -131,8 +131,23 @@ ORDER BY Tipo ASC;
 
 
 -- 7)
---Anuncios, que se encuentren entre las fechas 28 de febrero de 2024 y 29 de mayo de 2024, ademas se acomodan los nombres de los cursos y profesores
-SELECT A.Fecha, C.Nombre AS Nombre_Curso, CONCAT(P.Nombre, ' ', P.Apellido) AS Nombre_Profesor , A.Mensaje
+/*Longitud de los mensajes de los anuncios, que se encuentren entre las fechas 28 de febrero de 2024 y 29 de Mayo de 2024; 
+    ademas de mostrar el nombre del curso, nombre del profesor y la fecha del anuncio */
+
+CREATE or ALTER FUNCTION ContarCaracteresMensaje (@Mensaje NVARCHAR(MAX))
+RETURNS INT
+AS
+BEGIN
+    DECLARE @Contador INT
+    SET @Contador = LEN(@Mensaje)
+    RETURN @Contador
+END;
+
+SELECT A.Fecha, 
+       C.Nombre AS Nombre_Curso, 
+       CONCAT(P.Nombre, ' ', P.Apellido) AS Nombre_Profesor, 
+       A.Mensaje,
+       dbo.ContarCaracteresMensaje(A.Mensaje) AS Longitud_Mensaje
 FROM Anuncios A
 JOIN Curso C ON A.ID_Curso = C.ID_Curso
 JOIN Profesor_Curso PC ON C.ID_Curso = PC.ID_Curso
@@ -142,12 +157,13 @@ ORDER BY A.ID_Curso, A.Fecha, A.Mensaje;
 
 
 -- 8)
-/*Promedio de calificaciones (de estudiantes que tengan TI), que se encuentren entre las fechas 28 de febrero de 2024 y 31 de marzo de 2024. 
+/*Promedio de calificaciones (de estudiantes que tengan TI), que se encuentren entre las fechas 28 de febrero de 2024 y 30 de Abril de 2024. 
  Usando una funcion de tabla para calcular el promedio de calificaciones*/ --Se puede hacer para muchas combianciones de fechas;TypeID;o el nombre del curso, nombre del estudiante, etc.
 
-CREATE or ALTER FUNCTION dbo.CalcularPromedioCalificacionesTI (
+CREATE OR ALTER FUNCTION dbo.CalcularPromedioCalificacionesTI (
     @FechaInicio DATE,
-    @FechaFin DATE
+    @FechaFin DATE,
+    @TipoEstudiante VARCHAR(2)
 )
 RETURNS TABLE
 AS
@@ -157,17 +173,17 @@ RETURN
         C.ID_Curso,
         E.TypeID_Estudiante,
         E.ID_Estudiante,
+        C.Fecha,
         AVG(C.Nota) AS PromedioCalificaciones
     FROM Calificacion C
     JOIN Estudiante E ON C.TypeID_Estudiante = E.TypeID_Estudiante AND C.ID_Estudiante = E.ID_Estudiante
-    WHERE C.Fecha BETWEEN @FechaInicio AND @FechaFin
-    AND E.TypeID_Estudiante = 'TI'-- Filtrar solo estudiantes con Type_ID 'TI'
-    GROUP BY C.ID_Curso, E.TypeID_Estudiante, E.ID_Estudiante
+    WHERE E.TypeID_Estudiante = @TipoEstudiante
+    AND C.Fecha BETWEEN @FechaInicio AND @FechaFin
+    GROUP BY C.ID_Curso, E.TypeID_Estudiante, E.ID_Estudiante, C.Fecha
 );
 
 SELECT 
-    C.Fecha, 
-    C.Porcentaje, 
+    C.Fecha,  
     E.Nombre AS Nombre_Estudiante, 
     E.Apellido AS Apellido_Estudiante, 
     CO.Nombre AS Nombre_Curso,
@@ -175,9 +191,10 @@ SELECT
 FROM Calificacion C
 JOIN Estudiante E ON C.TypeID_Estudiante = E.TypeID_Estudiante AND C.ID_Estudiante = E.ID_Estudiante
 JOIN Curso CO ON C.ID_Curso = CO.ID_Curso
-JOIN dbo.CalcularPromedioCalificacionesTI('2024-02-28', '2024-03-31') Promedio ON C.ID_Curso = Promedio.ID_Curso AND E.TypeID_Estudiante = Promedio.TypeID_Estudiante AND E.ID_Estudiante = Promedio.ID_Estudiante
-WHERE C.Fecha BETWEEN '2024-02-28' AND '2024-03-31'
-ORDER BY C.ID_Curso, C.Fecha;
+JOIN dbo.CalcularPromedioCalificacionesTI('2024-02-28', '2024-04-30', 'TI') Promedio ON C.ID_Curso = Promedio.ID_Curso AND E.TypeID_Estudiante = Promedio.TypeID_Estudiante AND E.ID_Estudiante = Promedio.ID_Estudiante AND C.Fecha = Promedio.Fecha
+WHERE C.Fecha BETWEEN '2024-02-28' AND '2024-04-30'
+Group by C.Fecha, E.Nombre, E.Apellido, CO.Nombre, Promedio.PromedioCalificaciones
+ORDER BY E.Nombre, C.Fecha;
 
 
 -- 9)
@@ -198,7 +215,7 @@ END;
 
 SELECT 
     CONCAT(P.Nombre, ' ', P.Apellido) AS Nombre_Completo,
-    P.Email,
+    P.Email, P.ID_Profesor,
     dbo.ContarCursosPorProfesor(P.TypeID_Profesor, P.ID_Profesor) AS Cantidad_Cursos
 FROM Profesor P;
 
