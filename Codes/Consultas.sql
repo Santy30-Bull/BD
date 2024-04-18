@@ -251,3 +251,39 @@ INNER JOIN
     Curso c ON cal.ID_Curso = c.ID_Curso
 GROUP BY 
     CONCAT(e.Nombre, ' ', e.Apellido), c.ID_Curso, c.Nombre;
+
+--Función para calcular el porcentaje de 'TI' y de 'CC' para todos los cursos de una sede ingresada por el usuario
+CREATE OR ALTER FUNCTION dbo.CalcularPorcentajeTipoCedula (
+    @ID_Sede VARCHAR(MAX)
+)
+RETURNS TABLE
+AS
+RETURN
+(
+    SELECT 
+        c.ID_Curso,
+		c.Nombre,
+		(CAST((SELECT COUNT(*) FROM Estudiante e 
+		       INNER JOIN Curso_Estudiante ce ON e.ID_Estudiante = ce.ID_Estudiante
+               WHERE ce.ID_Curso = c.ID_Curso AND e.TypeID_Estudiante='CC') AS FLOAT) /
+		 CAST((SELECT COUNT(*) FROM Estudiante e 
+		       INNER JOIN Curso_Estudiante ce ON e.ID_Estudiante = ce.ID_Estudiante
+               WHERE ce.ID_Curso = c.ID_Curso) AS FLOAT)) * 100 AS Porcentaje_CC,
+		(CAST((SELECT COUNT(*) FROM Estudiante e 
+		       INNER JOIN Curso_Estudiante ce ON e.ID_Estudiante = ce.ID_Estudiante
+               WHERE ce.ID_Curso = c.ID_Curso AND e.TypeID_Estudiante='TI') AS FLOAT) /
+		 CAST((SELECT COUNT(*) FROM Estudiante e 
+		       INNER JOIN Curso_Estudiante ce ON e.ID_Estudiante = ce.ID_Estudiante
+               WHERE ce.ID_Curso = c.ID_Curso) AS FLOAT)) * 100 AS Porcentaje_TI,
+		 COUNT(*) AS No_Estudiantes
+    FROM 
+        Curso c 
+		INNER JOIN Curso_Estudiante ce ON ce.ID_Curso = c.ID_Curso
+		INNER JOIN Estudiante e ON e.ID_Estudiante = ce.ID_Estudiante
+		INNER JOIN Sede_Curso sc ON sc.ID_Curso = c.ID_Curso
+		INNER JOIN Sede s ON s.ID_Sede = @ID_Sede AND s.ID_Sede = sc.ID_Sede
+    GROUP BY
+        c.ID_Curso, c.Nombre
+);
+
+SELECT * FROM dbo.CalcularPorcentajeTipoCedula('229666F3-E854-4165-883E-7262E2DB583E');

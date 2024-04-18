@@ -2402,7 +2402,7 @@ VALUES ('TI', '0046', '020', 5, '2024-06-10', 4.2, 'Quiz');
 INSERT INTO Calificacion(TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Fecha, Nota, Trabajo)
 VALUES ('TI', '0046', '020', 5, '2024-06-15', 3.7, 'Tarea');
 
-SELECT * FROM Calificacion
+--SELECT * FROM Calificacion
 
 INSERT INTO Certificado(TypeID_Estudiante, ID_Estudiante, ID_Curso, Fecha) values ('CC', '0002', '001', '2024-03-01')
 
