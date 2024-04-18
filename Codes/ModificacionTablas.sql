@@ -27,7 +27,7 @@ ADD Nombre_Sede VARCHAR(12);
 ALTER TABLE Libro
 ALTER COLUMN Autor VARCHAR(MAX) NOT NULL;
 
---Arreglar errores en isertarDatos
+--Arreglar errores en insertarDatos
 ALTER TABLE Libro
 ALTER COLUMN Genero VARCHAR(MAX) NOT NULL;
 
@@ -51,7 +51,7 @@ BEGIN
     DECLARE @EstudianteId VARCHAR(15);
     DECLARE @CursoId VARCHAR(10);
 
-    -- Iterar sobre cada calificación afectada por la operación de inserción o actualización
+    -- Iterar sobre cada calificaciï¿½n afectada por la operaciï¿½n de inserciï¿½n o actualizaciï¿½n
     DECLARE calificaciones_cursor CURSOR FOR
     SELECT DISTINCT C.TypeID_Estudiante, C.ID_Estudiante, C.ID_Curso
     FROM inserted AS C;
@@ -76,7 +76,7 @@ BEGIN
             ROLLBACK TRANSACTION;
         END
 
-        -- Verificar si alguna nota está fuera del rango permitido para el estudiante actual
+        -- Verificar si alguna nota estï¿½ fuera del rango permitido para el estudiante actual
         IF EXISTS (
             SELECT 1
             FROM inserted AS C
