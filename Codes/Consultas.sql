@@ -250,15 +250,16 @@ GROUP BY CONCAT(e.Nombre, ' ', e.Apellido), c.ID_Curso, c.Nombre, pp.NotaFinal, 
 
 -- Opción 2
 SELECT 
-    CONCAT(e.Nombre, ' ', e.Apellido) AS 'Nombre Estudiante', c.ID_Curso AS 'ID Curso', c.Nombre AS 'Curso', SUM(cal.Nota * cal.Porcentaje)/100  AS 'Nota final',
+    e.TypeID_Estudiante, e.ID_Estudiante,CONCAT(e.Nombre, ' ', e.Apellido) AS 'Nombre Estudiante', c.ID_Curso AS 'ID Curso', c.Nombre AS 'Curso', SUM(cal.Nota * cal.Porcentaje)/100  AS 'Nota final',
     SUM(cal.Porcentaje) AS 'Porcentaje calificado'
 FROM 
     Estudiante e INNER JOIN Calificacion cal ON e.TypeID_Estudiante = cal.TypeID_Estudiante AND e.ID_Estudiante = cal.ID_Estudiante
 	INNER JOIN Curso c ON cal.ID_Curso = c.ID_Curso
 GROUP BY 
-    CONCAT(e.Nombre, ' ', e.Apellido), c.ID_Curso, c.Nombre;
+    e.TypeID_Estudiante, e.ID_Estudiante, CONCAT(e.Nombre, ' ', e.Apellido), c.ID_Curso, c.Nombre
+ORDER BY 'Porcentaje calificado' DESC;
 
-<<<<<<< HEAD
+
 --Función para calcular el porcentaje de 'TI' y de 'CC' para todos los cursos de una sede ingresada por el usuario
 CREATE OR ALTER FUNCTION dbo.CalcularPorcentajeTipoCedula (
     @ID_Sede VARCHAR(MAX)
@@ -294,7 +295,7 @@ RETURN
 );
 
 SELECT * FROM dbo.CalcularPorcentajeTipoCedula('229666F3-E854-4165-883E-7262E2DB583E');
-=======
+
 
 -- 11)
 -- Obtener la cantidad de estudiantes por cada curso 
@@ -322,4 +323,17 @@ SELECT
      WHERE ce.ID_Curso = c.ID_Curso) AS 'Cantidad estudiantes'
 FROM Curso c;
 
->>>>>>> 0a248f61fa976c7a80b1d3052f81098045a6d1cf
+
+-- Función para obtener la cantidad de cursos que tiene cada sede
+CREATE OR ALTER FUNCTION dbo.CantidadDeCursosXSede(@ID_Sede VARCHAR(MAX))
+RETURNS INT
+AS 
+BEGIN
+	DECLARE @cantidad_cursos INT;
+	SELECT @cantidad_cursos = COUNT(*)
+	FROM Sede_Curso sc
+	WHERE sc.ID_Sede = @ID_Sede
+	RETURN @cantidad_cursos
+END;
+
+SELECT s.Nombre_Sede, dbo.CantidadDeCursosXSede(s.ID_Sede) AS 'Cantidad de cursos' FROM Sede s;
