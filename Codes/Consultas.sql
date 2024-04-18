@@ -288,14 +288,12 @@ RETURN
         Curso c 
 		INNER JOIN Curso_Estudiante ce ON ce.ID_Curso = c.ID_Curso
 		INNER JOIN Estudiante e ON e.ID_Estudiante = ce.ID_Estudiante
-		INNER JOIN Sede_Curso sc ON sc.ID_Curso = c.ID_Curso
-		INNER JOIN Sede s ON s.ID_Sede = @ID_Sede AND s.ID_Sede = sc.ID_Sede
+		INNER JOIN Sede_Curso sc ON sc.ID_Sede = @ID_Sede AND sc.ID_Curso = c.ID_Curso
     GROUP BY
         c.ID_Curso, c.Nombre
 );
 
-SELECT * FROM dbo.CalcularPorcentajeTipoCedula('229666F3-E854-4165-883E-7262E2DB583E');
-
+SELECT * FROM dbo.CalcularPorcentajeTipoCedula((SELECT ID_Sede FROM Sede WHERE Nombre_Sede='Uni2'));
 
 -- 11)
 -- Obtener la cantidad de estudiantes por cada curso 
@@ -337,3 +335,30 @@ BEGIN
 END;
 
 SELECT s.Nombre_Sede, dbo.CantidadDeCursosXSede(s.ID_Sede) AS 'Cantidad de cursos' FROM Sede s;
+
+--Función para sacar el top 3 de cursos con mayor cantidad de estudiantes por sede
+CREATE OR ALTER FUNCTION dbo.CalcularCantEstxCurso (
+    @ID_Sede VARCHAR(MAX)
+)
+RETURNS TABLE
+AS
+RETURN
+(
+    SELECT 
+        c.ID_Curso,
+		c.Nombre,
+		COUNT(*) AS No_Estudiantes
+    FROM 
+        Curso c 
+		INNER JOIN Curso_Estudiante ce ON ce.ID_Curso = c.ID_Curso
+		INNER JOIN Estudiante e ON e.ID_Estudiante = ce.ID_Estudiante
+		INNER JOIN Sede_Curso sc ON sc.ID_Sede = @ID_Sede AND sc.ID_Curso = c.ID_Curso
+    GROUP BY
+        c.ID_Curso, c.Nombre
+);
+
+DECLARE @sede VARCHAR(MAX) = (SELECT ID_Sede FROM Sede WHERE Nombre_Sede='Uni2');
+
+SELECT TOP 3 *
+FROM dbo.CalcularCantEstxCurso(@sede)
+ORDER BY No_Estudiantes DESC
