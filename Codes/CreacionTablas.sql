@@ -1,11 +1,11 @@
--- Creaci�n DataBase
+-- Creacion DataBase
 CREATE DATABASE Diplomados;
 go
 
 USE Diplomados;
 go
 
--- Creaci�n de tablas sin FK
+-- Creacion de tablas sin FK
 CREATE TABLE Profesor(
 	TypeID_Profesor VARCHAR(10),
 	ID_Profesor VARCHAR(15),
@@ -76,7 +76,7 @@ CREATE TABLE InformeInvestigacion(
 )
 
 
--- Creaci�n tablas con FK
+-- Creacion tablas con FK
 CREATE TABLE Sede(
 	ID_Sede UNIQUEIDENTIFIER DEFAULT NEWID() PRIMARY KEY,
 	Localidad VARCHAR(50) NOT NULL,
@@ -99,8 +99,6 @@ CREATE TABLE Calificacion(
 	FOREIGN KEY (ID_Curso) REFERENCES Curso (ID_Curso) ON DELETE CASCADE
 )
 
-
--- Falta agregar nombre de curso, estudiante y profesor
 CREATE TABLE Certificado(
 	TypeID_Estudiante VARCHAR(10),
 	ID_Estudiante VARCHAR(15), 

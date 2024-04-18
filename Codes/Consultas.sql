@@ -82,9 +82,6 @@ FROM (
     GROUP BY re.Tematica
 ) AS SourceTable
 
-SELECT * FROM Estudiante
-
-
 -- 4)
 --Revista científica, que hayan mas de 70 ejemplares y sean de tipo Tecnica, ademas se acomodan los nombres de los autores y esta organizada por titulo descendente
 SELECT 
@@ -135,13 +132,13 @@ ORDER BY Tipo ASC;
 
 -- 7)
 --Anuncios, que se encuentren entre las fechas 28 de febrero de 2024 y 29 de mayo de 2024, ademas se acomodan los nombres de los cursos y profesores
-SELECT A.Fecha, C.Nombre AS Nombre_Curso, CONCAT(P.Nombre, ' ', P.Apellido) AS Nombre_Profesor
+SELECT A.Fecha, C.Nombre AS Nombre_Curso, CONCAT(P.Nombre, ' ', P.Apellido) AS Nombre_Profesor , A.Mensaje
 FROM Anuncios A
 JOIN Curso C ON A.ID_Curso = C.ID_Curso
 JOIN Profesor_Curso PC ON C.ID_Curso = PC.ID_Curso
 JOIN Profesor P ON PC.TypeID_Profesor = P.TypeID_Profesor AND PC.ID_Profesor = P.ID_Profesor
 WHERE A.Fecha BETWEEN '2024-02-28' AND '2024-05-29'
-ORDER BY A.ID_Curso, A.Fecha;
+ORDER BY A.ID_Curso, A.Fecha, A.Mensaje;
 
 
 -- 8)
@@ -223,8 +220,6 @@ RETURN
     GROUP BY
         c.ID_Curso, c.TypeID_Estudiante, c.ID_Estudiante
 );
-
-GO
 
 SELECT 
     CONCAT(e.Nombre, ' ', e.Apellido) AS 'Nombre Estudiante', c.ID_Curso AS 'ID Curso', c.Nombre AS 'Curso', pp.NotaFinal AS 'Nota final',
