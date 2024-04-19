@@ -362,3 +362,31 @@ DECLARE @sede VARCHAR(MAX) = (SELECT ID_Sede FROM Sede WHERE Nombre_Sede='Uni2')
 SELECT TOP 3 *
 FROM dbo.CalcularCantEstxCurso(@sede)
 ORDER BY No_Estudiantes DESC
+
+--Dado el estudiante, el curso y una nota a cumplir, mostrar al usuario la nota que debe sacar en el porcentaje restante para dejar la materia en la nota a cumplir
+CREATE OR ALTER FUNCTION dbo.CalcularNotaRestanteParaCumplir (
+    @TypeID_Estudiante VARCHAR(10),
+    @ID_Estudiante INT,
+    @ID_Curso INT,
+    @NotaCumplir DECIMAL(10, 2)
+)
+RETURNS DECIMAL(10, 2)
+AS
+BEGIN
+    DECLARE @NotaRestante DECIMAL(10, 2);
+
+    SELECT @NotaRestante = 
+        ((@NotaCumplir * 100) - SUM(ca.Nota * ca.Porcentaje)) / (100 - SUM(ca.Porcentaje))
+    FROM Calificacion ca
+    INNER JOIN Curso_Estudiante ce ON ca.ID_Estudiante = ce.ID_Estudiante AND ca.ID_Curso = ce.ID_Curso
+    WHERE ca.ID_Curso = @ID_Curso AND ca.ID_Estudiante = @ID_Estudiante AND ce.TypeID_Estudiante = @TypeID_Estudiante;
+
+    RETURN @NotaRestante;
+END;
+
+DECLARE @TypeID_Estudiante VARCHAR(10) = 'TI';
+DECLARE @ID_Estudiante VARCHAR(20) = '034';
+DECLARE @ID_Curso VARCHAR(10) = '001';
+DECLARE @NotaCumplir DECIMAL(10, 2) = 3;
+
+SELECT  dbo.CalcularNotaRestanteParaCumplir(@TypeID_Estudiante, @ID_Estudiante, @ID_Curso, @NotaCumplir) AS Nota_Restante_Para_Cumplir
