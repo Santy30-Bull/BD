@@ -390,3 +390,31 @@ DECLARE @ID_Curso VARCHAR(10) = '001';
 DECLARE @NotaCumplir DECIMAL(10, 2) = 3;
 
 SELECT  dbo.CalcularNotaRestanteParaCumplir(@TypeID_Estudiante, @ID_Estudiante, @ID_Curso, @NotaCumplir) AS Nota_Restante_Para_Cumplir
+
+/* Función para obtener todas las calificaciones del estudiante de un curso en específico (si se pasa el parámetro de ID_Curso por medio de 
+una consulta se pueden obtener todas las notas de todos los cursos*/
+CREATE OR ALTER FUNCTION dbo.ObtenerCalificacionesDeEstudiante (@TypeID_Estudiante VARCHAR(10), @ID_Estudiante VARCHAR(20), @ID_Curso INT)
+RETURNS TABLE
+AS
+RETURN
+(
+    SELECT 
+		e.TypeID_Estudiante,
+		e.ID_Estudiante,
+		CONCAT(e.Apellido, ' ', e.Nombre) AS 'Nombre', 
+        c.ID_Curso,
+        c.Nombre AS 'Nombre Curso',
+        ca.Nota,
+		ca.Fecha
+    FROM 
+        Calificacion ca 
+		JOIN Curso c ON c.ID_Curso = ca.ID_Curso 
+		JOIN Estudiante e ON e.TypeID_Estudiante = ca.TypeID_Estudiante AND e.ID_Estudiante = ca.ID_Estudiante
+		WHERE ca.TypeID_Estudiante = @TypeID_Estudiante AND ca.ID_Estudiante = @ID_Estudiante AND ca.ID_Curso = @ID_Curso
+);
+
+
+SELECT * FROM dbo.ObtenerCalificacionesDeEstudiante('CC', '0001', '041');
+
+
+
