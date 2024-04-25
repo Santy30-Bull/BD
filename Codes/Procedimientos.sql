@@ -104,3 +104,31 @@ END
 SELECT * FROM Libro
 WHERE Titulo = 'El principito'
 Execute agregarLibro 'Fisico', 'El principito', 'Antoine de Saint-Exupéry', 10, '1943-04-06', 'Fábula', 96;
+
+CREATE OR ALTER PROCEDURE Isis AS
+BEGIN
+	DECLARE @FirstName NVARCHAR(50);
+	DECLARE @LastName NVARCHAR(50);
+	DECLARE @CourseName NVARCHAR(50);
+
+	DECLARE course_Teacher CURSOR FOR
+	SELECT p.Nombre, p.Apellido, c.Nombre
+	FROM Profesor_Curso pc
+	INNER JOIN Curso c ON c.ID_Curso = pc.ID_Curso
+	INNER JOIN Profesor p ON p.ID_Profesor = pc.ID_Profesor AND p.TypeID_Profesor = pc.TypeID_Profesor
+	GROUP BY p.Nombre, p.Apellido, c.Nombre;
+
+	OPEN course_Teacher;
+	FETCH NEXT FROM course_Teacher INTO @FirstName, @LastName, @CourseName;
+
+	WHILE @@FETCH_STATUS = 0
+	BEGIN	
+		PRINT 'El profesor es: ' + @FirstName + ' ' + @LastName + ' da el curso: ' + @CourseName;
+		FETCH NEXT FROM course_Teacher INTO @FirstName, @LastName, @CourseName;
+	END;
+	CLOSE course_Teacher;
+	DEALLOCATE course_Teacher;
+END;
+GO
+EXEC Isis
+SELECT * FROM Profesor_Curso
