@@ -45,26 +45,21 @@ BEGIN
         -- Verificar si el estudiante ya está inscrito en el curso
         IF EXISTS (SELECT 1 FROM Curso_Estudiante WHERE TypeID_Estudiante = @TypeID_Estudiante AND ID_Estudiante = @ID_Estudiante AND ID_Curso = @ID_Curso)
         BEGIN
-            RAISEERROR('El estudiante ya está inscrito en este curso.', 16, 1);
+            RAISERROR('El estudiante ya está inscrito en este curso.', 16, 1);
         END
         ELSE
         BEGIN
             -- Insertar el estudiante en el curso
             INSERT INTO Curso_Estudiante (TypeID_Estudiante, ID_Estudiante, ID_Curso)
             VALUES (@TypeID_Estudiante, @ID_Estudiante, @ID_Curso);
-            PRINT 'El estudiante ha sido inscrito en el curso %d exitosamente.', @ID_Curso;
+            PRINT 'El estudiante ha sido inscrito en el curso ' + @ID_Curso +  ' exitosamente.';
         END
     END TRY
     BEGIN CATCH
         -- Manejar el error
         DECLARE @ErrorMessage NVARCHAR(4000);
-        DECLARE @ErrorSeverity INT;
-        DECLARE @ErrorState INT;
-
         SELECT 
-            @ErrorMessage = ERROR_MESSAGE(),
-            @ErrorSeverity = ERROR_SEVERITY(),
-            @ErrorState = ERROR_STATE();
+            @ErrorMessage = ERROR_MESSAGE();
         -- Mensaje de error
         PRINT 'Error: ' + @ErrorMessage;
     END CATCH;
@@ -106,5 +101,6 @@ BEGIN
     PRINT 'Libro agregado exitosamente.';
 END
 
-SELECT * FROM Libro;
+SELECT * FROM Libro
+WHERE Titulo = 'El principito'
 Execute agregarLibro 'Fisico', 'El principito', 'Antoine de Saint-Exupéry', 10, '1943-04-06', 'Fábula', 96;
