@@ -20,6 +20,8 @@ BEGIN
 			DELETE FROM Sede_Profesor WHERE TypeID_Profesor = @TypeIDProfesor AND ID_Profesor = @ID_Profesor;
 			-- Se quita los cursos que tiene asignados
 			DELETE FROM Profesor_Curso WHERE TypeID_Profesor = @TypeIDProfesor AND ID_Profesor = @ID_Profesor;
+			-- Se elimina al profesor de la base de datos
+			DELETE FROM Profesor WHERE TypeID_Profesor = @TypeIDProfesor AND ID_Profesor = @ID_Profesor;
 
 			PRINT 'Se han quitado los cursos y la sede al profesor con tipo de documento ' + @TypeIDProfesor + ' y ID ' + @ID_Profesor;
 	END TRY
@@ -29,7 +31,7 @@ BEGIN
 END
 
 SELECT * FROM Profesor_Curso;
-EXECUTE InactivarProfesor 'IN', '0000000045';
+EXECUTE InactivarProfesor 'IN', '0000000044';
 
 -- 2)
 /* Procedimiento que permita agregar un nuevo estudiante a un curso específico*/

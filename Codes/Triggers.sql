@@ -1,4 +1,4 @@
-USE Diplomados
+USE Diplomados;
 
 --Triggers DDL
 --1. Guardar en una tabla las modificaciones realizadas a una tabla, quien las realizo, y fecha en la que se realizaron 
@@ -155,3 +155,74 @@ BEGIN
 		@data);
 END
 
+
+-- Trigger para eliminar profesor y almacenarlo en una tabla de histórico de profesores
+CREATE TABLE Profesor_Hist(
+	TypeID VARCHAR(10) NOT NULL,
+	ID VARCHAR(15) NOT NULL,
+	DeleteDate DATETIME NOT NULL
+)
+
+CREATE OR ALTER TRIGGER dml_Del_Teacher
+ON Profesor
+AFTER DELETE AS
+BEGIN
+	DECLARE @TypeID VARCHAR(10);
+	DECLARE @ID VARCHAR(15);
+	SELECT TOP 1 @TypeID = TypeID_Profesor, @ID = ID_Profesor FROM DELETED;
+	PRINT 'Se eliminó al profesor con tipo de id: ' +@TypeID + ' y ID: ' + @ID + ' de los profesores activos' ; 
+	INSERT INTO Profesor_Hist VALUES (@TypeID, @ID, GETDATE());
+END;
+
+
+SELECT * FROM Profesor_Hist;
+
+
+-- Trigger para no dejar borrar cursos
+CREATE OR ALTER TRIGGER dml_NoDel_Curso
+ON Curso
+INSTEAD OF DELETE AS 
+BEGIN
+	SELECT 'No es posible eliminar el curso' AS MESSAGE
+END;
+
+SELECT * FROM Curso;
+
+DELETE FROM Curso WHERE ID_Curso = 001;
+
+
+-- Trigger para generar un certificado una vez las notas sean equivalentes al 100% y superior a 3
+CREATE OR ALTER TRIGGER dml_CrearCertificado
+ON Calificacion
+AFTER UPDATE, INSERT AS 
+BEGIN
+	DECLARE @PorcentajeCalificado INT;
+	DECLARE @Nota FLOAT;
+	DECLARE @TypeID VARCHAR(10);
+	DECLARE @IDEstudiante VARCHAR(15);
+	DECLARE @IDCurso VARCHAR(10);
+	SELECT TOP 1 
+        @TypeID = i.TypeID_Estudiante,
+        @IDEstudiante = i.ID_Estudiante,
+        @IDCurso = i.ID_Curso
+    FROM INSERTED i;
+
+	SELECT 
+		@PorcentajeCalificado = SUM(c.Porcentaje),
+        @Nota = SUM(c.Nota * c.Porcentaje) / 100
+	FROM Calificacion c WHERE @TypeID = c.TypeID_Estudiante AND @IDEstudiante = c.ID_Estudiante AND c.ID_Curso = @IDCurso
+
+	IF (@PorcentajeCalificado = 100 AND @Nota >=3.0)
+		BEGIN
+			INSERT INTO Certificado VALUES (@TypeID, @IDEstudiante,  @IDCurso, GETDATE());
+			PRINT 'Se generó un certificado para el estudiante con tipo de documento: ' + @TypeID + ' y ID: ' + @IDEstudiante + ' en el curso con ID: ' + @IDCurso
+		END;
+END;
+
+SELECT * FROM Certificado
+
+INSERT INTO Calificacion (TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Nota, Trabajo) 
+VALUES ('TI', '0039', '026', 20, 4.2, 'Exposición');
+
+
+SELECT * FROM Estudiante

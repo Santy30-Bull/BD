@@ -2404,9 +2404,6 @@ VALUES ('TI', '0046', '020', 5, '2024-06-15', 3.7, 'Tarea');
 
 --SELECT * FROM Calificacion
 
-INSERT INTO Certificado(TypeID_Estudiante, ID_Estudiante, ID_Curso, Fecha) values ('CC', '0002', '001', '2024-03-01')
-
---SELECT * FROM Certificado
 
 INSERT INTO Horarios(ID_Curso, Dia, Hora) values ('001', 'Jueves', '8:00')
 INSERT INTO Horarios(ID_Curso, Dia, Hora) values ('002', 'Jueves', '10:00')
