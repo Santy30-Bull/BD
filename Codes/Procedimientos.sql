@@ -107,7 +107,9 @@ SELECT * FROM Libro
 WHERE Titulo = 'El principito'
 Execute agregarLibro 'Fisico', 'El principito', 'Antoine de Saint-Exupéry', 10, '1943-04-06', 'Fábula', 96;
 
-CREATE OR ALTER PROCEDURE Isis AS
+
+-- Listar el nombre del profesor y el curso que da
+CREATE OR ALTER PROCEDURE Cursor_Prof_Curso AS
 BEGIN
 	DECLARE @FirstName NVARCHAR(50);
 	DECLARE @LastName NVARCHAR(50);
@@ -132,7 +134,8 @@ BEGIN
 	DEALLOCATE course_Teacher;
 END;
 GO
-EXEC Isis
+EXEC Cursor_Prof_Curso;
+
 SELECT * FROM Profesor_Curso
 
 --4 Procedimiento para actualizar la información de un estudiante

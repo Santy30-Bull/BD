@@ -221,8 +221,30 @@ END;
 
 SELECT * FROM Certificado
 
-INSERT INTO Calificacion (TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Nota, Trabajo) 
-VALUES ('TI', '0039', '026', 20, 4.2, 'Exposición');
+/*INSERT INTO Calificacion (TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Nota, Trabajo) 
+VALUES ('TI', '0039', '026', 20, 4.2, 'Exposición');*/
 
 
-SELECT * FROM Estudiante
+-- Trigger para limitar el largo del mensaje de anuncio
+CREATE OR ALTER TRIGGER triggerAnuncioMensajeLargo
+ON Anuncios
+AFTER INSERT
+AS
+BEGIN
+    DECLARE @Limite INT = 500;
+    DECLARE @Mensaje VARCHAR(MAX);
+
+    -- Obtener el mensaje del nuevo registro
+    SELECT @Mensaje = Mensaje
+    FROM inserted;
+
+    -- Verificar la longitud del mensaje
+    IF LEN(@Mensaje) > @Limite
+    BEGIN
+        -- Lanzar un error si el mensaje supera el límite permitido
+        RAISERROR('El anuncio que deseas enviar sobrepasa la cantidad de caracteres permitida, la cual es: %d', 16, 1, @Limite);
+
+        -- Deshacer la transacción actual
+        ROLLBACK TRANSACTION;
+    END;
+END;
