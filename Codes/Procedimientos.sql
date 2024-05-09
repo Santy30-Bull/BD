@@ -134,3 +134,68 @@ END;
 GO
 EXEC Isis
 SELECT * FROM Profesor_Curso
+
+--4 Procedimiento para actualizar la información de un estudiante
+CREATE OR ALTER PROCEDURE ActualizarInformacionEstudiante
+    @TypeID_Estudiante VARCHAR(10),
+    @ID_Estudiante VARCHAR(15),
+    @NuevoNombre NVARCHAR(50),
+    @NuevoApellido NVARCHAR(50),
+    @NuevoCorreo NVARCHAR(100)
+AS
+BEGIN
+    BEGIN TRY
+        -- Verificar si el estudiante existe
+        IF NOT EXISTS (SELECT 1 FROM Estudiante WHERE TypeID_Estudiante = @TypeID_Estudiante AND ID_Estudiante = @ID_Estudiante)
+        BEGIN
+            RAISERROR('El estudiante especificado no existe en la base de datos.', 16, 1);
+            RETURN;
+        END
+
+        -- Actualizar la información del estudiante
+        UPDATE Estudiante
+        SET Nombre = @NuevoNombre,
+            Apellido = @NuevoApellido,
+            Email = @NuevoCorreo
+        WHERE TypeID_Estudiante = @TypeID_Estudiante AND ID_Estudiante = @ID_Estudiante;
+
+        PRINT 'La información del estudiante ha sido actualizada exitosamente.';
+    END TRY
+    BEGIN CATCH
+        -- Manejar el error
+        DECLARE @ErrorMessage NVARCHAR(4000);
+        SELECT @ErrorMessage = ERROR_MESSAGE();
+        -- Mensaje de error
+        PRINT 'Error: ' + @ErrorMessage;
+    END CATCH;
+END
+
+--EXECUTE ActualizarInformacionEstudiante 'CC', '0001', 'Luis', 'González', 'luisestudiante@gmail.com';
+
+/*SELECT * FROM Estudiante
+WHERE ID_Estudiante = '0001'*/
+
+CREATE OR ALTER PROCEDURE BuscarLibrosPorAutor
+    @Autor VARCHAR(50)
+AS
+BEGIN
+    -- Verificar si hay libros del autor especificado
+    IF NOT EXISTS (
+        SELECT 1
+        FROM Libro
+        WHERE Autor = @Autor
+    )
+    BEGIN
+        PRINT 'No se encontraron libros del autor ' + @Autor + '.';
+        RETURN;
+    END
+
+    -- Mostrar los libros del autor especificado
+    PRINT 'Libros del autor ' + @Autor + ':';
+    SELECT Titulo, Genero, FechaPublicacion
+    FROM Libro
+    WHERE Autor = @Autor;
+END
+
+
+EXEC BuscarLibrosPorAutor 'Gabriel García Márquez';
