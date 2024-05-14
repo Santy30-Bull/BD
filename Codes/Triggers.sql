@@ -155,6 +155,112 @@ BEGIN
 		@data);
 END
 
+--6 Trigger complejo
+-- Trigger que captura los eventos DDL y realiza acciones adicionales
+CREATE OR ALTER TRIGGER ddl_complex_trigger
+ON DATABASE
+FOR CREATE_TABLE, ALTER_TABLE, DROP_TABLE
+AS
+BEGIN
+    -- Variables para almacenar información del evento
+   -- Variables para almacenar información del evento
+    DECLARE @data XML;
+    DECLARE @eventType NVARCHAR(100);
+    DECLARE @objectName NVARCHAR(100);
+
+    -- Obtener los datos del evento
+    SET @data = EVENTDATA();
+    SET @eventType = @data.value('(/EVENT_INSTANCE/EventType)[1]', 'NVARCHAR(100)');
+    SET @objectName = @data.value('(/EVENT_INSTANCE/ObjectName)[1]', 'NVARCHAR(100)');
+
+    -- Lógica adicional basada en el tipo de evento
+    IF @eventType = 'CREATE_TABLE'
+    BEGIN
+		DECLARE @columnsInfo NVARCHAR(MAX);
+		SET @columnsInfo = (
+			SELECT 
+				 COLUMN_NAME + ' con el tipo de dato ' + DATA_TYPE + CHAR(13) + CHAR(10) AS ColumnInfo
+			FROM 
+				INFORMATION_SCHEMA.COLUMNS
+			WHERE 
+				TABLE_NAME = @objectName
+			FOR XML PATH('')
+		);
+
+		SET @columnsInfo = REPLACE(@columnsInfo, '<ColumnInfo>', '');
+		SET @columnsInfo = REPLACE(@columnsInfo, '</ColumnInfo>', '');
+		SET @columnsInfo = REPLACE(@columnsInfo, '&#x0D', '');
+
+		-- Imprimir el mensaje con el formato deseado
+		PRINT '----------------------------------';
+		PRINT 'Se ha creado la tabla ' + @objectName + ' con las siguientes columnas:';
+		PRINT @columnsInfo;
+		PRINT '----------------------------------';
+	END
+
+	IF @eventType = 'ALTER_TABLE'
+	BEGIN
+		DECLARE @action NVARCHAR(50);
+        DECLARE @columnName NVARCHAR(100);
+
+		-- Obtener el nombre de la columna modificada
+		SET @columnName = (
+			SELECT TOP 1
+				COALESCE(
+					@data.value('(/EVENT_INSTANCE/AlterTableActionList/Create/Columns/Name)[1]', 'NVARCHAR(100)'),
+					@data.value('(/EVENT_INSTANCE/AlterTableActionList/Alter/Columns/Name)[1]', 'NVARCHAR(100)'),
+					@data.value('(/EVENT_INSTANCE/AlterTableActionList/Drop/Columns/Name)[1]', 'NVARCHAR(100)')
+				)
+		);
+
+        -- Obtener el tipo de acción
+        SET @action = @data.value('(/EVENT_INSTANCE/TSQLCommand/CommandText)[1]', 'NVARCHAR(MAX)');
+
+		-- Mostrar el mensaje de modificación
+        PRINT '----------------------------------';
+        PRINT 'Se ha modificado la tabla ' + @objectName + '. Cambios realizados:';
+
+        IF @action LIKE '%ADD%'
+        BEGIN
+            PRINT 'Se ha añadido la columna ' + @columnName;
+        END
+        ELSE IF @action LIKE '%ALTER COLUMN%'
+        BEGIN
+			DECLARE @lastSpacePosition INT = CHARINDEX(' ', REVERSE(@action));
+			DECLARE @lastWord NVARCHAR(100) = RIGHT(@action, @lastSpacePosition - 1);
+			PRINT 'Se ha modificado la columna ' + @columnName + ' a ' + @lastWord;
+        END
+        ELSE IF @action LIKE '%DROP COLUMN%'
+        BEGIN
+            PRINT 'Se ha eliminado la columna ' + @columnName;
+        END
+
+        PRINT '----------------------------------';
+	END
+
+    -- Lógica adicional para DROP_TABLE 
+    IF @eventType = 'DROP_TABLE'
+    BEGIN
+        PRINT 'Se ha eliminado la tabla ' + @objectName + '.';
+    END
+END
+
+
+/*CREATE TABLE TestTable (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    Name NVARCHAR(100),
+	Manin XML
+);
+
+DROP TABLE TestTable
+
+ALTER TABLE TestTable ADD XMLColumn XML;
+
+ALTER TABLE TestTable ALTER COLUMN XMLColumn NVARCHAR(255);
+
+ALTER TABLE TestTable DROP COLUMN XMLColumn;
+
+SELECT * FROM HistoricoModifaciones*/
 
 -- Trigger para eliminar profesor y almacenarlo en una tabla de histórico de profesores
 CREATE TABLE Profesor_Hist(
