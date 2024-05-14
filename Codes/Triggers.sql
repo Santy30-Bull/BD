@@ -40,6 +40,7 @@ BEGIN
 		@data);
 END
 
+
 SELECT * FROM HistoricoModifaciones
 
 --2 No permitir que se borre la base de datos (Toro va a traficar con nuestros datos)
@@ -320,9 +321,19 @@ BEGIN
 
 	IF (@PorcentajeCalificado = 100 AND @Nota >=3.0)
 		BEGIN
-			INSERT INTO Certificado VALUES (@TypeID, @IDEstudiante,  @IDCurso, GETDATE());
-			PRINT 'Se generó un certificado para el estudiante con tipo de documento: ' + @TypeID + ' y ID: ' + @IDEstudiante + ' en el curso con ID: ' + @IDCurso
-		END;
+        -- Verificar si ya existe un certificado para el mismo estudiante en el mismo curso
+        IF NOT EXISTS (SELECT 1 FROM Certificado WHERE TypeID_Estudiante = @TypeID AND ID_Estudiante = @IDEstudiante AND ID_Curso = @IDCurso)
+        BEGIN
+            -- Insertar el nuevo certificado
+            INSERT INTO Certificado VALUES (@TypeID, @IDEstudiante, @IDCurso, GETDATE());
+            PRINT 'Se generó un certificado para el estudiante con tipo de documento: ' + @TypeID + ' y ID: ' + @IDEstudiante + ' en el curso con ID: ' + @IDCurso;
+        END
+        ELSE
+        BEGIN
+            -- Mostrar mensaje si el certificado ya existe
+            PRINT 'El certificado para el estudiante con tipo de documento: ' + @TypeID + ' y ID: ' + @IDEstudiante + ' en el curso con ID: ' + @IDCurso + ' ya ha sido generado previamente.';
+        END;
+    END;
 END;
 
 SELECT * FROM Certificado
