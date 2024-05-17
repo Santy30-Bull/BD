@@ -11,38 +11,20 @@ WHERE Dia = 'Lunes' AND Hora = '08:00';
 
 --2) Índice filtrado en la tabla Curso con condición específica
 CREATE NONCLUSTERED INDEX IX_Curso_RangoFechas_Activo
-ON Curso(FechaInicio, FechaFinal, Estado)
-WHERE FechaInicio >= '2024-03-01' AND FechaFinal <= '2024-03-28' AND Estado = 'Inactivo';
+ON Curso(Nombre, FechaInicio, FechaFinal, Estado)
+WHERE FechaInicio >= '2024-03-01' AND FechaFinal <= '2024-05-28' AND Estado = 'Activo';
 
+-- Eliminar index
 DROP INDEX IF EXISTS IX_Curso_RangoFechas_Activo ON Curso
+
 -- Consulta de los cursos que esten inactivos durante el rango de fechas; usando el indice filtrado
 SET STATISTICS TIME ON;
 SELECT Nombre, FechaInicio, FechaFinal, Estado
 FROM Curso
-WHERE FechaInicio >= '2024-05-01' AND FechaFinal <= '2026-04-28'
-AND Estado = 'Inactivo';
+WHERE FechaInicio >= '2024-03-01' AND FechaFinal <= '2025-05-28' AND Estado = 'Activo';
 SET STATISTICS TIME OFF;
 
-/*Como se tiene pk, hace que no se tenga diferencia entre si está el cluster del index creado o no*/
-
--- Si se hace en una tabla sin pk
-SELECT *
-INTO Curso_Clone1
-FROM Curso;
-
-CREATE NONCLUSTERED INDEX IX_CursoClone_RangoFechas_Activo
-ON Curso_Clone1(FechaInicio, FechaFinal, Nombre, Estado)
-WHERE FechaInicio >= '2024-03-01' AND FechaFinal <= '2024-03-28'; -- Explicar (Por el condicional)
-
-DROP INDEX IF EXISTS IX_CursoClone_RangoFechas_Activo ON Curso_Clone1
-
-SET STATISTICS TIME ON;
-SELECT Nombre, FechaInicio, FechaFinal, Estado
-FROM Curso_Clone1
-WHERE FechaInicio >= '2023-05-01' AND FechaFinal <= '2026-04-28'
-AND Estado = 'Activo';
-SET STATISTICS TIME OFF;
-
+SELECT * FROM Curso
 -- Borrar caché
 CHECKPOINT
 DBCC DROPCLEANBUFFERS
@@ -61,6 +43,7 @@ CREATE CLUSTERED INDEX IX_Cluster_Curso_Clone_Nombre
 ON Curso_Clone(Nombre);
 
 
+SELECT * FROM Curso_Clone
 /* Indice no cluster */
 
 --4) Indice no cluster en la tabla Biblioteca

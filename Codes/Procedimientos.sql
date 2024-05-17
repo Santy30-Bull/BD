@@ -41,7 +41,6 @@ CREATE or ALTER PROCEDURE AgregarEstudianteACurso
     @ID_Curso VARCHAR(10)
 AS
 BEGIN
-    SET NOCOUNT ON;
 
     BEGIN TRY
         -- Verificar si el estudiante ya está inscrito en el curso
@@ -135,6 +134,7 @@ BEGIN
 END;
 GO
 EXEC Cursor_Prof_Curso;
+
 
 SELECT * FROM Profesor_Curso
 

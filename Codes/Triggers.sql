@@ -247,7 +247,7 @@ BEGIN
 END
 
 
-/*CREATE TABLE TestTable (
+CREATE TABLE TestTable (
     ID INT IDENTITY(1,1) PRIMARY KEY,
     Name NVARCHAR(100),
 	Manin XML
@@ -261,7 +261,7 @@ ALTER TABLE TestTable ALTER COLUMN XMLColumn NVARCHAR(255);
 
 ALTER TABLE TestTable DROP COLUMN XMLColumn;
 
-SELECT * FROM HistoricoModifaciones*/
+SELECT * FROM HistoricoModifaciones
 
 -- Trigger para eliminar profesor y almacenarlo en una tabla de histórico de profesores
 CREATE TABLE Profesor_Hist(
@@ -338,8 +338,8 @@ END;
 
 SELECT * FROM Certificado
 
-/*INSERT INTO Calificacion (TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Nota, Trabajo) 
-VALUES ('TI', '0039', '026', 20, 4.2, 'Exposición');*/
+INSERT INTO Calificacion (TypeID_Estudiante, ID_Estudiante, ID_Curso, Porcentaje, Nota, Trabajo) 
+VALUES ('TI', '0039', '026', 20, 4.2, 'Exposición');
 
 
 -- Trigger para limitar el largo del mensaje de anuncio
