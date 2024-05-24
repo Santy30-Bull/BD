@@ -51,7 +51,6 @@ CREATE TABLE RevistaCientifica (
   Autor VARCHAR(20) NOT NULL,
   NoEjemplares INT,
   FechaPublicacion DATE,
-  Genero VARCHAR(20) NOT NULL,
   Tematica LONGTEXT NOT NULL,
   Periocidad VARCHAR(15)
 );
