@@ -235,18 +235,19 @@ FROM Curso c;
 -- Crear primero una funcion para contar los cursos por sede
 DELIMITER //
 
-CREATE OR REPLACE FUNCTION CantidadDeCursosXSede(ID_Sede VARCHAR(255))
+CREATE OR REPLACE FUNCTION CantidadDeCursosXSede(ID_Sede_parametro VARCHAR(255))
 RETURNS INT
 BEGIN
     DECLARE cantidad_cursos INT;
     SELECT COUNT(*)
     INTO cantidad_cursos
     FROM Sede_Curso
-    WHERE ID_Sede = ID_Sede;
+    WHERE ID_Sede = ID_Sede_parametro;
     RETURN cantidad_cursos;
 END //
 
 DELIMITER ;
+
 
 -- Consulta utilizando la funcion almacenada
 SELECT 
