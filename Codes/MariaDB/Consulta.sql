@@ -116,8 +116,7 @@ SELECT A.Fecha,
 FROM Anuncios A
 JOIN Curso C ON A.ID_Curso = C.ID_Curso
 JOIN Profesor_Curso PC ON PC.ID_Curso = C.ID_Curso
-JOIN Persona P ON P.TypeID_Persona = PC.TypeID_Persona AND P.ID_Persona = PC.ID_Persona;
-
+JOIN Profesor P ON P.TypeID_Profesor = PC.TypeID_Profesor AND P.ID_Profesor = PC.ID_Profesor;
 
 -- 8 Prommedio de calificaciones por TI
 -- Se crea la vista
