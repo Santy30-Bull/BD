@@ -156,10 +156,9 @@ ORDER BY E.Nombre, C.Fecha;
 -- 9 Cantidad de cursos que tiene cada profesor
 -- Primero se crea una funcion para contar los cursos por profesor
 DELIMITER //
-
 CREATE FUNCTION ContarCursosPorProfesor (
-    TypeID_Profesor VARCHAR(255),
-    ID_Profesor VARCHAR(255)
+    p_TypeID_Profesor VARCHAR(255),
+    p_ID_Profesor VARCHAR(255)
 )
 RETURNS INT
 DETERMINISTIC
@@ -167,13 +166,13 @@ BEGIN
     DECLARE Contador INT;
     SELECT COUNT(*) INTO Contador 
     FROM Profesor_Curso 
-    WHERE TypeID_Profesor = TypeID_Profesor AND ID_Profesor = ID_Profesor;
+    WHERE TypeID_Profesor = p_TypeID_Profesor AND ID_Profesor = p_ID_Profesor;
     RETURN Contador;
 END //
 
 DELIMITER ;
 
--- Se hace una consulta de seleccion
+-- Consulta para obtener la cantidad de cursos por cada profesor
 SELECT 
     CONCAT(P.Nombre, ' ', P.Apellido) AS Nombre_Completo,
     P.Email, P.ID_Profesor,
