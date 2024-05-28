@@ -3,77 +3,26 @@ CREATE DATABASE Diplomados;
 USE Diplomados;
 
 -- 1 Promedio del curso para cada estudiante, si aplica para dicho curso y tiene notas en dicho curso de lo contrario rellenar con 0.
-DELIMITER $$
+SET SESSION group_concat_max_len = 1000000;
 
--- Variables
-SET @courseList = '';
-SET @dynamicSql = '';
-SET @pivotSql = '';
-SET @columnName = '';
-
--- Crear lista de nombres de columnas de cursos
+-- Generar una lista de cursos concatenados para usar en la consulta
 SET @courseList = (
-    SELECT GROUP_CONCAT(DISTINCT
-        CONCAT('\'', Curso.Nombre, '\'')
-        ORDER BY Curso.Nombre
-        SEPARATOR ', ')
+    SELECT GROUP_CONCAT(CONCAT('SUM(CASE WHEN cu.Nombre = ''', Nombre, ''' THEN ca.Nota * ca.Porcentaje / 100 ELSE 0 END) AS ', REPLACE(Nombre, ' ', '_')))
     FROM Curso
 );
 
--- Construir la consulta para generar columnas
-SET @courseListColumns = (
-    SELECT GROUP_CONCAT(DISTINCT
-        CONCAT('MAX(CASE WHEN cu.Nombre = ''', Curso.Nombre, ''' THEN WeightedGrade ELSE 0 END) AS `', Curso.Nombre, '`')
-        ORDER BY Curso.Nombre
-        SEPARATOR ', ')
-    FROM Curso
-);
-
--- Crear consulta dinámica para el pivote
+-- Crear la consulta dinámica
 SET @dynamicSql = CONCAT('
-SELECT es.TypeID_Estudiante, es.ID_Estudiante, ', @courseListColumns, '
-FROM (
-    SELECT es.TypeID_Estudiante,
-           es.ID_Estudiante, 
-           COALESCE(SUM(ca.Nota * ca.Porcentaje / 100), 0) AS WeightedGrade,
-           cu.Nombre as courseName
-    FROM Estudiante es
-    INNER JOIN Calificacion ca ON es.TypeID_Estudiante = ca.TypeID_Estudiante AND es.ID_Estudiante = ca.ID_Estudiante
-    INNER JOIN Curso cu ON cu.ID_Curso = ca.ID_Curso
-    GROUP BY es.TypeID_Estudiante, es.ID_Estudiante, cu.Nombre
-) AS SourceTable
+SELECT es.TypeID_Estudiante, es.ID_Estudiante, ', @courseList, '
+FROM Estudiante es
+LEFT JOIN Calificacion ca ON es.TypeID_Estudiante = ca.TypeID_Estudiante AND es.ID_Estudiante = ca.ID_Estudiante
+LEFT JOIN Curso cu ON cu.ID_Curso = ca.ID_Curso
 GROUP BY es.TypeID_Estudiante, es.ID_Estudiante');
 
--- Manejo de nulos después del pivote
-DECLARE courseListCursor CURSOR FOR
-    SELECT DISTINCT Curso.Nombre
-    FROM Curso;
-
-OPEN courseListCursor;
-
-FETCH NEXT FROM courseListCursor INTO @columnName;
-
-WHILE @@FETCH_STATUS = 0 DO
-    SET @pivotSql = CONCAT(@pivotSql, ', IFNULL(`', @columnName, '`, 0) AS `', @columnName, '`');
-    FETCH NEXT FROM courseListCursor INTO @columnName;
-END WHILE;
-
-CLOSE courseListCursor;
-DEALLOCATE courseListCursor;
-
--- Construir consulta final con manejo de nulos
-SET @dynamicSql = CONCAT('
-SELECT TypeID_Estudiante, ID_Estudiante', @pivotSql, '
-FROM (
-    ', @dynamicSql, '
-) AS PivotData');
-
--- Ejecutar consulta dinámica
+-- Preparar y ejecutar la consulta
 PREPARE stmt FROM @dynamicSql;
 EXECUTE stmt;
 DEALLOCATE PREPARE stmt;
-
-DELIMITER ;
 
 -- 2 Cantidad de libros por genero
 SELECT COALESCE(COUNT(li.Genero), 0) AS Cant,
